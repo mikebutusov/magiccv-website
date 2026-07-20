@@ -8,7 +8,7 @@ export function TestimonialBlock({ context = "bid manager, IT consulting, NL" }:
         <PlaceholderBlock label={`{{TESTIMONIAL: ${context}}}`} aspect="aspect-square" className="w-24 md:w-28" />
         <div>
           <p className="font-serif text-xl leading-snug text-ink-soft">
-            &ldquo;Quote from a design-partner {context} will go here once proof lands.&rdquo;
+            &ldquo;A design-partner quote ({context}) will go here once proof lands.&rdquo;
           </p>
           <p className="mt-4 text-sm font-medium text-muted">Name, Role -- Firm (placeholder)</p>
         </div>

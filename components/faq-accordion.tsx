@@ -38,7 +38,6 @@ export function FAQAccordion({ faqs, title = "Frequently asked questions" }: { f
       </div>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </Container>

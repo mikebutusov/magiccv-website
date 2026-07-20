@@ -107,6 +107,9 @@ export function SiteHeader() {
                 <p className="px-2 text-xs font-semibold uppercase tracking-wide text-muted">{section.label}</p>
                 {section.groups.map((group) => (
                   <div key={group.heading} className="mt-1">
+                    {section.groups.length > 1 && (
+                      <p className="mt-2 px-2 text-xs font-medium text-muted/70">{group.heading}</p>
+                    )}
                     {group.items.map((item) => (
                       <Link
                         key={item.href}

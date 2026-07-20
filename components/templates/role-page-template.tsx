@@ -15,7 +15,7 @@ export function RolePageTemplate({ role }: { role: RolePage }) {
     <>
       <Breadcrumbs items={[{ label: "Solutions", href: "/#solutions-by-role" }, { label: role.h1, href: `/solutions/${role.slug}` }]} />
 
-      <Hero h1={role.h1} sub={role.sub} visualAlt={role.reader} />
+      <Hero h1={role.h1} sub={role.sub} visualAlt={role.seo.title.replace(/^MagicCV for /, "")} />
 
       <Section>
         <PersonaPainCard pain={role.pain} />
@@ -40,7 +40,7 @@ export function RolePageTemplate({ role }: { role: RolePage }) {
       )}
 
       <Section className="border-t border-border">
-        <TestimonialBlock context={role.reader} />
+        <TestimonialBlock context={role.seo.title.replace(/^MagicCV for /, "")} />
       </Section>
 
       <Section className="border-t border-border bg-surface">

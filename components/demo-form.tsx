@@ -35,7 +35,7 @@ export function DemoForm() {
   if (submitted) {
     return (
       <div className="rounded-lg border border-border bg-surface p-8 text-center" role="status">
-        <h3 className="text-xl font-medium text-ink">Thanks -- we'll be in touch shortly.</h3>
+        <h3 className="text-xl font-medium text-ink">Thanks -- we&rsquo;ll be in touch shortly.</h3>
         <p className="mt-2 text-ink-soft">
           Prefer not to wait? You can also{" "}
           <a href="/demo" className="text-primary underline underline-offset-4">

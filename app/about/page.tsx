@@ -24,14 +24,14 @@ export default function AboutPage() {
             hand, and hoping the result reads as one consistent firm.
           </p>
           <p>
-            That work doesn't require more headcount, and it doesn't require a template library. It requires
-            starting from the brief -- understanding what a client's RFP is actually asking for -- and reasoning
+            That work doesn&rsquo;t require more headcount, and it doesn&rsquo;t require a template library. It requires
+            starting from the brief -- understanding what a client&rsquo;s RFP is actually asking for -- and reasoning
             about which real experience answers it, before anything gets formatted at all.
           </p>
           <p>
             We also think being built for Europe is a feature, not a constraint. Multilingual output,
-            GDPR-by-design data handling, and EU data residency aren't compliance checkboxes bolted on for a later
-            market -- they're the starting requirements for the mid-market European firms we build for.
+            GDPR-by-design data handling, and EU data residency aren&rsquo;t compliance checkboxes bolted on for a later
+            market -- they&rsquo;re the starting requirements for the mid-market European firms we build for.
           </p>
         </div>
       </Section>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <a href="/demo" className="font-medium text-primary hover:text-primary-soft">
             the demo request form
           </a>{" "}
-          and we'll route it to the right person.
+          and we&rsquo;ll route it to the right person.
         </p>
       </Section>
 

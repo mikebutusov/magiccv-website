@@ -19,7 +19,7 @@ export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
         ]}
       />
 
-      <Hero h1={industry.h1} sub={industry.sub} visualAlt={industry.reader} />
+      <Hero h1={industry.h1} sub={industry.sub} visualAlt={industry.seo.title.replace(/^MagicCV for /, "")} />
 
       <Section>
         <p className="max-w-measure text-lg text-ink-soft">{industry.angle}</p>
@@ -43,7 +43,7 @@ export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
       )}
 
       <Section className="border-t border-border">
-        <TestimonialBlock context={industry.reader} />
+        <TestimonialBlock context={industry.seo.title.replace(/^MagicCV for /, "")} />
       </Section>
 
       <Section className="border-t border-border bg-surface">

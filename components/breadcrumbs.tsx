@@ -42,7 +42,6 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       </nav>
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
     </Container>

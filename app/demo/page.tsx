@@ -2,7 +2,7 @@ import { CheckCircle2, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { DemoForm } from "@/components/demo-form";
 import { TestimonialBlock } from "@/components/testimonial-block";
-import { Container, Section } from "@/components/ui/container";
+import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({

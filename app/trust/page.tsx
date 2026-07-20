@@ -55,7 +55,7 @@ export default function TrustPage() {
         <h1 className="text-4xl font-medium text-ink md:text-5xl">Trust & security, kept factual and current.</h1>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">
           Built for the scrutiny European consulting firms bring to procurement. No overstated certifications --
-          what's live is live, and what's roadmap is clearly marked as roadmap.
+          what&rsquo;s live is live, and what&rsquo;s roadmap is clearly marked as roadmap.
         </p>
       </Section>
 
@@ -76,7 +76,7 @@ export default function TrustPage() {
           <h2 className="text-lg font-medium text-ink">Certifications</h2>
           <p className="mt-2 max-w-measure text-ink-soft">
             <PlaceholderText text="{{SOC2: Type 1 target month 9}}" /> -- SOC 2 is on our roadmap; this page will
-            update the moment it's achieved. We won't claim a certification before it's real.
+            update the moment it&rsquo;s achieved. We won&rsquo;t claim a certification before it&rsquo;s real.
           </p>
         </div>
       </Section>
@@ -94,7 +94,7 @@ export default function TrustPage() {
       <Section className="border-t border-border text-center">
         <h2 className="text-2xl font-medium text-ink">Need a completed security questionnaire?</h2>
         <p className="mx-auto mt-3 max-w-measure text-ink-soft">
-          We'll work through your IT/security team's questionnaire directly -- no generic trust-center PDF required.
+          We&rsquo;ll work through your IT/security team&rsquo;s questionnaire directly -- no generic trust-center PDF required.
         </p>
         <div className="mt-6 flex justify-center">
           <Button href="/demo">Request a security review</Button>
