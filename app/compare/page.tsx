@@ -39,7 +39,7 @@ export default function CompareHubPage() {
             <Link
               key={comparison.slug}
               href={`/compare/${comparison.slug}`}
-              className="group flex items-center justify-between gap-2 rounded-lg border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="group flex items-center justify-between gap-2 rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
             >
               vs {comparison.competitorName}
               <ArrowUpRight className="h-4 w-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />

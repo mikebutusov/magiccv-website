@@ -24,7 +24,7 @@ const mdxComponents = {
     <a className="font-medium text-primary underline underline-offset-4 hover:text-primary-soft" {...props} />
   ),
   table: (props: React.ComponentProps<"table">) => (
-    <div className="mt-6 overflow-x-auto rounded-lg border border-border">
+    <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
       <table className="w-full min-w-[480px] border-collapse text-left text-sm" {...props} />
     </div>
   ),
@@ -82,11 +82,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <span className="w-fit rounded-full bg-primary-tint px-3 py-1 text-xs font-semibold text-primary">
             {post.frontmatter.category}
           </span>
-          <h1 className="mt-4 font-serif text-4xl font-medium text-ink">{post.frontmatter.title}</h1>
+          <h1 className="mt-4 font-display text-4xl font-medium text-ink">{post.frontmatter.title}</h1>
           <p className="mt-3 text-sm text-muted">
             By {post.frontmatter.author} &middot; {post.frontmatter.date} &middot; {post.readingTime}
           </p>
-          <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-lg border border-dashed border-border bg-surface text-sm text-muted">
+          <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-border bg-surface text-sm text-muted">
             {"{{SCREENSHOT: hero image for " + post.frontmatter.title + "}}"}
           </div>
 
@@ -111,7 +111,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </>
           )}
 
-          <div className="mt-12 rounded-lg border border-border bg-surface p-5 text-sm text-ink-soft">
+          <div className="mt-12 rounded-2xl border border-border bg-surface p-5 text-sm text-ink-soft">
             Written by <span className="font-medium text-ink">{post.frontmatter.author}</span> at MagicCV.
           </div>
         </article>
@@ -128,7 +128,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </Section>
 
       <Section className="border-t border-border">
-        <div className="rounded-xl border border-border bg-surface p-8 text-center">
+        <div className="rounded-3xl border border-border bg-surface p-8 text-center">
           <p className="text-lg font-medium text-ink">Get proposal & CV-ops tips in your inbox</p>
           <div className="mt-4 flex justify-center">
             <NewsletterSignup />

@@ -34,7 +34,7 @@ export function DemoForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-lg border border-border bg-surface p-8 text-center" role="status">
+      <div className="rounded-2xl border border-border bg-surface p-8 text-center" role="status">
         <h3 className="text-xl font-medium text-ink">Thanks -- we&rsquo;ll be in touch shortly.</h3>
         <p className="mt-2 text-ink-soft">
           Prefer not to wait? You can also{" "}
@@ -48,7 +48,7 @@ export function DemoForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 rounded-lg border border-border bg-surface p-6 md:p-8">
+    <form onSubmit={handleSubmit} className="space-y-5 rounded-2xl border border-border bg-surface p-6 md:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Full name" htmlFor={`${formId}-name`}>
           <input id={`${formId}-name`} name="name" type="text" required className="form-input" />
@@ -109,7 +109,7 @@ export function DemoForm() {
       </Field>
       <button
         type="submit"
-        className="w-full rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="w-full rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         Submit demo request
       </button>

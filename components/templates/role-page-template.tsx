@@ -27,7 +27,7 @@ export function RolePageTemplate({ role }: { role: RolePage }) {
 
       {role.stats.length > 0 && (
         <Section className="border-t border-border">
-          <div className="rounded-lg border border-border bg-surface">
+          <div className="rounded-2xl border border-border bg-surface">
             <StatStrip stats={role.stats} />
           </div>
         </Section>

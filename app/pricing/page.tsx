@@ -28,7 +28,7 @@ export default function PricingPage() {
 
       <Section className="border-t border-border bg-surface">
         <h2 className="text-2xl font-medium text-ink">Compare every feature by plan</h2>
-        <div className="mt-6 overflow-x-auto rounded-lg border border-border">
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
           <table className="w-full min-w-[720px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-paper">
@@ -89,7 +89,7 @@ export default function PricingPage() {
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <div className="grid gap-4 rounded-xl border border-border bg-paper p-6 text-sm text-ink-soft sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 rounded-3xl border border-border bg-paper p-6 text-sm text-ink-soft sm:grid-cols-2 lg:grid-cols-4">
           <p>14-day free trial, no credit card required.</p>
           <p>30-day money-back guarantee on all paid plans.</p>
           <p>Annual prepay: 20% off the monthly price.</p>

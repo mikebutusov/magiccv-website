@@ -13,7 +13,7 @@ export function RelatedLinks({ links, title = "Related" }: { links: RelatedLink[
           <li key={link.href}>
             <Link
               href={link.href}
-              className="flex items-center justify-between gap-2 rounded-md border border-border bg-surface px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="flex items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
             >
               {link.label}
               <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden />

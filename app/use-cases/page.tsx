@@ -25,7 +25,7 @@ export default function UseCasesHubPage() {
             <Link
               key={useCase.slug}
               href={`/use-cases/${useCase.slug}`}
-              className="group flex flex-col rounded-lg border border-border bg-surface p-6 transition-colors hover:border-primary/40"
+              className="group flex flex-col rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/40"
             >
               <p className="text-lg font-medium text-ink">{useCase.h1}</p>
               <p className="mt-2 text-sm text-ink-soft">{useCase.job}</p>

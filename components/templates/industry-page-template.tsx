@@ -24,7 +24,7 @@ export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
       <Section>
         <p className="max-w-measure text-lg text-ink-soft">{industry.angle}</p>
         {industry.note && (
-          <p className="mt-4 max-w-measure rounded-md border border-border bg-surface p-4 text-sm text-muted">
+          <p className="mt-4 max-w-measure rounded-xl border border-border bg-surface p-4 text-sm text-muted">
             {industry.note}
           </p>
         )}
@@ -36,7 +36,7 @@ export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
 
       {industry.stats.length > 0 && (
         <Section className="border-t border-border">
-          <div className="rounded-lg border border-border bg-surface">
+          <div className="rounded-2xl border border-border bg-surface">
             <StatStrip stats={industry.stats} />
           </div>
         </Section>

@@ -25,7 +25,7 @@ export default function FeaturesHubPage() {
             <Link
               key={feature.slug}
               href={`/features/${feature.slug}`}
-              className="group flex flex-col rounded-lg border border-border bg-surface p-6 transition-colors hover:border-primary/40"
+              className="group flex flex-col rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/40"
             >
               <p className="text-lg font-medium text-ink">{feature.name}</p>
               <p className="mt-2 text-sm text-ink-soft">{feature.sub}</p>

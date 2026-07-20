@@ -53,7 +53,7 @@ export function PricingTable() {
             <div
               key={tier.id}
               className={clsx(
-                "flex flex-col rounded-xl border p-6",
+                "flex flex-col rounded-3xl border p-6",
                 tier.highlight ? "border-primary bg-primary-tint/40 ring-1 ring-primary" : "border-border bg-surface",
               )}
             >

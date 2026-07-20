@@ -27,7 +27,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
   }, [proposalsPerMonth, hoursPerPack, hourlyCost, growthPlan.priceMonthly]);
 
   return (
-    <div className="rounded-xl border border-border bg-surface p-6 md:p-8">
+    <div className="rounded-3xl border border-border bg-surface p-6 md:p-8">
       <h3 className="text-xl font-medium text-ink">{title}</h3>
       <p className="mt-2 max-w-measure text-sm text-ink-soft">
         Estimate the hidden hours-per-week cost of manually chasing and reformatting CVs for every proposal.
@@ -114,7 +114,7 @@ function Output({ label, value, hint }: { label: string; value: string; hint?: s
   return (
     <div>
       <p className="text-sm text-muted">{label}</p>
-      <p className="font-serif text-2xl font-medium text-primary">{value}</p>
+      <p className="font-display text-2xl font-medium text-primary">{value}</p>
       {hint && <p className="mt-0.5 text-xs text-muted">{hint}</p>}
     </div>
   );

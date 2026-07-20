@@ -8,7 +8,7 @@ export function LogoWall({ label = "Trusted by European consulting teams" }: { l
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="flex h-14 items-center justify-center rounded-md border border-dashed border-border bg-surface text-xs text-muted"
+            className="flex h-14 items-center justify-center rounded-xl border border-dashed border-border bg-surface text-xs text-muted"
           >
             {"{{LOGO}}"}
           </div>

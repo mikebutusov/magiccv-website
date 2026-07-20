@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <div className="rounded-xl border border-border bg-paper p-8 text-center">
+        <div className="rounded-3xl border border-border bg-paper p-8 text-center">
           <p className="text-lg font-medium text-ink">Get proposal & CV-ops tips in your inbox</p>
           <div className="mt-4 flex justify-center">
             <NewsletterSignup />

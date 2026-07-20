@@ -37,7 +37,7 @@ export default function DemoPage() {
                 </li>
               ))}
             </ul>
-            <div className="mt-10 rounded-lg border border-border bg-surface p-5">
+            <div className="mt-10 rounded-2xl border border-border bg-surface p-5">
               <p className="text-sm text-ink-soft">
                 Prefer to just try it?{" "}
                 <Link href="/pricing" className="font-semibold text-primary hover:text-primary-soft">

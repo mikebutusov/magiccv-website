@@ -13,19 +13,23 @@ export function CTASection({
   secondaryCta?: { label: string; href: string };
 }) {
   return (
-    <section className="bg-primary py-16 md:py-20">
-      <Container className="flex flex-col items-center gap-6 text-center">
-        <h2 className="max-w-2xl text-3xl font-medium text-white md:text-4xl">{headline}</h2>
-        <p className="max-w-xl text-primary-tint/90">{body}</p>
-        <div className="flex flex-wrap justify-center gap-4">
+    <section className="bg-grain relative overflow-hidden bg-primary py-20 md:py-28">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-lime/20 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl"
+      />
+      <Container className="relative flex flex-col items-center gap-6 text-center">
+        <h2 className="max-w-2xl text-4xl font-semibold text-white md:text-5xl">{headline}</h2>
+        <p className="max-w-xl text-lg text-primary-tint/80">{body}</p>
+        <div className="mt-2 flex flex-wrap justify-center gap-4">
           <Button href={primaryCta.href} variant="primary">
             {primaryCta.label}
           </Button>
-          <Button
-            href={secondaryCta.href}
-            variant="secondary"
-            className="border-white/30 text-white hover:border-white/60 hover:bg-white/10"
-          >
+          <Button href={secondaryCta.href} variant="inverse">
             {secondaryCta.label}
           </Button>
         </div>

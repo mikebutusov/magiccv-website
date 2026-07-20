@@ -62,7 +62,7 @@ export default function TrustPage() {
       <Section className="border-t border-border bg-surface">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SECTIONS.map((section) => (
-            <div key={section.title} className="rounded-lg border border-border bg-paper p-6">
+            <div key={section.title} className="rounded-2xl border border-border bg-paper p-6">
               <section.icon className="h-6 w-6 text-primary" aria-hidden />
               <h2 className="mt-3 text-lg font-medium text-ink">{section.title}</h2>
               <p className="mt-2 text-sm text-ink-soft">{section.body}</p>
@@ -72,7 +72,7 @@ export default function TrustPage() {
       </Section>
 
       <Section className="border-t border-border">
-        <div className="rounded-lg border border-border bg-surface p-6">
+        <div className="rounded-2xl border border-border bg-surface p-6">
           <h2 className="text-lg font-medium text-ink">Certifications</h2>
           <p className="mt-2 max-w-measure text-ink-soft">
             <PlaceholderText text="{{SOC2: Type 1 target month 9}}" /> -- SOC 2 is on our roadmap; this page will
@@ -82,7 +82,7 @@ export default function TrustPage() {
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <div className="rounded-lg border border-border bg-paper p-6">
+        <div className="rounded-2xl border border-border bg-paper p-6">
           <h2 className="text-lg font-medium text-ink">Subprocessors</h2>
           <p className="mt-2 max-w-measure text-ink-soft">
             <PlaceholderText text="{{SUBPROCESSORS: current list pending publication}}" /> -- the current

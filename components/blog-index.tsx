@@ -60,16 +60,16 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="grid gap-6 rounded-xl border border-border bg-surface p-6 transition-colors hover:border-primary/40 md:grid-cols-[1.1fr_1fr] md:p-8"
+      className="grid gap-6 rounded-3xl border border-border bg-surface p-6 transition-colors hover:border-primary/40 md:grid-cols-[1.1fr_1fr] md:p-8"
     >
-      <div className="order-2 flex aspect-[16/9] items-center justify-center rounded-lg border border-dashed border-border bg-paper text-xs text-muted md:order-1">
+      <div className="order-2 flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-border bg-paper text-xs text-muted md:order-1">
         {"{{IMAGE}}"}
       </div>
       <div className="order-1 flex flex-col justify-center md:order-2">
         <span className="w-fit rounded-full bg-primary-tint px-3 py-1 text-xs font-semibold text-primary">
           {post.frontmatter.category}
         </span>
-        <h2 className="mt-3 font-serif text-2xl font-medium text-ink">{post.frontmatter.title}</h2>
+        <h2 className="mt-3 font-display text-2xl font-medium text-ink">{post.frontmatter.title}</h2>
         <p className="mt-2 text-ink-soft">{post.frontmatter.description}</p>
         <p className="mt-4 text-xs text-muted">
           {post.frontmatter.date} &middot; {post.readingTime}
@@ -83,9 +83,9 @@ function PostCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="flex flex-col rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary/40"
+      className="flex flex-col rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-primary/40"
     >
-      <div className="flex aspect-[16/9] items-center justify-center rounded-md border border-dashed border-border bg-paper text-xs text-muted">
+      <div className="flex aspect-[16/9] items-center justify-center rounded-xl border border-dashed border-border bg-paper text-xs text-muted">
         {"{{IMAGE}}"}
       </div>
       <span className="mt-4 w-fit rounded-full bg-primary-tint px-2.5 py-0.5 text-xs font-semibold text-primary">

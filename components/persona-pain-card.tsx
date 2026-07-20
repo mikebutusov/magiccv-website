@@ -6,8 +6,8 @@ import type { PersonaPain } from "@/lib/content/types";
 export function PersonaPainCard({ pain }: { pain: PersonaPain }) {
   return (
     <Container>
-      <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
-        <blockquote className="font-serif text-2xl leading-snug text-ink md:text-3xl">
+      <div className="rounded-3xl border border-border bg-surface p-8 md:p-10">
+        <blockquote className="font-display text-2xl leading-snug text-ink md:text-3xl">
           &ldquo;{pain.quote}&rdquo;
         </blockquote>
         <p className="mt-5 max-w-measure text-lg text-primary">{pain.answer}</p>

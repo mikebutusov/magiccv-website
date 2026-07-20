@@ -14,7 +14,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-paper/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Link href="/" className="font-serif text-xl font-medium text-ink">
+        <Link href="/" className="font-display text-xl font-medium text-ink">
           MagicCV
         </Link>
 
@@ -22,14 +22,14 @@ export function SiteHeader() {
           <NavigationMenu.List className="flex items-center gap-1">
             {primaryNav.map((section) => (
               <NavigationMenu.Item key={section.label} className="relative">
-                <NavigationMenu.Trigger className="group flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink data-[state=open]:bg-ink/5 data-[state=open]:text-ink">
+                <NavigationMenu.Trigger className="group flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink data-[state=open]:bg-ink/5 data-[state=open]:text-ink">
                   {section.label}
                   <ChevronDown
                     className="h-3.5 w-3.5 transition-transform group-data-[state=open]:rotate-180"
                     aria-hidden
                   />
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content className="absolute top-full left-0 rounded-lg border border-border bg-surface p-5 shadow-lg">
+                <NavigationMenu.Content className="absolute top-full left-0 rounded-2xl border border-border bg-surface p-5 shadow-lg">
                   <div className="flex gap-8">
                     {section.groups.map((group) => (
                       <div key={group.heading} className="min-w-[200px]">
@@ -60,7 +60,7 @@ export function SiteHeader() {
               <NavigationMenu.Link asChild>
                 <Link
                   href="/pricing"
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
+                  className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
                 >
                   Pricing
                 </Link>
@@ -70,7 +70,7 @@ export function SiteHeader() {
               <NavigationMenu.Link asChild>
                 <Link
                   href="/blog"
-                  className="block rounded-md px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
+                  className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
                 >
                   Blog
                 </Link>

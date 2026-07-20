@@ -61,7 +61,7 @@ export function ComparePageTemplate({ comparison }: { comparison: ComparisonPage
       </Section>
 
       <Section className="border-t border-border">
-        <div className="rounded-lg border border-border bg-surface p-6">
+        <div className="rounded-2xl border border-border bg-surface p-6">
           <h2 className="text-xl font-medium text-ink">Who should choose which</h2>
           <p className="mt-3 max-w-measure text-ink-soft">{comparison.guidance}</p>
         </div>

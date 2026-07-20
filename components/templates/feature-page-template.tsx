@@ -43,7 +43,7 @@ export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
               <Link
                 key={link.href}
                 href={link.href}
-                className="flex items-center justify-between gap-2 rounded-lg border border-border bg-surface px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+                className="flex items-center justify-between gap-2 rounded-2xl border border-border bg-surface px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
               >
                 {link.label}
                 <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden />

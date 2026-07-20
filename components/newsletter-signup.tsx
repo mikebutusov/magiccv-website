@@ -32,7 +32,7 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
       />
       <button
         type="submit"
-        className="shrink-0 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-soft"
+        className="shrink-0 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-soft"
       >
         Subscribe
       </button>

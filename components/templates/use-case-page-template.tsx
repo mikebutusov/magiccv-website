@@ -34,7 +34,7 @@ export function UseCasePageTemplate({ useCase }: { useCase: UseCasePage }) {
         <h2 className="text-2xl font-medium text-ink">Outcome</h2>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">{useCase.outcome}</p>
         {useCase.outcomeStats.length > 0 && (
-          <div className="mt-6 rounded-lg border border-border bg-surface">
+          <div className="mt-6 rounded-2xl border border-border bg-surface">
             <StatStrip stats={useCase.outcomeStats} />
           </div>
         )}

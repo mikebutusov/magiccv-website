@@ -124,7 +124,7 @@ export default function HomePage() {
             <Link
               key={cap.href}
               href={cap.href}
-              className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-6 transition-colors hover:border-primary/40"
+              className="group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/40"
             >
               <cap.icon className="h-6 w-6 text-primary" aria-hidden />
               <p className="font-medium text-ink">{cap.title}</p>
@@ -163,7 +163,7 @@ export default function HomePage() {
             See all comparisons <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="mt-8 overflow-x-auto rounded-lg border border-border">
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-border">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-surface">
@@ -218,7 +218,7 @@ export default function HomePage() {
             <Link
               key={role.href}
               href={role.href}
-              className="rounded-lg border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
             >
               {role.label}
             </Link>
@@ -232,7 +232,7 @@ export default function HomePage() {
             <Link
               key={industry.href}
               href={industry.href}
-              className="rounded-lg border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
             >
               {industry.label}
             </Link>
@@ -241,7 +241,7 @@ export default function HomePage() {
       </Section>
 
       <Section className="border-t border-border">
-        <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
+        <div className="rounded-3xl border border-border bg-surface p-8 md:p-10">
           <div className="flex flex-wrap items-start justify-between gap-6">
             <div>
               <h2 className="text-2xl font-medium text-ink">Built on EU trust from day one</h2>

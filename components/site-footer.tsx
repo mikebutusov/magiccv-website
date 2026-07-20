@@ -19,7 +19,7 @@ export function SiteFooter() {
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(6,1fr)]">
           <div>
-            <Link href="/" className="font-serif text-xl font-medium text-ink">
+            <Link href="/" className="font-display text-xl font-medium text-ink">
               {site.name}
             </Link>
             <p className="mt-3 max-w-[32ch] text-sm text-ink-soft">{site.description}</p>

@@ -20,7 +20,7 @@ export function FAQAccordion({ faqs, title = "Frequently asked questions" }: { f
   return (
     <Container>
       <h2 className="text-2xl font-medium text-ink">{title}</h2>
-      <div className="mt-6 divide-y divide-border rounded-lg border border-border bg-surface">
+      <div className="mt-6 divide-y divide-border rounded-2xl border border-border bg-surface">
         {faqs.map((faq, i) => (
           <details key={i} className="group p-5">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-ink marker:content-none">

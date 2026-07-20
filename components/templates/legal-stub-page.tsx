@@ -12,7 +12,7 @@ export function LegalStubPage({ title, sections }: { title: string; sections: st
       <Breadcrumbs items={[{ label: title, href: "#" }]} />
       <Section>
         <h1 className="text-4xl font-medium text-ink md:text-5xl">{title}</h1>
-        <div className="mt-6 max-w-measure rounded-lg border border-dashed border-border bg-surface p-6 text-sm text-muted">
+        <div className="mt-6 max-w-measure rounded-2xl border border-dashed border-border bg-surface p-6 text-sm text-muted">
           Placeholder -- final legal copy pending review by counsel. Structure below reflects what this document
           will cover.
         </div>
