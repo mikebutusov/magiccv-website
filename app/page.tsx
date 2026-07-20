@@ -1,65 +1,266 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, FileText, Globe2, Layers, ShieldCheck, Sparkles } from "lucide-react";
+import { Hero } from "@/components/hero";
+import { LogoWall } from "@/components/logo-wall";
+import { FeatureRowList } from "@/components/feature-row";
+import { ROICalculator } from "@/components/roi-calculator";
+import { TestimonialBlock } from "@/components/testimonial-block";
+import { CTASection } from "@/components/cta-section";
+import { Section } from "@/components/ui/container";
+import { buildMetadata } from "@/lib/seo";
 
-export default function Home() {
+export const metadata = buildMetadata({
+  title: "MagicCV -- AI CV & Resume Platform for Consulting Firms",
+  description:
+    "Turn any RFP into tailored, on-brand consultant CVs in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free 14-day trial.",
+  path: "/",
+  keywords: ["CV management for consulting", "proposal CV tool", "consultant CV software"],
+});
+
+const HOW_IT_WORKS = [
+  {
+    title: "Import your consultants once",
+    body: "Bring your existing CVs in to create structured, always-current profiles for your whole bench.",
+    screenshotAlt: "Consultant profile import",
+  },
+  {
+    title: "Paste the RFP brief",
+    body: "Drop in the RFP, an evaluation sheet, or a short summary of what the client needs.",
+    screenshotAlt: "RFP brief input",
+  },
+  {
+    title: "Get a tailored, on-brand, translated CV pack",
+    body: "MagicCV reasons about the brief and produces a submission-ready pack in your firm's brand, in the language you need.",
+    screenshotAlt: "Generated CV pack ready for submission",
+  },
+];
+
+const CAPABILITIES = [
+  {
+    icon: Sparkles,
+    title: "RFP-to-CV reasoning",
+    body: "Starts from the brief, not a template.",
+    href: "/features/rfp-to-cv",
+  },
+  {
+    icon: FileText,
+    title: "Brand-consistent exports",
+    body: "Every CV, perfectly on-brand.",
+    href: "/features/brand-templates",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Anonymization & GDPR",
+    body: "Built in, not bolted on.",
+    href: "/features/anonymization",
+  },
+  {
+    icon: Globe2,
+    title: "Multilingual & translation",
+    body: "Bid in every European language.",
+    href: "/features/multilingual",
+  },
+  {
+    icon: Layers,
+    title: "Centralized profiles & skills",
+    body: "One structured profile, endlessly reusable.",
+    href: "/features/profiles-skills",
+  },
+];
+
+const ROLE_LINKS = [
+  { label: "Sales teams", href: "/solutions/sales" },
+  { label: "Recruitment teams", href: "/solutions/recruitment" },
+  { label: "HR / People Ops", href: "/solutions/hr" },
+  { label: "Project delivery", href: "/solutions/project-delivery" },
+];
+
+const INDUSTRY_LINKS = [
+  { label: "Software & IT consulting", href: "/solutions/it-consulting" },
+  { label: "Strategy & management consulting", href: "/solutions/strategy-consulting" },
+  { label: "Design & creative agencies", href: "/solutions/design-agencies" },
+  { label: "Public-sector & tender-driven", href: "/solutions/public-sector" },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <Hero
+        eyebrow="AI-native CV Management for consulting firms"
+        h1="Win more proposals. Faster."
+        sub="MagicCV turns any RFP into the right consultants and tailored, on-brand CVs -- in any language, in minutes."
+        visualAlt="RFP-to-CV generation"
+        stats={[
+          { value: "1 day → 15 min", label: "per CV pack", isPlaceholder: true },
+          { value: "5+", label: "EU languages" },
+          { value: "GDPR-by-design", label: "built in from day one" },
+        ]}
+      />
+
+      <LogoWall />
+
+      <Section className="border-t border-border">
+        <div className="max-w-measure">
+          <h2 className="text-3xl font-medium text-ink">
+            The Friday-night CV scramble is a solved problem now.
+          </h2>
+          <p className="mt-4 text-lg text-ink-soft">
+            Every RFP means the same thing: hours chasing consultants for current CVs, reformatting them
+            by hand, and hoping quality holds up across the whole pack. Inconsistent output costs bids you
+            should have won.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      <Section className="border-t border-border bg-surface">
+        <h2 className="text-3xl font-medium text-ink">How it works</h2>
+        <FeatureRowList items={HOW_IT_WORKS} />
+      </Section>
+
+      <Section className="border-t border-border" id="capabilities">
+        <h2 className="text-3xl font-medium text-ink">Everything you need to make CVs win work</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {CAPABILITIES.map((cap) => (
+            <Link
+              key={cap.href}
+              href={cap.href}
+              className="group flex flex-col gap-3 rounded-lg border border-border bg-surface p-6 transition-colors hover:border-primary/40"
+            >
+              <cap.icon className="h-6 w-6 text-primary" aria-hidden />
+              <p className="font-medium text-ink">{cap.title}</p>
+              <p className="text-sm text-ink-soft">{cap.body}</p>
+              <span className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
+                Learn more <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+              </span>
+            </Link>
+          ))}
         </div>
-      </main>
-    </div>
+      </Section>
+
+      <Section className="border-t border-border bg-surface">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div>
+            <h2 className="text-3xl font-medium text-ink">Consistent quality, at any volume</h2>
+            <p className="mt-4 max-w-measure text-lg text-ink-soft">
+              For the COO or Managing Partner: scale proposal output without scaling headcount, and get
+              visible ROI on every RFP the team touches.
+            </p>
+            <Link
+              href="/pricing"
+              className="mt-6 inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft"
+            >
+              See full pricing & ROI breakdown <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+          <ROICalculator title="What could this be costing your team?" />
+        </div>
+      </Section>
+
+      <Section className="border-t border-border">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <h2 className="text-3xl font-medium text-ink">Why MagicCV vs the alternatives</h2>
+          <Link href="/compare" className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft">
+            See all comparisons <ArrowUpRight className="h-4 w-4" aria-hidden />
+          </Link>
+        </div>
+        <div className="mt-8 overflow-x-auto rounded-lg border border-border">
+          <table className="w-full min-w-[640px] border-collapse text-left text-sm">
+            <thead>
+              <tr className="bg-surface">
+                <th scope="col" className="border-b border-border p-4 font-medium text-muted">
+                  &nbsp;
+                </th>
+                <th scope="col" className="border-b border-border bg-primary-tint p-4 font-semibold text-primary">
+                  MagicCV
+                </th>
+                <th scope="col" className="border-b border-border p-4 font-medium text-ink-soft">
+                  Template tools
+                </th>
+                <th scope="col" className="border-b border-border p-4 font-medium text-ink-soft">
+                  Do nothing (SharePoint + Word)
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="odd:bg-surface even:bg-paper">
+                <th scope="row" className="border-b border-border p-4 font-medium text-ink">
+                  Starting point
+                </th>
+                <td className="border-b border-border bg-primary-tint/40 p-4 font-medium text-primary">Reasons from the RFP brief</td>
+                <td className="border-b border-border p-4 text-ink-soft">A CV template</td>
+                <td className="border-b border-border p-4 text-ink-soft">A blank document, every time</td>
+              </tr>
+              <tr className="odd:bg-surface even:bg-paper">
+                <th scope="row" className="border-b border-border p-4 font-medium text-ink">
+                  Pricing
+                </th>
+                <td className="border-b border-border bg-primary-tint/40 p-4 font-medium text-primary">Public, self-serve</td>
+                <td className="border-b border-border p-4 text-ink-soft">Often demo-gated</td>
+                <td className="border-b border-border p-4 text-ink-soft">€0 direct cost</td>
+              </tr>
+              <tr className="odd:bg-surface even:bg-paper">
+                <th scope="row" className="border-b border-border p-4 font-medium text-ink">
+                  Time per CV pack
+                </th>
+                <td className="border-b border-border bg-primary-tint/40 p-4 font-medium text-primary">About 15 minutes</td>
+                <td className="border-b border-border p-4 text-ink-soft">Faster than nothing, still manual</td>
+                <td className="border-b border-border p-4 text-ink-soft">Hours, every time</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section className="border-t border-border bg-surface" id="solutions-by-role">
+        <h2 className="text-3xl font-medium text-ink">Built for your team</h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {ROLE_LINKS.map((role) => (
+            <Link
+              key={role.href}
+              href={role.href}
+              className="rounded-lg border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+            >
+              {role.label}
+            </Link>
+          ))}
+        </div>
+        <h2 className="mt-12 text-3xl font-medium text-ink" id="solutions-by-industry">
+          Built for your firm
+        </h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {INDUSTRY_LINKS.map((industry) => (
+            <Link
+              key={industry.href}
+              href={industry.href}
+              className="rounded-lg border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+            >
+              {industry.label}
+            </Link>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="border-t border-border">
+        <div className="rounded-xl border border-border bg-surface p-8 md:p-10">
+          <div className="flex flex-wrap items-start justify-between gap-6">
+            <div>
+              <h2 className="text-2xl font-medium text-ink">Built on EU trust from day one</h2>
+              <p className="mt-2 max-w-measure text-ink-soft">
+                EU data residency, SSO, DPA templates, and GDPR-by-design data handling throughout.
+              </p>
+            </div>
+            <Link href="/trust" className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft">
+              Visit the Trust Center <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="border-t border-border bg-surface">
+        <TestimonialBlock />
+      </Section>
+
+      <CTASection />
+    </>
   );
 }
