@@ -26,7 +26,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-paper/95 backdrop-blur">
-      <Container className="flex h-16 items-center justify-between gap-6">
+      <div className="mx-auto flex h-16 w-full max-w-[1480px] items-center justify-between gap-6 px-6 lg:px-10">
         <Link href={prefix || "/"} aria-label="MagicCV home">
           <Logo />
         </Link>
@@ -92,7 +92,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
           </NavigationMenu.List>
         </NavigationMenu.Root>
 
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <a
             href={site.appUrl}
             className="whitespace-nowrap text-sm font-medium text-ink-soft transition-colors hover:text-ink"
@@ -116,7 +116,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
-      </Container>
+      </div>
 
       {mobileOpen && (
         <div className="border-t border-border bg-surface xl:hidden">
