@@ -28,7 +28,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
 
   return (
     <div className="rounded-3xl border border-border bg-surface p-6 md:p-8">
-      <h3 className="text-xl font-medium text-ink">{title}</h3>
+      <h2 className="text-xl font-medium text-ink">{title}</h2>
       <p className="mt-2 max-w-measure text-sm text-ink-soft">
         Estimate the hidden hours-per-week cost of manually chasing and reformatting CVs for every proposal.
       </p>
@@ -36,6 +36,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
         <RangeField
           id={`${id}-proposals`}
           label="Proposals per month"
+          unit="proposals per month"
           value={proposalsPerMonth}
           min={1}
           max={40}
@@ -44,6 +45,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
         <RangeField
           id={`${id}-hours`}
           label="Hours per CV pack"
+          unit="hours"
           value={hoursPerPack}
           min={0.5}
           max={12}
@@ -53,6 +55,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
         <RangeField
           id={`${id}-rate`}
           label="Hourly cost (USD)"
+          unit="US dollars per hour"
           value={hourlyCost}
           min={20}
           max={200}
@@ -60,7 +63,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
           onChange={setHourlyCost}
         />
       </div>
-      <div className="mt-8 grid gap-6 border-t border-border pt-6 sm:grid-cols-3">
+      <div className="mt-8 grid gap-6 border-t border-border pt-6 sm:grid-cols-3" aria-live="polite">
         <Output label="Monthly hidden cost" value={currency.format(monthlyCost)} />
         <Output label="Annual hidden cost" value={currency.format(annualCost)} />
         <Output
@@ -80,6 +83,7 @@ function RangeField({
   min,
   max,
   step = 1,
+  unit,
   onChange,
 }: {
   id: string;
@@ -88,6 +92,7 @@ function RangeField({
   min: number;
   max: number;
   step?: number;
+  unit?: string;
   onChange: (value: number) => void;
 }) {
   return (
@@ -109,6 +114,7 @@ function RangeField({
         max={max}
         step={step}
         value={value}
+        aria-valuetext={unit ? `${value} ${unit}` : undefined}
         onChange={(e) => onChange(Number(e.target.value))}
         className="mt-1 w-full accent-primary"
       />

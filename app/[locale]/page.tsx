@@ -126,12 +126,12 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
             {t.vsSeeAll} <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-border">
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-border" tabIndex={0} role="region" aria-label="MagicCV comparison">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-surface">
                 <th scope="col" className="border-b border-border p-4 font-medium text-muted">
-                  &nbsp;
+                  <span className="sr-only">Category</span>
                 </th>
                 <th scope="col" className="border-b border-border bg-primary-tint p-4 font-semibold text-primary">
                   {t.vsCols.magiccv}

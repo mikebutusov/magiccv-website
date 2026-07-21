@@ -29,7 +29,7 @@ export default function PricingPage() {
 
       <Section className="border-t border-border bg-surface">
         <h2 className="text-2xl font-medium text-ink">Compare every feature by plan</h2>
-        <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
+        <div className="mt-6 overflow-x-auto rounded-2xl border border-border" tabIndex={0} role="region" aria-label="Plan comparison">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-paper">

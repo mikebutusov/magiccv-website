@@ -11,7 +11,9 @@ export function BrowserFrame({
   children: React.ReactNode;
 }) {
   return (
+    // Decorative product illustration - hidden from assistive tech.
     <div
+      aria-hidden="true"
       className={clsx(
         "overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_20px_60px_-24px_rgba(26,27,46,0.35)]",
         className,

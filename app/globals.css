@@ -10,7 +10,7 @@
 :root {
   --color-ink: #1a1b2e;
   --color-ink-soft: #444664;
-  --color-muted: #6c6e88;
+  --color-muted: #5f6180;
   --color-paper: #f6f7fb;
   --color-surface: #ffffff;
   --color-border: #e7e7f1;
@@ -22,6 +22,7 @@
   --color-accent-tint: #eeebfc;
   /* Sparingly used product accent (matches the CV template "ABOUT ME" pink). */
   --color-pop: #e6447e;
+  --color-pop-ink: #c2255c;
 }
 
 @theme inline {
@@ -41,6 +42,7 @@
   --color-accent-soft: var(--color-accent-soft);
   --color-accent-tint: var(--color-accent-tint);
   --color-pop: var(--color-pop);
+  --color-pop-ink: var(--color-pop-ink);
   /* legacy alias kept so any lingering references resolve to lavender */
   --color-lime: var(--color-primary-tint);
   --color-lime-ink: var(--color-primary);
@@ -97,6 +99,22 @@ h4 {
   outline-offset: 2px;
 }
 
+/* 16px prevents iOS Safari zoom-on-focus; keep the site-standard focus outline. */
 .form-input {
-  @apply w-full rounded-lg border border-border bg-surface px-3.5 py-2.5 text-sm text-ink placeholder:text-muted focus:border-primary focus:outline-none;
+  @apply w-full rounded-lg border border-border bg-surface px-3.5 py-2.5 text-base text-ink placeholder:text-muted focus:border-primary;
+}
+
+.skip-link {
+  @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary focus:shadow-lg;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

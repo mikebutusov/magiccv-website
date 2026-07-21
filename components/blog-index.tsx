@@ -19,13 +19,12 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter posts by category">
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter posts by category">
         {["All", ...BLOG_CATEGORIES].map((cat) => (
           <button
             key={cat}
             type="button"
-            role="tab"
-            aria-selected={category === cat}
+            aria-pressed={category === cat}
             onClick={() => setCategory(cat)}
             className={clsx(
               "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
@@ -38,6 +37,10 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
           </button>
         ))}
       </div>
+
+      <p className="sr-only" aria-live="polite">
+        {filtered.length} {filtered.length === 1 ? "post" : "posts"}
+      </p>
 
       {filtered.length === 0 ? (
         <p className="mt-10 text-ink-soft">No posts in this category yet.</p>

@@ -8,7 +8,7 @@ export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
-    return <p className="text-sm text-primary">Thanks - check your inbox to confirm.</p>;
+    return <p role="status" className="text-sm text-primary">Thanks - check your inbox to confirm.</p>;
   }
 
   return (

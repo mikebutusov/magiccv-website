@@ -22,7 +22,7 @@ export function FeatureRow({
       )}
     >
       <div>
-        <h3 className="text-2xl font-medium text-ink">{item.title}</h3>
+        <h2 className="text-2xl font-medium text-ink">{item.title}</h2>
         <p className="mt-4 max-w-measure text-ink-soft">{item.body}</p>
       </div>
       {visual ?? <GenericUiShot variant={variant} />}

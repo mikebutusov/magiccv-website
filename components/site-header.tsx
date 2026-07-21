@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -12,6 +12,20 @@ import { dictionaries, localePrefix, type AnyLocale } from "@/lib/i18n";
 
 export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [mobileOpen]);
+
   const dict = locale === "en" ? null : dictionaries[locale];
   const prefix = localePrefix(locale);
   const lx = (href: string) => (href === "/blog" || !href.startsWith("/") ? href : `${prefix}${href}`);
@@ -108,10 +122,12 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
         </div>
 
         <button
+          ref={menuButtonRef}
           type="button"
-          className="xl:hidden"
+          className="-m-2 p-2 xl:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
           onClick={() => setMobileOpen((v) => !v)}
         >
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -119,7 +135,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-surface xl:hidden">
+        <div id="mobile-menu" className="border-t border-border bg-surface xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {primaryNav.map((section) => (
               <div key={section.label} className="py-2">
@@ -127,7 +143,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
                 {section.groups.map((group) => (
                   <div key={group.heading} className="mt-1">
                     {section.groups.length > 1 && (
-                      <p className="mt-2 px-2 text-xs font-medium text-muted/70">{group.heading}</p>
+                      <p className="mt-2 px-2 text-xs font-medium text-muted">{group.heading}</p>
                     )}
                     {group.items.map((item) => (
                       <Link

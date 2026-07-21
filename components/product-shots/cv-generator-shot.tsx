@@ -39,7 +39,7 @@ export function CvGeneratorShot() {
             <p className="mt-4 text-lg font-bold text-ink">Maksym V.</p>
             <p className="text-[11px] text-muted">Senior Full Stack Developer</p>
             <div className="mt-4 border-t border-border pt-3">
-              <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop)]">ABOUT ME</p>
+              <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop-ink)]">ABOUT ME</p>
               <div className="mt-1.5 space-y-1">
                 <span className="block h-1.5 w-full rounded bg-paper" />
                 <span className="block h-1.5 w-[92%] rounded bg-paper" />
@@ -47,7 +47,7 @@ export function CvGeneratorShot() {
               </div>
             </div>
             <div className="mt-3">
-              <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop)]">QUALIFICATIONS</p>
+              <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop-ink)]">QUALIFICATIONS</p>
               <div className="mt-1.5 grid grid-cols-2 gap-1.5">
                 {["ReactJS, Next.js", "Node, Golang", "AWS, Docker", "GraphQL, REST"].map((t) => (
                   <div key={t} className="flex items-center gap-1">

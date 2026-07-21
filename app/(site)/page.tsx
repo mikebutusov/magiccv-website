@@ -147,7 +147,7 @@ export default function HomePage() {
               <cap.icon className="h-6 w-6 text-primary" aria-hidden />
               <p className="font-medium text-ink">{cap.title}</p>
               <p className="text-sm text-ink-soft">{cap.body}</p>
-              <span className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
+              <span className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
                 Learn more <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
               </span>
             </Link>
@@ -181,12 +181,12 @@ export default function HomePage() {
             See all comparisons <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-border">
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-border" tabIndex={0} role="region" aria-label="Comparison of MagicCV with alternatives">
           <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-surface">
                 <th scope="col" className="border-b border-border p-4 font-medium text-muted">
-                  &nbsp;
+                  <span className="sr-only">Category</span>
                 </th>
                 <th scope="col" className="border-b border-border bg-primary-tint p-4 font-semibold text-primary">
                   MagicCV

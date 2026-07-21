@@ -42,7 +42,7 @@ export function PricingTable({
               {strings.mostPopular}
             </span>
           )}
-          <h3 className="text-lg font-medium text-ink">{tier.name}</h3>
+          <h2 className="text-lg font-medium text-ink">{tier.name}</h2>
           <p className="mt-1 text-xs text-muted">{tier.limits}</p>
           <div className="mt-4">
             {tier.priceMonthly === null ? (

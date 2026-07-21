@@ -40,7 +40,7 @@ export function CvPreviewShot({ variant = "default" }: { variant?: "default" | "
             </div>
           </div>
           <div className="mt-5 border-t border-border pt-3">
-            <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop)]">
+            <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop-ink)]">
               {variant === "multilingual" ? "ÜBER MICH" : "ABOUT ME"}
             </p>
             <div className="mt-2 space-y-1.5">
@@ -50,7 +50,7 @@ export function CvPreviewShot({ variant = "default" }: { variant?: "default" | "
             </div>
           </div>
           <div className="mt-4">
-            <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop)]">
+            <p className="text-[10px] font-bold tracking-wide text-[var(--color-pop-ink)]">
               {variant === "multilingual" ? "QUALIFIKATIONEN" : "QUALIFICATIONS"}
             </p>
             <div className="mt-2 grid grid-cols-2 gap-1.5">

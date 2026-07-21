@@ -22,7 +22,7 @@ export function LogoWall({ label = "Trusted by European consulting teams" }: { l
         {SAMPLE_FIRMS.map((firm) => (
           <div
             key={firm}
-            className="flex h-10 items-center justify-center text-center text-sm font-semibold tracking-tight text-ink/45"
+            className="flex h-10 items-center justify-center text-center text-sm font-semibold tracking-tight text-muted"
           >
             {firm}
           </div>
