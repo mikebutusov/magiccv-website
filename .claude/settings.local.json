@@ -8,7 +8,10 @@
       "Bash(bash)",
       "Read(//usr/local/**)",
       "Bash(touch /usr/local/bin/.write_test)",
-      "Bash(rm /usr/local/bin/.write_test)"
+      "Bash(rm /usr/local/bin/.write_test)",
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(git push *)"
     ]
   }
 }

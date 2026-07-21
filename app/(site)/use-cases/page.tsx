@@ -4,31 +4,34 @@ import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
-import { features } from "@/lib/content/features";
+import { getUseCases } from "@/lib/data";
+
+export const revalidate = 60;
 
 export const metadata = buildMetadata({
-  title: "MagicCV Features",
-  description: "Everything you need to make CVs win work: RFP-to-CV reasoning, brand templates, anonymization, multilingual, and centralized profiles.",
-  path: "/features",
+  title: "MagicCV Use Cases",
+  description: "Whatever the job-to-be-done -- tailoring, packing, centralizing, anonymizing, or translating CVs -- see exactly how MagicCV does it.",
+  path: "/use-cases",
 });
 
-export default function FeaturesHubPage() {
+export default async function UseCasesHubPage() {
+  const useCases = await getUseCases();
   return (
     <>
       <Section>
-        <h1 className="text-4xl font-medium text-ink md:text-5xl">Everything you need to make CVs win work.</h1>
+        <h1 className="text-4xl font-medium text-ink md:text-5xl">Whatever you need to do with a CV, MagicCV does it.</h1>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">
-          Five capabilities, one workflow -- from reading the brief to a submission-ready, on-brand CV pack.
+          Five jobs-to-be-done, each with the same underlying reasoning and profile data.
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
-          {features.map((feature) => (
+          {useCases.map((useCase) => (
             <Link
-              key={feature.slug}
-              href={`/features/${feature.slug}`}
+              key={useCase.slug}
+              href={`/use-cases/${useCase.slug}`}
               className="group flex flex-col rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/40"
             >
-              <p className="text-lg font-medium text-ink">{feature.name}</p>
-              <p className="mt-2 text-sm text-ink-soft">{feature.sub}</p>
+              <p className="text-lg font-medium text-ink">{useCase.h1}</p>
+              <p className="mt-2 text-sm text-ink-soft">{useCase.job}</p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 transition-opacity group-hover:opacity-100">
                 Learn more <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
               </span>
@@ -39,11 +42,10 @@ export default function FeaturesHubPage() {
 
       <Section className="border-t border-border bg-surface">
         <RelatedLinks
-          title="Explore use cases"
+          title="Explore features"
           links={[
-            { label: "Tailor CVs to every RFP", href: "/use-cases/tailor-cvs" },
-            { label: "Build a proposal-ready CV pack", href: "/use-cases/proposal-cv-pack" },
-            { label: "All use cases", href: "/use-cases" },
+            { label: "RFP-to-CV reasoning", href: "/features/rfp-to-cv" },
+            { label: "All features", href: "/features" },
           ]}
         />
       </Section>

@@ -2,8 +2,10 @@ import { BlogIndex } from "@/components/blog-index";
 import { NewsletterSignup } from "@/components/newsletter-signup";
 import { RelatedLinks } from "@/components/related-links";
 import { Section } from "@/components/ui/container";
-import { getAllPosts } from "@/lib/blog";
+import { getBlogPosts } from "@/lib/data-blog";
 import { buildMetadata } from "@/lib/seo";
+
+export const revalidate = 60;
 
 export const metadata = buildMetadata({
   title: "Blog -- Consulting proposals, CVs & bid management",
@@ -12,8 +14,8 @@ export const metadata = buildMetadata({
   path: "/blog",
 });
 
-export default function BlogIndexPage() {
-  const posts = getAllPosts();
+export default async function BlogIndexPage() {
+  const posts = await getBlogPosts();
 
   return (
     <>

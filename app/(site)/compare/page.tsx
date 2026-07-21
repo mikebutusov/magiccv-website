@@ -4,7 +4,9 @@ import { ComparisonTable } from "@/components/comparison-table";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
-import { comparisons } from "@/lib/content/comparisons";
+import { getComparisons } from "@/lib/data";
+
+export const revalidate = 60;
 
 export const metadata = buildMetadata({
   title: "MagicCV vs alternatives -- honest comparisons",
@@ -19,7 +21,8 @@ const SUMMARY_ROWS = [
   { category: "EU multilingual & anonymization", magiccv: "Built in", competitor: "Varies by vendor" },
 ];
 
-export default function CompareHubPage() {
+export default async function CompareHubPage() {
+  const comparisons = await getComparisons();
   return (
     <>
       <Section>

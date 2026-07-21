@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ComparePageTemplate } from "@/components/templates/compare-page-template";
-import { comparisons, getComparison } from "@/lib/content/comparisons";
+import { getComparison, getComparisons } from "@/lib/data";
 import { buildMetadata } from "@/lib/seo";
 
+export const revalidate = 60;
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
+  const comparisons = await getComparisons();
   return comparisons.map((c) => ({ slug: c.slug }));
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -16,14 +18,14 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const comparison = getComparison(slug);
+  const comparison = await getComparison(slug);
   if (!comparison) return {};
   return buildMetadata({ ...comparison.seo, path: `/compare/${slug}` });
 }
 
 export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const comparison = getComparison(slug);
+  const comparison = await getComparison(slug);
   if (!comparison) notFound();
   return <ComparePageTemplate comparison={comparison} />;
 }

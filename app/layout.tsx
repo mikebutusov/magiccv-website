@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Sans } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import { JsonLd, organizationJsonLd, softwareApplicationJsonLd } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -31,13 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${instrument.variable} h-full`}>
-      <body className="flex min-h-full flex-col antialiased">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <JsonLd data={organizationJsonLd()} />
-        <JsonLd data={softwareApplicationJsonLd()} />
-      </body>
+      <body className="flex min-h-full flex-col antialiased">{children}</body>
     </html>
   );
 }

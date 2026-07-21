@@ -8,9 +8,13 @@ import { TrialCTA } from "@/components/trial-cta";
 import { NewsletterSignup } from "@/components/newsletter-signup";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
+import { PortableTextBody } from "@/components/portable-text-body";
 import { Section } from "@/components/ui/container";
-import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { getBlogPost, getBlogPosts } from "@/lib/data-blog";
 import { articleJsonLd, buildMetadata, JsonLd } from "@/lib/seo";
+
+export const revalidate = 60;
+export const dynamicParams = true;
 
 const TRIAL_MARKER = "{/* TRIAL_CTA */}";
 
@@ -35,10 +39,9 @@ const mdxComponents = {
 };
 
 export async function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }));
+  const posts = await getBlogPosts();
+  return posts.map((post) => ({ slug: post.slug }));
 }
-
-export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
@@ -46,7 +49,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getBlogPost(slug);
   if (!post) return {};
   return buildMetadata({
     title: post.frontmatter.title,
@@ -58,15 +61,17 @@ export async function generateMetadata({
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getBlogPost(slug);
   if (!post) notFound();
 
-  const allPosts = getAllPosts();
-  const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
+  const related = (await getBlogPosts()).filter((p) => p.slug !== slug).slice(0, 3);
 
-  const [beforeCta, afterCta] = post.content.includes(TRIAL_MARKER)
-    ? post.content.split(TRIAL_MARKER)
-    : [post.content, ""];
+  // Local MDX posts split on an inline marker to place the TrialCTA; Sanity
+  // posts embed a trialCta block in portable text instead.
+  const [beforeCta, afterCta] =
+    post.source === "local" && post.content.includes(TRIAL_MARKER)
+      ? post.content.split(TRIAL_MARKER)
+      : [post.source === "local" ? post.content : "", ""];
 
   return (
     <>
@@ -91,25 +96,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </div>
 
           <div className="mt-8">
-            <MDXRemote
-              source={beforeCta}
-              components={mdxComponents}
-              options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
-            />
+            {post.source === "sanity" ? (
+              <PortableTextBody value={post.body} />
+            ) : (
+              <>
+                <MDXRemote
+                  source={beforeCta}
+                  components={mdxComponents}
+                  options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
+                />
+                {afterCta && (
+                  <>
+                    <div className="my-8">
+                      <TrialCTA />
+                    </div>
+                    <MDXRemote
+                      source={afterCta}
+                      components={mdxComponents}
+                      options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
+                    />
+                  </>
+                )}
+              </>
+            )}
           </div>
-
-          {afterCta && (
-            <>
-              <div className="my-8">
-                <TrialCTA />
-              </div>
-              <MDXRemote
-                source={afterCta}
-                components={mdxComponents}
-                options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [rehypeSlug] } }}
-              />
-            </>
-          )}
 
           <div className="mt-12 rounded-2xl border border-border bg-surface p-5 text-sm text-ink-soft">
             Written by <span className="font-medium text-ink">{post.frontmatter.author}</span> at MagicCV.

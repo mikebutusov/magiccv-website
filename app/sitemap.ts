@@ -1,20 +1,11 @@
 import type { MetadataRoute } from "next";
-import fs from "node:fs";
-import path from "node:path";
 import { site } from "@/lib/site";
-import { features } from "@/lib/content/features";
-import { useCases } from "@/lib/content/use-cases";
-import { roles } from "@/lib/content/roles";
-import { industries } from "@/lib/content/industries";
-import { comparisons } from "@/lib/content/comparisons";
+import { getFeatures, getUseCases, getRoles, getIndustries, getComparisons } from "@/lib/data";
+import { getBlogPosts } from "@/lib/data-blog";
 
-function blogSlugs(): string[] {
-  const dir = path.join(process.cwd(), "content", "blog");
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir).filter((f) => f.endsWith(".mdx")).map((f) => f.replace(/\.mdx$/, ""));
-}
+export const revalidate = 60;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     "",
     "/pricing",
@@ -30,8 +21,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/legal/terms",
   ];
 
+  const [features, useCases, roles, industries, comparisons, posts] = await Promise.all([
+    getFeatures(),
+    getUseCases(),
+    getRoles(),
+    getIndustries(),
+    getComparisons(),
+    getBlogPosts(),
+  ]);
+
   const dynamicRoutes = [
-    ...blogSlugs().map((slug) => `/blog/${slug}`),
+    ...posts.map((p) => `/blog/${p.slug}`),
     ...features.map((f) => `/features/${f.slug}`),
     ...useCases.map((u) => `/use-cases/${u.slug}`),
     ...roles.map((r) => `/solutions/${r.slug}`),
