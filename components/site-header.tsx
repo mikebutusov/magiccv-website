@@ -6,6 +6,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { Logo } from "@/components/ui/logo";
 import { primaryNav } from "@/lib/site";
 
 export function SiteHeader() {
@@ -14,8 +15,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-paper/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Link href="/" className="font-display text-xl font-medium text-ink">
-          MagicCV
+        <Link href="/" aria-label="MagicCV home">
+          <Logo />
         </Link>
 
         <NavigationMenu.Root className="relative hidden lg:block" delayDuration={100}>

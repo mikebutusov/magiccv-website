@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { NewsletterSignup } from "@/components/newsletter-signup";
+import { Logo } from "@/components/ui/logo";
 import { footerNav, site } from "@/lib/site";
 
 const columns: { title: string; items: readonly { label: string; href: string }[] }[] = [
@@ -19,8 +20,8 @@ export function SiteFooter() {
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_repeat(6,1fr)]">
           <div>
-            <Link href="/" className="font-display text-xl font-medium text-ink">
-              {site.name}
+            <Link href="/" aria-label="MagicCV home">
+              <Logo />
             </Link>
             <p className="mt-3 max-w-[32ch] text-sm text-ink-soft">{site.description}</p>
             <div className="mt-4 flex items-center gap-2 text-xs font-medium text-primary">
