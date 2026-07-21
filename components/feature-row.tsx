@@ -3,7 +3,15 @@ import { Container } from "@/components/ui/container";
 import { PlaceholderBlock } from "@/components/ui/placeholder-block";
 import type { FeatureRowItem } from "@/lib/content/types";
 
-export function FeatureRow({ item, reverse = false }: { item: FeatureRowItem; reverse?: boolean }) {
+export function FeatureRow({
+  item,
+  reverse = false,
+  visual,
+}: {
+  item: FeatureRowItem;
+  reverse?: boolean;
+  visual?: React.ReactNode;
+}) {
   return (
     <div
       className={clsx(
@@ -15,7 +23,7 @@ export function FeatureRow({ item, reverse = false }: { item: FeatureRowItem; re
         <h3 className="text-2xl font-medium text-ink">{item.title}</h3>
         <p className="mt-4 max-w-measure text-ink-soft">{item.body}</p>
       </div>
-      <PlaceholderBlock label={`{{SCREENSHOT: ${item.screenshotAlt}}}`} />
+      {visual ?? <PlaceholderBlock label={`{{SCREENSHOT: ${item.screenshotAlt}}}`} />}
     </div>
   );
 }

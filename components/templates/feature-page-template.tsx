@@ -8,7 +8,16 @@ import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { PlaceholderBlock } from "@/components/ui/placeholder-block";
+import { CvGeneratorShot } from "@/components/product-shots/cv-generator-shot";
+import { CvListShot } from "@/components/product-shots/cv-list-shot";
 import type { FeaturePage } from "@/lib/content/types";
+
+// Wire the most fitting product mockup into each feature's hero.
+const FEATURE_VISUALS: Record<string, React.ReactNode> = {
+  "rfp-to-cv": <CvGeneratorShot />,
+  "brand-templates": <CvGeneratorShot />,
+  "profiles-skills": <CvListShot />,
+};
 
 export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
   return (
@@ -20,7 +29,12 @@ export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
         ]}
       />
 
-      <Hero h1={feature.h1} sub={feature.sub} visualAlt={`${feature.name} overview`} />
+      <Hero
+        h1={feature.h1}
+        sub={feature.sub}
+        visualAlt={`${feature.name} overview`}
+        visual={FEATURE_VISUALS[feature.slug]}
+      />
 
       <Section>
         <h2 className="text-2xl font-medium text-ink">What it does</h2>

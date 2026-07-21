@@ -2,8 +2,11 @@ import Link from "next/link";
 import { ArrowUpRight, FileText, Globe2, Layers, ShieldCheck, Sparkles } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { LogoWall } from "@/components/logo-wall";
-import { FeatureRowList } from "@/components/feature-row";
+import { FeatureRow } from "@/components/feature-row";
 import { ROICalculator } from "@/components/roi-calculator";
+import { CvGeneratorShot } from "@/components/product-shots/cv-generator-shot";
+import { CvListShot } from "@/components/product-shots/cv-list-shot";
+import { ImportShot } from "@/components/product-shots/import-shot";
 import { TestimonialBlock } from "@/components/testimonial-block";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
@@ -89,7 +92,7 @@ export default function HomePage() {
         eyebrow="AI-native CV Management for consulting firms"
         h1="Win more proposals. Faster."
         sub="MagicCV turns any RFP into the right consultants and tailored, on-brand CVs -- in any language, in minutes."
-        visualAlt="RFP-to-CV generation"
+        visual={<CvGeneratorShot />}
         stats={[
           { value: "1 day → 15 min", label: "per CV pack", isPlaceholder: true },
           { value: "5+", label: "EU languages" },
@@ -114,7 +117,11 @@ export default function HomePage() {
 
       <Section className="border-t border-border bg-surface">
         <h2 className="text-3xl font-medium text-ink">How it works</h2>
-        <FeatureRowList items={HOW_IT_WORKS} />
+        <div className="divide-y divide-border">
+          <FeatureRow item={HOW_IT_WORKS[0]} visual={<ImportShot />} />
+          <FeatureRow item={HOW_IT_WORKS[1]} reverse visual={<CvListShot />} />
+          <FeatureRow item={HOW_IT_WORKS[2]} visual={<CvGeneratorShot />} />
+        </div>
       </Section>
 
       <Section className="border-t border-border" id="capabilities">

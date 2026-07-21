@@ -12,7 +12,7 @@ export function StatStrip({ stats, inverse = false }: { stats: StatItem[]; inver
           <p
             className={clsx(
               "font-display text-3xl font-semibold md:text-4xl",
-              inverse ? "text-lime" : "text-primary",
+              inverse ? "text-white" : "text-primary",
             )}
           >
             <PlaceholderText text={stat.value} />
