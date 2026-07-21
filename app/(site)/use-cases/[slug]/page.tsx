@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { UseCasePageTemplate } from "@/components/templates/use-case-page-template";
 import { getUseCase, getUseCases } from "@/lib/data";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export const revalidate = 60;
@@ -20,7 +21,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const useCase = await getUseCase(slug);
   if (!useCase) return {};
-  return buildMetadata({ ...useCase.seo, path: `/use-cases/${slug}` });
+  return buildMetadata({ ...useCase.seo, path: `/use-cases/${slug}`, languages: languagesFor(`/use-cases/${slug}`) });
 }
 
 export default async function UseCaseDetailPage({ params }: { params: Promise<{ slug: string }> }) {

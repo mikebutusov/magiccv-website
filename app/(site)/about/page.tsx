@@ -3,12 +3,14 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { Avatar } from "@/components/product-shots/browser-frame";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "About MagicCV",
   description: "Why we built MagicCV, and what an AI-native, EU-native proposal-readiness platform means for mid-market consulting firms.",
   path: "/about",
+  languages: languagesFor("/about"),
 });
 
 export default function AboutPage() {

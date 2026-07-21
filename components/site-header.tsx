@@ -14,6 +14,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const dict = locale === "en" ? null : dictionaries[locale];
   const prefix = localePrefix(locale);
+  const lx = (href: string) => (href === "/blog" || !href.startsWith("/") ? href : `${prefix}${href}`);
   const t = {
     top: (label: string) => dict?.nav.top[label] ?? label,
     pricing: dict?.nav.pricing ?? "Pricing",
@@ -53,7 +54,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
                             <li key={item.href}>
                               <NavigationMenu.Link asChild>
                                 <Link
-                                  href={item.href}
+                                  href={lx(item.href)}
                                   className="block rounded px-2 py-1.5 text-sm text-ink-soft hover:bg-primary-tint hover:text-primary"
                                 >
                                   {item.label}
@@ -131,7 +132,7 @@ export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
                     {group.items.map((item) => (
                       <Link
                         key={item.href}
-                        href={item.href}
+                        href={lx(item.href)}
                         className="block rounded px-2 py-2 text-sm text-ink-soft hover:bg-primary-tint hover:text-primary"
                         onClick={() => setMobileOpen(false)}
                       >

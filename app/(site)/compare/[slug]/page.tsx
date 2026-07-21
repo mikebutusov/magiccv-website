@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ComparePageTemplate } from "@/components/templates/compare-page-template";
 import { getComparison, getComparisons } from "@/lib/data";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export const revalidate = 60;
@@ -20,7 +21,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const comparison = await getComparison(slug);
   if (!comparison) return {};
-  return buildMetadata({ ...comparison.seo, path: `/compare/${slug}` });
+  return buildMetadata({ ...comparison.seo, path: `/compare/${slug}`, languages: languagesFor(`/compare/${slug}`) });
 }
 
 export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {

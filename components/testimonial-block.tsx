@@ -46,8 +46,22 @@ function pick(context: string) {
   return SAMPLE_TESTIMONIALS[sum % SAMPLE_TESTIMONIALS.length];
 }
 
-export function TestimonialBlock({ context = "default" }: { context?: string }) {
-  const t = pick(context);
+export interface TestimonialOverride {
+  quote: string;
+  name: string;
+  role: string;
+  firm: string;
+  initials: string;
+}
+
+export function TestimonialBlock({
+  context = "default",
+  override,
+}: {
+  context?: string;
+  override?: TestimonialOverride;
+}) {
+  const t = override ?? pick(context);
   return (
     <Container>
       <figure className="rounded-3xl border border-border bg-surface p-8 md:p-10">

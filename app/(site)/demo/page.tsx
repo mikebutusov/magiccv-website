@@ -3,12 +3,14 @@ import Link from "next/link";
 import { DemoForm } from "@/components/demo-form";
 import { TestimonialBlock } from "@/components/testimonial-block";
 import { Section } from "@/components/ui/container";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Book a MagicCV demo",
   description: "See MagicCV on your own consultants and scenario - from messy CVs to an on-brand pack. 30 minutes, no slides.",
   path: "/demo",
+  languages: languagesFor("/demo"),
 });
 
 const EXPECTATIONS = [

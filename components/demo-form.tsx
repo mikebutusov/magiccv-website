@@ -1,27 +1,47 @@
 "use client";
 
 import { useId, useState } from "react";
-import Link from "next/link";
+import { site } from "@/lib/site";
+import type { DemoFormStrings } from "@/lib/i18n-pages";
 
-const ROLE_OPTIONS = ["Bid/Proposal Manager", "Head of Ops/COO", "Managing Partner", "IT/Security", "Other"];
+const EN_STRINGS: DemoFormStrings = {
+  fullName: "Full name",
+  workEmail: "Work email",
+  company: "Company",
+  role: "Role",
+  selectRole: "Select a role",
+  roleOptions: ["Bid/Proposal Manager", "Head of Ops/COO", "Managing Partner", "IT/Security", "Other"],
+  firmSize: "Firm size",
+  selectFirmSize: "Select firm size",
+  employees: "employees",
+  useCaseLegend: "Primary use case",
+  useCaseOptions: [
+    "Tailor CVs to every brief",
+    "Build a proposal-ready CV pack",
+    "Centralize & standardize CVs",
+    "Anonymize CVs",
+    "Translate CVs into any language",
+  ],
+  message: "Message (optional)",
+  submit: "Submit demo request",
+  thanksTitle: "Thanks - we'll be in touch shortly.",
+  thanksPre: "Prefer not to wait? You can also ",
+  thanksLink: "get started free",
+  thanksPost: " right now.",
+};
+
 const FIRM_SIZE_OPTIONS = ["10-25", "25-100", "100-250", "250+"];
-const USE_CASE_OPTIONS = [
-  "Tailor CVs to every brief",
-  "Build a proposal-ready CV pack",
-  "Centralize & standardize CVs",
-  "Anonymize CVs",
-  "Translate CVs into any language",
-];
 
 /**
  * UI + client-side validation only. Submission is a local no-op until a
  * CRM (HubSpot/Attio) is wired up - see PRD §2.1. Swapping in a real
  * POST is a one-function change (see handleSubmit below).
  */
-export function DemoForm() {
+export function DemoForm({ strings = EN_STRINGS }: { strings?: DemoFormStrings }) {
   const formId = useId();
   const [submitted, setSubmitted] = useState(false);
   const [useCases, setUseCases] = useState<string[]>([]);
+  const s = strings;
 
   function toggleUseCase(value: string) {
     setUseCases((prev) => (prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]));
@@ -36,13 +56,13 @@ export function DemoForm() {
   if (submitted) {
     return (
       <div className="rounded-2xl border border-border bg-surface p-8 text-center" role="status">
-        <h3 className="text-xl font-medium text-ink">Thanks - we&rsquo;ll be in touch shortly.</h3>
+        <h3 className="text-xl font-medium text-ink">{s.thanksTitle}</h3>
         <p className="mt-2 text-ink-soft">
-          Prefer not to wait? You can also{" "}
-          <Link href="/demo" className="text-primary underline underline-offset-4">
-            start a free trial
-          </Link>{" "}
-          right now.
+          {s.thanksPre}
+          <a href={site.signUpUrl} className="text-primary underline underline-offset-4">
+            {s.thanksLink}
+          </a>
+          {s.thanksPost}
         </p>
       </div>
     );
@@ -51,23 +71,23 @@ export function DemoForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5 rounded-2xl border border-border bg-surface p-6 md:p-8">
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Full name" htmlFor={`${formId}-name`}>
+        <Field label={s.fullName} htmlFor={`${formId}-name`}>
           <input id={`${formId}-name`} name="name" type="text" required className="form-input" />
         </Field>
-        <Field label="Work email" htmlFor={`${formId}-email`}>
+        <Field label={s.workEmail} htmlFor={`${formId}-email`}>
           <input id={`${formId}-email`} name="email" type="email" required className="form-input" />
         </Field>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label="Company" htmlFor={`${formId}-company`}>
+        <Field label={s.company} htmlFor={`${formId}-company`}>
           <input id={`${formId}-company`} name="company" type="text" required className="form-input" />
         </Field>
-        <Field label="Role" htmlFor={`${formId}-role`}>
+        <Field label={s.role} htmlFor={`${formId}-role`}>
           <select id={`${formId}-role`} name="role" required className="form-input" defaultValue="">
             <option value="" disabled>
-              Select a role
+              {s.selectRole}
             </option>
-            {ROLE_OPTIONS.map((role) => (
+            {s.roleOptions.map((role) => (
               <option key={role} value={role}>
                 {role}
               </option>
@@ -75,22 +95,22 @@ export function DemoForm() {
           </select>
         </Field>
       </div>
-      <Field label="Firm size" htmlFor={`${formId}-firm-size`}>
+      <Field label={s.firmSize} htmlFor={`${formId}-firm-size`}>
         <select id={`${formId}-firm-size`} name="firmSize" required className="form-input" defaultValue="">
           <option value="" disabled>
-            Select firm size
+            {s.selectFirmSize}
           </option>
           {FIRM_SIZE_OPTIONS.map((size) => (
             <option key={size} value={size}>
-              {size} employees
+              {size} {s.employees}
             </option>
           ))}
         </select>
       </Field>
       <fieldset>
-        <legend className="mb-2 text-sm font-medium text-ink">Primary use case</legend>
+        <legend className="mb-2 text-sm font-medium text-ink">{s.useCaseLegend}</legend>
         <div className="grid gap-2 sm:grid-cols-2">
-          {USE_CASE_OPTIONS.map((useCase) => (
+          {s.useCaseOptions.map((useCase) => (
             <label key={useCase} className="flex items-center gap-2 text-sm text-ink-soft">
               <input
                 type="checkbox"
@@ -105,14 +125,14 @@ export function DemoForm() {
           ))}
         </div>
       </fieldset>
-      <Field label="Message (optional)" htmlFor={`${formId}-message`}>
+      <Field label={s.message} htmlFor={`${formId}-message`}>
         <textarea id={`${formId}-message`} name="message" rows={3} className="form-input" />
       </Field>
       <button
         type="submit"
         className="w-full rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
-        Submit demo request
+        {s.submit}
       </button>
     </form>
   );

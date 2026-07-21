@@ -9,18 +9,21 @@ import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { heroShotFor } from "@/components/product-shots/hero-shot";
 import type { IndustryPage } from "@/lib/content/types";
+import type { AnyLocale } from "@/lib/i18n";
+import { templateCtx } from "@/lib/template-locale";
 
-export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
+export function IndustryPageTemplate({ industry, locale = "en" }: { industry: IndustryPage; locale?: AnyLocale }) {
+  const ctx = templateCtx(locale);
   return (
     <>
       <Breadcrumbs
         items={[
-          { label: "Solutions", href: "/#solutions-by-industry" },
-          { label: industry.h1, href: `/solutions/${industry.slug}` },
+          { label: ctx.tpl.breadcrumbSolutions, href: ctx.px("/#solutions-by-industry") },
+          { label: industry.h1, href: ctx.px(`/solutions/${industry.slug}`) },
         ]}
       />
 
-      <Hero h1={industry.h1} sub={industry.sub} visual={heroShotFor("industry", industry.slug)} />
+      <Hero h1={industry.h1} sub={industry.sub} visual={heroShotFor("industry", industry.slug)} {...ctx.heroCtas} />
 
       <Section>
         <p className="max-w-measure text-lg text-ink-soft">{industry.angle}</p>
@@ -44,18 +47,21 @@ export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
       )}
 
       <Section className="border-t border-border">
-        <TestimonialBlock context={industry.seo.title.replace(/^MagicCV for /, "")} />
+        <TestimonialBlock context={industry.seo.title.replace(/^MagicCV for /, "")} override={ctx.testimonial} />
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <FAQAccordion faqs={industry.faqs} />
+        <FAQAccordion faqs={industry.faqs} title={ctx.tpl.faqTitle} />
       </Section>
 
       <Section className="border-t border-border">
-        <RelatedLinks links={industry.related} />
+        <RelatedLinks
+          links={industry.related.map((l) => ({ ...l, href: ctx.px(l.href) }))}
+          title={ctx.tpl.relatedTitle}
+        />
       </Section>
 
-      <CTASection />
+      <CTASection {...ctx.cta} />
     </>
   );
 }

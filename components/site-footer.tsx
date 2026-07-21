@@ -25,6 +25,9 @@ export function SiteFooter({ locale = "en" }: { locale?: AnyLocale }) {
   const newsletterTitle = dict?.footer.newsletterTitle ?? "Get proposal & CV-ops tips in your inbox";
   const languageLabel = dict?.footer.language ?? "Language:";
   const rights = dict?.footer.rights ?? "All rights reserved.";
+  const prefix = localePrefix(locale);
+  const lx = (href: string) =>
+    href === "/blog" || href.startsWith("/legal") || !href.startsWith("/") ? href : `${prefix}${href}`;
   const heading = (key: keyof typeof footerNav, fallback: string) =>
     dict?.footer.headings[key] ?? fallback;
 
@@ -59,7 +62,7 @@ export function SiteFooter({ locale = "en" }: { locale?: AnyLocale }) {
               <ul className="mt-3 space-y-2">
                 {column.items.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="text-sm text-ink-soft hover:text-primary">
+                    <Link href={lx(item.href)} className="text-sm text-ink-soft hover:text-primary">
                       {item.label}
                     </Link>
                   </li>

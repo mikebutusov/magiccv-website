@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { ComparisonTable } from "@/components/comparison-table";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { getComparisons } from "@/lib/data";
 
@@ -12,6 +13,7 @@ export const metadata = buildMetadata({
   title: "MagicCV vs alternatives - honest comparisons",
   description: "Fair, factual comparisons of MagicCV against Flowcase, Cinode, Sprint CV, CuViBox, Napta, and doing nothing.",
   path: "/compare",
+  languages: languagesFor("/compare"),
 });
 
 const SUMMARY_ROWS = [

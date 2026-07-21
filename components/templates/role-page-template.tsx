@@ -10,13 +10,21 @@ import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { heroShotFor } from "@/components/product-shots/hero-shot";
 import type { RolePage } from "@/lib/content/types";
+import type { AnyLocale } from "@/lib/i18n";
+import { templateCtx } from "@/lib/template-locale";
 
-export function RolePageTemplate({ role }: { role: RolePage }) {
+export function RolePageTemplate({ role, locale = "en" }: { role: RolePage; locale?: AnyLocale }) {
+  const ctx = templateCtx(locale);
   return (
     <>
-      <Breadcrumbs items={[{ label: "Solutions", href: "/#solutions-by-role" }, { label: role.h1, href: `/solutions/${role.slug}` }]} />
+      <Breadcrumbs
+        items={[
+          { label: ctx.tpl.breadcrumbSolutions, href: ctx.px("/#solutions-by-role") },
+          { label: role.h1, href: ctx.px(`/solutions/${role.slug}`) },
+        ]}
+      />
 
-      <Hero h1={role.h1} sub={role.sub} visual={heroShotFor("role", role.slug)} />
+      <Hero h1={role.h1} sub={role.sub} visual={heroShotFor("role", role.slug)} {...ctx.heroCtas} />
 
       <Section>
         <PersonaPainCard pain={role.pain} />
@@ -36,19 +44,22 @@ export function RolePageTemplate({ role }: { role: RolePage }) {
 
       {role.includeRoiTeaser && (
         <Section className="border-t border-border bg-surface">
-          <ROICalculator />
+          <ROICalculator title={ctx.tpl.roiTitle} />
         </Section>
       )}
 
       <Section className="border-t border-border">
-        <TestimonialBlock context={role.seo.title.replace(/^MagicCV for /, "")} />
+        <TestimonialBlock context={role.seo.title.replace(/^MagicCV for /, "")} override={ctx.testimonial} />
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <RelatedLinks links={role.related} />
+        <RelatedLinks
+          links={role.related.map((l) => ({ ...l, href: ctx.px(l.href) }))}
+          title={ctx.tpl.relatedTitle}
+        />
       </Section>
 
-      <CTASection />
+      <CTASection {...ctx.cta} />
     </>
   );
 }

@@ -3,12 +3,14 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/container";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "MagicCV Trust & Security - GDPR, data residency, SSO",
   description: "GDPR-by-design, EU data residency, SSO, audit logs, and a factual, current picture of MagicCV's security posture.",
   path: "/trust",
+  languages: languagesFor("/trust"),
   keywords: ["GDPR CV tool", "consulting software data residency"],
 });
 

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { RolePageTemplate } from "@/components/templates/role-page-template";
 import { IndustryPageTemplate } from "@/components/templates/industry-page-template";
 import { getRole, getRoles, getIndustry, getIndustries } from "@/lib/data";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 
 export const revalidate = 60;
@@ -20,9 +21,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const role = await getRole(slug);
-  if (role) return buildMetadata({ ...role.seo, path: `/solutions/${slug}` });
+  if (role) return buildMetadata({ ...role.seo, path: `/solutions/${slug}`, languages: languagesFor(`/solutions/${slug}`) });
   const industry = await getIndustry(slug);
-  if (industry) return buildMetadata({ ...industry.seo, path: `/solutions/${slug}` });
+  if (industry) return buildMetadata({ ...industry.seo, path: `/solutions/${slug}`, languages: languagesFor(`/solutions/${slug}`) });
   return {};
 }
 

@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { getFeatures } from "@/lib/data";
 
@@ -12,6 +13,7 @@ export const metadata = buildMetadata({
   title: "MagicCV Features",
   description: "Everything you need to make CVs win work: RFP-to-CV reasoning, brand templates, anonymization, multilingual, and centralized profiles.",
   path: "/features",
+  languages: languagesFor("/features"),
 });
 
 export default async function FeaturesHubPage() {

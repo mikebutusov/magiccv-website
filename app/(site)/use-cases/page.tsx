@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { languagesFor } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { getUseCases } from "@/lib/data";
 
@@ -12,6 +13,7 @@ export const metadata = buildMetadata({
   title: "MagicCV Use Cases",
   description: "Whatever the job-to-be-done - tailoring, packing, centralizing, anonymizing, or translating CVs - see exactly how MagicCV does it.",
   path: "/use-cases",
+  languages: languagesFor("/use-cases"),
 });
 
 export default async function UseCasesHubPage() {

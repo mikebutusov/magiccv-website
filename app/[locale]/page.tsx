@@ -90,7 +90,7 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
             return (
               <Link
                 key={cap.title}
-                href={CAP_HREFS[i]}
+                href={`/${locale}${CAP_HREFS[i]}`}
                 className="group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/40"
               >
                 <Icon className="h-6 w-6 text-primary" aria-hidden />
@@ -121,7 +121,7 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
       <Section className="border-t border-border">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-3xl font-medium text-ink">{t.vsTitle}</h2>
-          <Link href="/compare" className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft">
+          <Link href={`/${locale}/compare`} className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft">
             {t.vsSeeAll} <ArrowUpRight className="h-4 w-4" aria-hidden />
           </Link>
         </div>
@@ -165,7 +165,7 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
           {t.teamLinks.map((label, i) => (
             <Link
               key={label}
-              href={TEAM_HREFS[i]}
+              href={`/${locale}${TEAM_HREFS[i]}`}
               className="rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
             >
               {label}
@@ -177,7 +177,7 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
           {t.firmLinks.map((label, i) => (
             <Link
               key={label}
-              href={FIRM_HREFS[i]}
+              href={`/${locale}${FIRM_HREFS[i]}`}
               className="rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
             >
               {label}
@@ -193,7 +193,7 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
               <h2 className="text-2xl font-medium text-ink">{t.trustTitle}</h2>
               <p className="mt-2 max-w-measure text-ink-soft">{t.trustP}</p>
             </div>
-            <Link href="/trust" className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft">
+            <Link href={`/${locale}/trust`} className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary-soft">
               {t.trustLink} <ArrowUpRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>

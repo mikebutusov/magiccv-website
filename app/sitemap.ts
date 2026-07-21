@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import { LOCALES } from "@/lib/i18n";
 import { getFeatures, getUseCases, getRoles, getIndustries, getComparisons } from "@/lib/data";
 import { getBlogPosts } from "@/lib/data-blog";
 
@@ -19,14 +20,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/legal/privacy",
     "/legal/dpa",
     "/legal/terms",
-    "/de",
-    "/de/pricing",
-    "/fr",
-    "/fr/pricing",
-    "/nl",
-    "/nl/pricing",
-    "/sv",
-    "/sv/pricing",
   ];
 
   const [features, useCases, roles, industries, comparisons, posts] = await Promise.all([
@@ -47,7 +40,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...comparisons.map((c) => `/compare/${c.slug}`),
   ];
 
-  return [...staticRoutes, ...dynamicRoutes].map((route) => ({
+  // Localized mirrors: every locale gets the full content tree (blog/legal stay EN-only).
+  const localizable = [
+    "",
+    "/pricing",
+    "/demo",
+    "/features",
+    "/use-cases",
+    "/compare",
+    "/trust",
+    "/about",
+    ...dynamicRoutes.filter((r) => !r.startsWith("/blog")),
+  ];
+  const localizedRoutes = LOCALES.flatMap((locale) => localizable.map((r) => `/${locale}${r}`));
+
+  return [...staticRoutes, ...dynamicRoutes, ...localizedRoutes].map((route) => ({
     url: `${site.url}${route}`,
     changeFrequency: "weekly",
     priority: route === "" ? 1 : 0.6,

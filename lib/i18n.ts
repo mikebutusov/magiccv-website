@@ -9,6 +9,8 @@ export const LOCALES = ["de", "fr", "nl", "sv"] as const;
 export type Locale = (typeof LOCALES)[number];
 export type AnyLocale = Locale | "en";
 
+export const OG_LOCALES: Record<Locale, string> = { de: "de_DE", fr: "fr_FR", nl: "nl_NL", sv: "sv_SE" };
+
 export const LOCALE_LABELS: Record<AnyLocale, string> = {
   en: "EN",
   de: "DE",
@@ -23,6 +25,19 @@ export function isLocale(value: string): value is Locale {
 
 export function localePrefix(locale: AnyLocale): string {
   return locale === "en" ? "" : `/${locale}`;
+}
+
+/** hreflang alternates map for a canonical (unprefixed) path, e.g. "/features/rfp-to-cv". */
+export function languagesFor(path: string): Record<string, string> {
+  const p = path === "/" ? "" : path;
+  return {
+    en: p || "/",
+    de: `/de${p}`,
+    fr: `/fr${p}`,
+    nl: `/nl${p}`,
+    sv: `/sv${p}`,
+    "x-default": p || "/",
+  };
 }
 
 interface TierCopy {

@@ -10,21 +10,24 @@ import { Section } from "@/components/ui/container";
 import { heroShotFor } from "@/components/product-shots/hero-shot";
 import { GenericUiShot } from "@/components/product-shots/generic-ui-shot";
 import type { FeaturePage } from "@/lib/content/types";
+import type { AnyLocale } from "@/lib/i18n";
+import { templateCtx } from "@/lib/template-locale";
 
-export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
+export function FeaturePageTemplate({ feature, locale = "en" }: { feature: FeaturePage; locale?: AnyLocale }) {
+  const ctx = templateCtx(locale);
   return (
     <>
       <Breadcrumbs
         items={[
-          { label: "Features", href: "/features" },
-          { label: feature.name, href: `/features/${feature.slug}` },
+          { label: ctx.tpl.breadcrumbFeatures, href: ctx.px("/features") },
+          { label: feature.name, href: ctx.px(`/features/${feature.slug}`) },
         ]}
       />
 
-      <Hero h1={feature.h1} sub={feature.sub} visual={heroShotFor("feature", feature.slug)} />
+      <Hero h1={feature.h1} sub={feature.sub} visual={heroShotFor("feature", feature.slug)} {...ctx.heroCtas} />
 
       <Section>
-        <h2 className="text-2xl font-medium text-ink">What it does</h2>
+        <h2 className="text-2xl font-medium text-ink">{ctx.tpl.whatItDoes}</h2>
         <div className="mt-6 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
           <p className="max-w-measure text-lg text-ink-soft">{feature.whatItDoesBody}</p>
           <GenericUiShot variant={1} />
@@ -32,18 +35,18 @@ export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <h2 className="text-2xl font-medium text-ink">Why it matters</h2>
+        <h2 className="text-2xl font-medium text-ink">{ctx.tpl.whyItMatters}</h2>
         <FeatureRowList items={feature.benefits} />
       </Section>
 
       {feature.connectsTo.length > 0 && (
         <Section className="border-t border-border">
-          <h2 className="text-2xl font-medium text-ink">How this connects</h2>
+          <h2 className="text-2xl font-medium text-ink">{ctx.tpl.connects}</h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {feature.connectsTo.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                href={ctx.px(link.href)}
                 className="flex items-center justify-between gap-2 rounded-2xl border border-border bg-surface px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
               >
                 {link.label}
@@ -55,14 +58,17 @@ export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
       )}
 
       <Section className="border-t border-border bg-surface">
-        <FAQAccordion faqs={feature.faqs} />
+        <FAQAccordion faqs={feature.faqs} title={ctx.tpl.faqTitle} />
       </Section>
 
       <Section className="border-t border-border">
-        <RelatedLinks links={feature.related} />
+        <RelatedLinks
+          links={feature.related.map((l) => ({ ...l, href: ctx.px(l.href) }))}
+          title={ctx.tpl.relatedTitle}
+        />
       </Section>
 
-      <CTASection />
+      <CTASection {...ctx.cta} />
     </>
   );
 }
