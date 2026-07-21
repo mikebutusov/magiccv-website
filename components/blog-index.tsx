@@ -5,6 +5,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import type { BlogPost } from "@/lib/blog-constants";
 import { BLOG_CATEGORIES } from "@/lib/blog-constants";
+import { BlogThumb } from "@/components/blog-thumb";
 
 export function BlogIndex({ posts }: { posts: BlogPost[] }) {
   const [category, setCategory] = useState<string>("All");
@@ -62,9 +63,7 @@ function FeaturedPostCard({ post }: { post: BlogPost }) {
       href={`/blog/${post.slug}`}
       className="grid gap-6 rounded-3xl border border-border bg-surface p-6 transition-colors hover:border-primary/40 md:grid-cols-[1.1fr_1fr] md:p-8"
     >
-      <div className="order-2 flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-border bg-paper text-xs text-muted md:order-1">
-        {"{{IMAGE}}"}
-      </div>
+      <BlogThumb category={post.frontmatter.category} seed={post.slug} className="order-2 aspect-[16/9] md:order-1" />
       <div className="order-1 flex flex-col justify-center md:order-2">
         <span className="w-fit rounded-full bg-primary-tint px-3 py-1 text-xs font-semibold text-primary">
           {post.frontmatter.category}
@@ -85,9 +84,7 @@ function PostCard({ post }: { post: BlogPost }) {
       href={`/blog/${post.slug}`}
       className="flex flex-col rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-primary/40"
     >
-      <div className="flex aspect-[16/9] items-center justify-center rounded-xl border border-dashed border-border bg-paper text-xs text-muted">
-        {"{{IMAGE}}"}
-      </div>
+      <BlogThumb category={post.frontmatter.category} seed={post.slug} className="aspect-[16/9]" />
       <span className="mt-4 w-fit rounded-full bg-primary-tint px-2.5 py-0.5 text-xs font-semibold text-primary">
         {post.frontmatter.category}
       </span>

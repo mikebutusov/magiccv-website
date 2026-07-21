@@ -9,6 +9,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { PortableTextBody } from "@/components/portable-text-body";
+import { BlogThumb } from "@/components/blog-thumb";
 import { Section } from "@/components/ui/container";
 import { getBlogPost, getBlogPosts } from "@/lib/data-blog";
 import { articleJsonLd, buildMetadata, JsonLd } from "@/lib/seo";
@@ -91,9 +92,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <p className="mt-3 text-sm text-muted">
             By {post.frontmatter.author} &middot; {post.frontmatter.date} &middot; {post.readingTime}
           </p>
-          <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-2xl border border-dashed border-border bg-surface text-sm text-muted">
-            {"{{SCREENSHOT: hero image for " + post.frontmatter.title + "}}"}
-          </div>
+          <BlogThumb category={post.frontmatter.category} seed={slug} className="mt-8 aspect-[16/9]" />
 
           <div className="mt-8">
             {post.source === "sanity" ? (

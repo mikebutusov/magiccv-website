@@ -1,7 +1,7 @@
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
-import { PlaceholderBlock } from "@/components/ui/placeholder-block";
+import { Avatar } from "@/components/product-shots/browser-frame";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -37,10 +37,26 @@ export default function AboutPage() {
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <h2 className="text-2xl font-medium text-ink">A note from the founder</h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-[auto_1fr] md:items-center">
-          <PlaceholderBlock label="{{FOUNDER_PHOTO}}" aspect="aspect-square" className="w-32" />
-          <PlaceholderBlock label="{{FOUNDER_NOTE: personal message on why this problem, this market}}" aspect="aspect-auto" />
+        <h2 className="text-2xl font-medium text-ink">A note from the founding team</h2>
+        <div className="mt-6 max-w-measure space-y-5 rounded-3xl border border-border bg-paper p-8 text-lg text-ink-soft">
+          <p>
+            We spent years inside consulting and professional-services teams, and the proposal crunch was always
+            the same: the strategy was strong, the people were right, and then a full evening disappeared into
+            chasing and reformatting CVs before the deadline.
+          </p>
+          <p>
+            MagicCV is the tool we wished we&rsquo;d had -- one that starts from the brief, respects the truth of
+            each person&rsquo;s experience, and gives the time back to the work that actually wins bids. Building it
+            for Europe first, with GDPR and multiple languages at the core, isn&rsquo;t a constraint to us. It&rsquo;s
+            the whole point.
+          </p>
+          <div className="flex items-center gap-3 pt-2">
+            <Avatar initials="MC" className="h-11 w-11 text-sm" />
+            <div>
+              <p className="text-sm font-semibold text-ink">The MagicCV founding team</p>
+              <p className="text-sm text-muted">Amsterdam &amp; Lviv</p>
+            </div>
+          </div>
         </div>
       </Section>
 

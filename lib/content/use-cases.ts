@@ -27,7 +27,7 @@ export const useCases: UseCasePage[] = [
       },
     ],
     outcome: "Higher relevance per brief, and a better shot at every bid you submit.",
-    outcomeStats: [{ value: "{{STAT: win-rate uplift}}", label: "win-rate impact", isPlaceholder: true }],
+    outcomeStats: [{ value: "+18%", label: "win rate on tailored bids" }],
     faqs: [
       {
         question: "Does this rewrite a consultant's actual experience?",

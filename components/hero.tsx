@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { PlaceholderBlock } from "@/components/ui/placeholder-block";
+import { GenericUiShot } from "@/components/product-shots/generic-ui-shot";
 import { StatStrip } from "@/components/stat-strip";
 import type { StatItem } from "@/lib/content/types";
 
@@ -10,7 +10,6 @@ export function Hero({
   sub,
   primaryCta = { label: "Start free trial", href: "/demo" },
   secondaryCta = { label: "Book a demo", href: "/demo" },
-  visualAlt = "Product screenshot",
   visual,
   stats,
 }: {
@@ -19,7 +18,6 @@ export function Hero({
   sub: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
-  visualAlt?: string;
   visual?: React.ReactNode;
   stats?: StatItem[];
 }) {
@@ -46,7 +44,7 @@ export function Hero({
             </Button>
           </div>
         </div>
-        {visual ?? <PlaceholderBlock label={`{{SCREENSHOT: ${visualAlt}}}`} aspect="aspect-[5/4]" />}
+        {visual ?? <GenericUiShot />}
       </Container>
       {stats && stats.length > 0 && (
         <div className="relative border-t border-border bg-paper">

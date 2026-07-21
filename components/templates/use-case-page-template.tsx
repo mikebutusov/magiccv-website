@@ -6,6 +6,7 @@ import { FAQAccordion } from "@/components/faq-accordion";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { heroShotFor } from "@/components/product-shots/hero-shot";
 import type { UseCasePage } from "@/lib/content/types";
 
 export function UseCasePageTemplate({ useCase }: { useCase: UseCasePage }) {
@@ -18,7 +19,7 @@ export function UseCasePageTemplate({ useCase }: { useCase: UseCasePage }) {
         ]}
       />
 
-      <Hero h1={useCase.h1} sub={useCase.sub} visualAlt={useCase.job} />
+      <Hero h1={useCase.h1} sub={useCase.sub} visual={heroShotFor("useCase", useCase.slug)} />
 
       <Section>
         <h2 className="text-2xl font-medium text-ink">The problem today</h2>

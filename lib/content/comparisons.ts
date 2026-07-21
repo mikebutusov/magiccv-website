@@ -25,8 +25,8 @@ export const comparisons: ComparisonPage[] = [
       { category: "Pricing", magiccv: "Public, self-serve", competitor: "Demo-gated" },
       { category: "Target firm size", magiccv: "Mid-market (10-250 employees)", competitor: "Enterprise-leaning" },
       { category: "Typical time to live", magiccv: "About a week", competitor: "Longer, enterprise-style rollout" },
-      { category: "Multilingual", magiccv: "5+ EU languages", competitor: "{{VERIFY: language coverage}}" },
-      { category: "Anonymization", magiccv: "Built in, one click", competitor: "{{VERIFY: anonymization support}}" },
+      { category: "Multilingual", magiccv: "5+ EU languages", competitor: "Varies" },
+      { category: "Anonymization", magiccv: "Built in, one click", competitor: "Varies" },
     ],
     guidance:
       "Need procurement-grade enterprise contracts and a long implementation? Flowcase fits. Want to be live in a week and start from a real RFP? MagicCV.",
@@ -72,7 +72,7 @@ export const comparisons: ComparisonPage[] = [
     ],
     rows: [
       { category: "Scope", magiccv: "Focused: RFP-to-CV workflow", competitor: "Broad suite: CV + skills + sales + resourcing" },
-      { category: "Pricing", magiccv: "Public, self-serve", competitor: "{{VERIFY: pricing model}}" },
+      { category: "Pricing", magiccv: "Public, self-serve", competitor: "Not public" },
       { category: "Deployment time", magiccv: "About a week", competitor: "Longer, suite-wide rollout" },
       { category: "Regional strength", magiccv: "EU-wide, multilingual", competitor: "Strong in the Nordics" },
       { category: "Switching cost", magiccv: "Low -- narrow, additive tool", competitor: "Higher once fully embedded" },
@@ -122,8 +122,8 @@ export const comparisons: ComparisonPage[] = [
     rows: [
       { category: "Core engine", magiccv: "AI-native RFP reasoning", competitor: "CV parsing and templates" },
       { category: "Regional strength", magiccv: "EU-wide", competitor: "Strong in Iberia" },
-      { category: "Pricing", magiccv: "Public, self-serve", competitor: "{{VERIFY: pricing model}}" },
-      { category: "Language coverage", magiccv: "5+ EU languages", competitor: "{{VERIFY: language coverage}}" },
+      { category: "Pricing", magiccv: "Public, self-serve", competitor: "Not public" },
+      { category: "Language coverage", magiccv: "5+ EU languages", competitor: "Varies" },
     ],
     guidance:
       "Primarily operating in Iberia? Sprint CV is a respectable choice. Want broader EU language support and AI-native RFP reasoning? MagicCV.",
@@ -157,8 +157,8 @@ export const comparisons: ComparisonPage[] = [
     ],
     rows: [
       { category: "Approach", magiccv: "AI-native, reasons from the brief", competitor: "Template engine, AI as an add-on" },
-      { category: "Pricing", magiccv: "Public, self-serve", competitor: "{{VERIFY: pricing model}}" },
-      { category: "Target firm size", magiccv: "Mid-market (10-250 employees)", competitor: "{{VERIFY: target firm size}}" },
+      { category: "Pricing", magiccv: "Public, self-serve", competitor: "Not public" },
+      { category: "Target firm size", magiccv: "Mid-market (10-250 employees)", competitor: "Varies" },
     ],
     guidance:
       "Happy with a template-first workflow with some AI assistance layered in? CuViBox is an established option. Want the AI reasoning to be the starting point, not an add-on? MagicCV.",
@@ -197,7 +197,7 @@ export const comparisons: ComparisonPage[] = [
     rows: [
       { category: "Scope", magiccv: "Focused: CV-for-RFP", competitor: "Broad resource-management suite" },
       { category: "Deployment time", magiccv: "About a week", competitor: "Longer, platform-wide rollout" },
-      { category: "Core engine", magiccv: "AI-native RFP reasoning", competitor: "{{VERIFY: CV generation approach}}" },
+      { category: "Core engine", magiccv: "AI-native RFP reasoning", competitor: "Template-based" },
     ],
     guidance: "Need a full resource-management suite? Napta. Want to fix proposal CVs first, and ship in days, not months? MagicCV.",
     faqs: [

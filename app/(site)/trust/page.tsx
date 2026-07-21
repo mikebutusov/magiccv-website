@@ -3,7 +3,6 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CTASection } from "@/components/cta-section";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/container";
-import { PlaceholderText } from "@/components/ui/placeholder-text";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -75,8 +74,9 @@ export default function TrustPage() {
         <div className="rounded-2xl border border-border bg-surface p-6">
           <h2 className="text-lg font-medium text-ink">Certifications</h2>
           <p className="mt-2 max-w-measure text-ink-soft">
-            <PlaceholderText text="{{SOC2: Type 1 target month 9}}" /> -- SOC 2 is on our roadmap; this page will
-            update the moment it&rsquo;s achieved. We won&rsquo;t claim a certification before it&rsquo;s real.
+            <span className="font-medium text-ink">SOC 2 Type I &mdash; in progress (targeted).</span> It&rsquo;s on
+            our roadmap, and this page will update the moment it&rsquo;s achieved. We won&rsquo;t claim a
+            certification before it&rsquo;s real.
           </p>
         </div>
       </Section>
@@ -85,8 +85,8 @@ export default function TrustPage() {
         <div className="rounded-2xl border border-border bg-paper p-6">
           <h2 className="text-lg font-medium text-ink">Subprocessors</h2>
           <p className="mt-2 max-w-measure text-ink-soft">
-            <PlaceholderText text="{{SUBPROCESSORS: current list pending publication}}" /> -- the current
-            subprocessor list will be published here; request it directly in the meantime.
+            Our current subprocessor list is available on request and will be published here. Ask us and
+            we&rsquo;ll send the up-to-date list for your review.
           </p>
         </div>
       </Section>

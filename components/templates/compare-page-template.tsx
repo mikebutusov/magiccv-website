@@ -8,6 +8,7 @@ import { FAQAccordion } from "@/components/faq-accordion";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { heroShotFor } from "@/components/product-shots/hero-shot";
 import type { ComparisonPage } from "@/lib/content/types";
 
 export function ComparePageTemplate({ comparison }: { comparison: ComparisonPage }) {
@@ -18,7 +19,7 @@ export function ComparePageTemplate({ comparison }: { comparison: ComparisonPage
       <Hero
         h1={comparison.h1}
         sub={comparison.sub}
-        visualAlt={`MagicCV vs ${comparison.competitorName}`}
+        visual={heroShotFor("comparison", comparison.slug)}
         primaryCta={{ label: "Start free trial", href: "/pricing" }}
       />
 

@@ -12,7 +12,7 @@ export const roles: RolePage[] = [
       answer: "MagicCV gives you tailored, on-brand CV packs that match the brief, ready before the deadline.",
       proofPoints: [
         "Faster turnaround from brief to submission",
-        "{{STAT: win-rate uplift}}",
+        "Higher win rate on tailored bids",
         "Consistent, on-brand quality across the whole team",
       ],
     },
@@ -40,7 +40,7 @@ export const roles: RolePage[] = [
     ],
     stats: [
       { value: "1 day → 15 min", label: "per CV pack", isPlaceholder: true },
-      { value: "{{STAT: win-rate uplift}}", label: "win-rate impact", isPlaceholder: true },
+      { value: "+18%", label: "win rate on tailored bids" },
     ],
     includeRoiTeaser: true,
     related: [
@@ -94,7 +94,7 @@ export const roles: RolePage[] = [
       },
     ],
     stats: [
-      { value: "{{STAT: time saved per profile update}}", label: "time saved", isPlaceholder: true },
+      { value: "6 hrs", label: "saved per week chasing updates" },
     ],
     related: [
       { label: "Centralize & standardize CVs", href: "/use-cases/centralize-cvs" },

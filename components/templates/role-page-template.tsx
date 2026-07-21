@@ -8,6 +8,7 @@ import { ROICalculator } from "@/components/roi-calculator";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { heroShotFor } from "@/components/product-shots/hero-shot";
 import type { RolePage } from "@/lib/content/types";
 
 export function RolePageTemplate({ role }: { role: RolePage }) {
@@ -15,7 +16,7 @@ export function RolePageTemplate({ role }: { role: RolePage }) {
     <>
       <Breadcrumbs items={[{ label: "Solutions", href: "/#solutions-by-role" }, { label: role.h1, href: `/solutions/${role.slug}` }]} />
 
-      <Hero h1={role.h1} sub={role.sub} visualAlt={role.seo.title.replace(/^MagicCV for /, "")} />
+      <Hero h1={role.h1} sub={role.sub} visual={heroShotFor("role", role.slug)} />
 
       <Section>
         <PersonaPainCard pain={role.pain} />

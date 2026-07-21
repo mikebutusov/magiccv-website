@@ -7,17 +7,9 @@ import { FAQAccordion } from "@/components/faq-accordion";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
-import { PlaceholderBlock } from "@/components/ui/placeholder-block";
-import { CvGeneratorShot } from "@/components/product-shots/cv-generator-shot";
-import { CvListShot } from "@/components/product-shots/cv-list-shot";
+import { heroShotFor } from "@/components/product-shots/hero-shot";
+import { GenericUiShot } from "@/components/product-shots/generic-ui-shot";
 import type { FeaturePage } from "@/lib/content/types";
-
-// Wire the most fitting product mockup into each feature's hero.
-const FEATURE_VISUALS: Record<string, React.ReactNode> = {
-  "rfp-to-cv": <CvGeneratorShot />,
-  "brand-templates": <CvGeneratorShot />,
-  "profiles-skills": <CvListShot />,
-};
 
 export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
   return (
@@ -29,18 +21,13 @@ export function FeaturePageTemplate({ feature }: { feature: FeaturePage }) {
         ]}
       />
 
-      <Hero
-        h1={feature.h1}
-        sub={feature.sub}
-        visualAlt={`${feature.name} overview`}
-        visual={FEATURE_VISUALS[feature.slug]}
-      />
+      <Hero h1={feature.h1} sub={feature.sub} visual={heroShotFor("feature", feature.slug)} />
 
       <Section>
         <h2 className="text-2xl font-medium text-ink">What it does</h2>
         <div className="mt-6 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
           <p className="max-w-measure text-lg text-ink-soft">{feature.whatItDoesBody}</p>
-          <PlaceholderBlock label={`{{SCREENSHOT: ${feature.name} in use}}`} />
+          <GenericUiShot variant={1} />
         </div>
       </Section>
 

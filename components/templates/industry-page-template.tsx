@@ -7,6 +7,7 @@ import { FAQAccordion } from "@/components/faq-accordion";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
+import { heroShotFor } from "@/components/product-shots/hero-shot";
 import type { IndustryPage } from "@/lib/content/types";
 
 export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
@@ -19,7 +20,7 @@ export function IndustryPageTemplate({ industry }: { industry: IndustryPage }) {
         ]}
       />
 
-      <Hero h1={industry.h1} sub={industry.sub} visualAlt={industry.seo.title.replace(/^MagicCV for /, "")} />
+      <Hero h1={industry.h1} sub={industry.sub} visual={heroShotFor("industry", industry.slug)} />
 
       <Section>
         <p className="max-w-measure text-lg text-ink-soft">{industry.angle}</p>
