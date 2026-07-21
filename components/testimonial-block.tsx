@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/container";
 import { Avatar } from "@/components/product-shots/browser-frame";
 
 /**
- * SAMPLE DATA -- fictional quotes, people, and firms (not real customers or
+ * SAMPLE DATA - fictional quotes, people, and firms (not real customers or
  * real individuals). Placeholder social proof to be replaced with real
  * design-partner testimonials before the site is promoted.
  */

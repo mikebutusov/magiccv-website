@@ -91,10 +91,16 @@ function RangeField({
   onChange: (value: number) => void;
 }) {
   return (
-    <div>
-      <label htmlFor={id} className="flex items-baseline justify-between text-sm font-medium text-ink">
+    <div className="flex flex-col">
+      {/* Fixed-height label row so sliders align even when a label wraps. */}
+      <label
+        htmlFor={id}
+        className="flex min-h-10 items-start justify-between gap-3 text-sm font-medium text-ink"
+      >
         <span>{label}</span>
-        <span className="text-primary">{value}</span>
+        <span className="shrink-0 rounded-md bg-primary-tint px-2 py-0.5 font-semibold tabular-nums text-primary">
+          {value}
+        </span>
       </label>
       <input
         id={id}
@@ -104,7 +110,7 @@ function RangeField({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-2 w-full accent-primary"
+        className="mt-1 w-full accent-primary"
       />
     </div>
   );
@@ -112,9 +118,10 @@ function RangeField({
 
 function Output({ label, value, hint }: { label: string; value: string; hint?: string }) {
   return (
-    <div>
-      <p className="text-sm text-muted">{label}</p>
-      <p className="font-display text-2xl font-medium text-primary">{value}</p>
+    <div className="flex flex-col">
+      {/* Matching min-height keeps the big values on one baseline across columns. */}
+      <p className="min-h-10 text-sm text-muted sm:min-h-10">{label}</p>
+      <p className="font-display text-2xl font-medium whitespace-nowrap text-primary">{value}</p>
       {hint && <p className="mt-0.5 text-xs text-muted">{hint}</p>}
     </div>
   );

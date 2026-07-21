@@ -9,7 +9,7 @@ import { getComparisons } from "@/lib/data";
 export const revalidate = 60;
 
 export const metadata = buildMetadata({
-  title: "MagicCV vs alternatives -- honest comparisons",
+  title: "MagicCV vs alternatives - honest comparisons",
   description: "Fair, factual comparisons of MagicCV against Flowcase, Cinode, Sprint CV, CuViBox, Napta, and doing nothing.",
   path: "/compare",
 });
@@ -28,7 +28,7 @@ export default async function CompareHubPage() {
       <Section>
         <h1 className="text-4xl font-medium text-ink md:text-5xl">How MagicCV compares.</h1>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">
-          Fair, factual comparisons -- including where the alternative genuinely wins.
+          Fair, factual comparisons - including where the alternative genuinely wins.
         </p>
         <div className="mt-10">
           <ComparisonTable competitorName="Alternatives (summary)" rows={SUMMARY_ROWS} />

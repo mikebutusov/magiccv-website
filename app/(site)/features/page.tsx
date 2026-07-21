@@ -21,7 +21,7 @@ export default async function FeaturesHubPage() {
       <Section>
         <h1 className="text-4xl font-medium text-ink md:text-5xl">Everything you need to make CVs win work.</h1>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">
-          Five capabilities, one workflow -- from reading the brief to a submission-ready, on-brand CV pack.
+          Five capabilities, one workflow - from reading the brief to a submission-ready, on-brand CV pack.
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {features.map((feature) => (

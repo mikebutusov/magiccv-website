@@ -8,9 +8,9 @@ import { buildMetadata } from "@/lib/seo";
 export const revalidate = 60;
 
 export const metadata = buildMetadata({
-  title: "Blog -- Consulting proposals, CVs & bid management",
+  title: "Blog - Consulting proposals, CVs & bid management",
   description:
-    "Practical thinking on proposal and bid ops, CV management, and AI for consulting -- from the MagicCV team.",
+    "Practical thinking on proposal and bid ops, CV management, and AI for consulting - from the MagicCV team.",
   path: "/blog",
 });
 
@@ -21,7 +21,7 @@ export default async function BlogIndexPage() {
     <>
       <Section>
         <h1 className="text-4xl font-medium text-ink md:text-5xl">
-          The MagicCV blog -- proposals, CVs, and winning more consulting work.
+          The MagicCV blog - proposals, CVs, and winning more consulting work.
         </h1>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">
           Practical thinking on bid ops, CV management, and what AI actually changes about proposal work.

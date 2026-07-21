@@ -2,17 +2,18 @@ export const site = {
   name: "MagicCV",
   tagline: "Every consultant CV, on-brand and ready in minutes.",
   description:
-    "MagicCV keeps your consultants' profiles current and turns them into tailored, on-brand CVs -- for any client, bid, or language, in minutes. GDPR-ready, built for European consulting firms.",
+    "MagicCV keeps your consultants' profiles current and turns them into tailored, on-brand CVs - for any client, bid, or language, in minutes. GDPR-ready, built for European consulting firms.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.magiccv.com",
-  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.magiccv.com",
+  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://getmagic.cv",
+  signUpUrl: process.env.NEXT_PUBLIC_SIGNUP_URL ?? "https://getmagic.cv/sign-up",
   ogImage: "/og/default.png",
   social: {
     linkedin: "https://www.linkedin.com/company/magiccv",
   },
   locales: {
     default: "en",
-    supported: ["en"],
-    roadmap: ["de", "fr", "nl", "sv"],
+    supported: ["en", "de", "fr", "nl", "sv"],
+    roadmap: [],
   },
 } as const;
 
@@ -136,8 +137,8 @@ export const pricingTiers = [
     name: "Free",
     priceMonthly: 0,
     limits: "10 candidate profiles · 30 CVs (total)",
-    anchorValue: "Try the full workflow on your own team -- no credit card, no clock.",
-    cta: { label: "Get started free", href: "https://app.magiccv.com" },
+    anchorValue: "Try the full workflow on your own team - no credit card, no clock.",
+    cta: { label: "Get started free", href: "https://getmagic.cv/sign-up" },
     highlight: false,
     features: [
       "10 candidate profiles (total)",
@@ -153,7 +154,7 @@ export const pricingTiers = [
     priceMonthly: 50,
     limits: "200 candidate profiles · 600 CVs",
     anchorValue: "The full CV workflow for a working consulting team.",
-    cta: { label: "Get started free", href: "https://app.magiccv.com" },
+    cta: { label: "Get started free", href: "https://getmagic.cv/sign-up" },
     highlight: true,
     features: [
       "Everything in Free",

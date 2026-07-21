@@ -4,7 +4,7 @@ export const pricingFaqs: FaqItem[] = [
   {
     question: "Is the Free plan a trial?",
     answer:
-      "No -- it's a real free plan with no clock. You get 10 candidate profiles and 30 CVs in total to run the full workflow on your own team, no credit card required.",
+      "No - it's a real free plan with no clock. You get 10 candidate profiles and 30 CVs in total to run the full workflow on your own team, no credit card required.",
   },
   {
     question: "Are the Free plan limits monthly?",
@@ -27,7 +27,7 @@ export const pricingFaqs: FaqItem[] = [
   },
   {
     question: "Can I cancel anytime?",
-    answer: "Yes. Pro is month-to-month -- cancel anytime. And the Free plan never expires.",
+    answer: "Yes. Pro is month-to-month - cancel anytime. And the Free plan never expires.",
   },
 ];
 
@@ -47,31 +47,31 @@ export const pricingFeatureMatrix: {
     rows: [
       { feature: "AI CV generation & chat editing", free: "✓", pro: "✓", enterprise: "✓" },
       { feature: "Tailoring to a brief or RFP", free: "✓", pro: "✓", enterprise: "✓" },
-      { feature: "Centralized profile search & tags", free: "--", pro: "✓", enterprise: "✓" },
+      { feature: "Centralized profile search & tags", free: "-", pro: "✓", enterprise: "✓" },
     ],
   },
   {
     group: "Branding & export",
     rows: [
       { feature: "Brand templates & PDF export", free: "✓", pro: "✓", enterprise: "✓" },
-      { feature: "Client/tender-specific templates", free: "--", pro: "✓", enterprise: "✓" },
-      { feature: "White-label exports", free: "--", pro: "--", enterprise: "✓" },
+      { feature: "Client/tender-specific templates", free: "-", pro: "✓", enterprise: "✓" },
+      { feature: "White-label exports", free: "-", pro: "-", enterprise: "✓" },
     ],
   },
   {
     group: "Languages & anonymization",
     rows: [
-      { feature: "Multilingual output (5+ EU languages)", free: "--", pro: "✓", enterprise: "✓" },
-      { feature: "One-click anonymization", free: "--", pro: "✓", enterprise: "✓" },
+      { feature: "Multilingual output (5+ EU languages)", free: "-", pro: "✓", enterprise: "✓" },
+      { feature: "One-click anonymization", free: "-", pro: "✓", enterprise: "✓" },
     ],
   },
   {
     group: "Security & compliance",
     rows: [
       { feature: "GDPR-by-design", free: "✓", pro: "✓", enterprise: "✓" },
-      { feature: "SSO & role-based access", free: "--", pro: "--", enterprise: "✓" },
-      { feature: "EU data residency guarantees", free: "--", pro: "--", enterprise: "✓" },
-      { feature: "DPA & custom contracts", free: "--", pro: "--", enterprise: "✓" },
+      { feature: "SSO & role-based access", free: "-", pro: "-", enterprise: "✓" },
+      { feature: "EU data residency guarantees", free: "-", pro: "-", enterprise: "✓" },
+      { feature: "DPA & custom contracts", free: "-", pro: "-", enterprise: "✓" },
     ],
   },
   {

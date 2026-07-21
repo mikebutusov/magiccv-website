@@ -48,7 +48,7 @@ function nonEmpty<T>(arr: T[] | null): arr is T[] {
   return Array.isArray(arr) && arr.length > 0;
 }
 
-// -- Features ----------------------------------------------------------
+// - Features ----------------------------------------------------------
 export async function getFeatures(): Promise<FeaturePage[]> {
   const remote = await fromSanity<FeaturePage[]>(featuresQuery);
   return nonEmpty(remote) ? remote : localFeatures;
@@ -58,7 +58,7 @@ export async function getFeature(slug: string): Promise<FeaturePage | undefined>
   return remote ?? localFeatures.find((f) => f.slug === slug);
 }
 
-// -- Use cases ---------------------------------------------------------
+// - Use cases ---------------------------------------------------------
 export async function getUseCases(): Promise<UseCasePage[]> {
   const remote = await fromSanity<UseCasePage[]>(useCasesQuery);
   return nonEmpty(remote) ? remote : localUseCases;
@@ -68,7 +68,7 @@ export async function getUseCase(slug: string): Promise<UseCasePage | undefined>
   return remote ?? localUseCases.find((u) => u.slug === slug);
 }
 
-// -- Roles -------------------------------------------------------------
+// - Roles -------------------------------------------------------------
 export async function getRoles(): Promise<RolePage[]> {
   const remote = await fromSanity<RolePage[]>(rolesQuery);
   return nonEmpty(remote) ? remote : localRoles;
@@ -78,7 +78,7 @@ export async function getRole(slug: string): Promise<RolePage | undefined> {
   return remote ?? localRoles.find((r) => r.slug === slug);
 }
 
-// -- Industries --------------------------------------------------------
+// - Industries --------------------------------------------------------
 export async function getIndustries(): Promise<IndustryPage[]> {
   const remote = await fromSanity<IndustryPage[]>(industriesQuery);
   return nonEmpty(remote) ? remote : localIndustries;
@@ -88,7 +88,7 @@ export async function getIndustry(slug: string): Promise<IndustryPage | undefine
   return remote ?? localIndustries.find((i) => i.slug === slug);
 }
 
-// -- Comparisons -------------------------------------------------------
+// - Comparisons -------------------------------------------------------
 export async function getComparisons(): Promise<ComparisonPage[]> {
   const remote = await fromSanity<ComparisonPage[]>(comparisonsQuery);
   return nonEmpty(remote) ? remote : localComparisons;

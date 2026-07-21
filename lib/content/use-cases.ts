@@ -5,10 +5,10 @@ export const useCases: UseCasePage[] = [
     _type: "useCasePage",
     slug: "tailor-cvs",
     job: "Adapt each consultant's CV to the specific brief, highlighting the most relevant experience and win conditions.",
-    h1: "Tailor every CV to every brief -- automatically.",
+    h1: "Tailor every CV to every brief - automatically.",
     sub: "MagicCV reasons about the RFP and reshapes each consultant's CV to foreground what matters for this opportunity.",
     problemToday:
-      "Every RFP has its own win conditions, but most CVs are static documents. Bid teams end up manually re-reading and re-ordering each consultant's experience by hand, for every single brief -- or they skip it, and submit a generic CV that undersells the fit.",
+      "Every RFP has its own win conditions, but most CVs are static documents. Bid teams end up manually re-reading and re-ordering each consultant's experience by hand, for every single brief - or they skip it, and submit a generic CV that undersells the fit.",
     steps: [
       {
         title: "Paste the RFP or brief",
@@ -17,7 +17,7 @@ export const useCases: UseCasePage[] = [
       },
       {
         title: "MagicCV identifies and re-emphasizes relevant experience",
-        body: "It never fabricates -- every claim is traceable back to the consultant's source profile, just reordered and re-emphasized to match the brief.",
+        body: "It never fabricates - every claim is traceable back to the consultant's source profile, just reordered and re-emphasized to match the brief.",
         screenshotAlt: "Relevant experience highlighted against brief requirements",
       },
       {
@@ -32,7 +32,7 @@ export const useCases: UseCasePage[] = [
       {
         question: "Does this rewrite a consultant's actual experience?",
         answer:
-          "No. MagicCV re-emphasizes and reorders real experience from the source profile to match the brief -- it never invents experience that isn't there.",
+          "No. MagicCV re-emphasizes and reorders real experience from the source profile to match the brief - it never invents experience that isn't there.",
       },
       {
         question: "How long does tailoring one CV take?",
@@ -45,7 +45,7 @@ export const useCases: UseCasePage[] = [
       { label: "For Sales teams", href: "/solutions/sales" },
     ],
     seo: {
-      title: "Tailor consultant CVs to every brief -- MagicCV",
+      title: "Tailor consultant CVs to every brief - MagicCV",
       description:
         "MagicCV reasons about the RFP and reshapes each consultant's CV to foreground what matters for this opportunity.",
       keywords: ["tailor CV to RFP", "customize consultant CV"],
@@ -76,7 +76,7 @@ export const useCases: UseCasePage[] = [
         screenshotAlt: "Exported CV pack combining multiple consultants",
       },
     ],
-    outcome: "What used to take a day now takes about fifteen minutes -- no last-minute scramble.",
+    outcome: "What used to take a day now takes about fifteen minutes - no last-minute scramble.",
     outcomeStats: [{ value: "1 day → 15 min", label: "per CV pack", isPlaceholder: true }],
     faqs: [
       {
@@ -86,7 +86,7 @@ export const useCases: UseCasePage[] = [
       },
       {
         question: "Does the whole pack stay consistent in formatting?",
-        answer: "Yes -- every CV in the pack uses the same brand template, so the pack reads as one document.",
+        answer: "Yes - every CV in the pack uses the same brand template, so the pack reads as one document.",
       },
     ],
     related: [
@@ -95,7 +95,7 @@ export const useCases: UseCasePage[] = [
       { label: "For Sales teams", href: "/solutions/sales" },
     ],
     seo: {
-      title: "Build a proposal-ready CV pack in minutes -- MagicCV",
+      title: "Build a proposal-ready CV pack in minutes - MagicCV",
       description:
         "Select the team, generate tailored CVs for everyone, and export a single on-brand pack ready to submit.",
       keywords: ["proposal CV pack", "RFP CV bundle consulting"],
@@ -106,9 +106,9 @@ export const useCases: UseCasePage[] = [
     slug: "centralize-cvs",
     job: "Replace scattered shared-drive CVs with one structured, current source of truth.",
     h1: "One home for every consultant CV.",
-    sub: "Import once, keep current, and generate any format on demand -- no more hunting through SharePoint.",
+    sub: "Import once, keep current, and generate any format on demand - no more hunting through SharePoint.",
     problemToday:
-      "CVs live in shared drives, inboxes, and people's laptops -- multiple versions of the same person's CV, none of them clearly the current one. Finding the right file costs time every single time it's needed.",
+      "CVs live in shared drives, inboxes, and people's laptops - multiple versions of the same person's CV, none of them clearly the current one. Finding the right file costs time every single time it's needed.",
     steps: [
       {
         title: "Import from existing files",
@@ -122,7 +122,7 @@ export const useCases: UseCasePage[] = [
       },
       {
         title: "Generate any output, any format, anytime",
-        body: "Whatever a bid or request needs, generate it from the current profile -- no hunting for the latest file.",
+        body: "Whatever a bid or request needs, generate it from the current profile - no hunting for the latest file.",
         screenshotAlt: "Output format picker from a single profile",
       },
     ],
@@ -145,9 +145,9 @@ export const useCases: UseCasePage[] = [
       { label: "For Recruitment teams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centralize & standardize consultant CVs -- MagicCV",
+      title: "Centralize & standardize consultant CVs - MagicCV",
       description:
-        "Import once, keep current, and generate any format on demand -- no more hunting through SharePoint.",
+        "Import once, keep current, and generate any format on demand - no more hunting through SharePoint.",
       keywords: ["centralized CV database consulting", "standardize consultant CVs"],
     },
   },
@@ -156,9 +156,9 @@ export const useCases: UseCasePage[] = [
     slug: "anonymize-cvs",
     job: "Produce anonymized, blind CVs for competitive bids, public tenders, and bias-free submission.",
     h1: "Anonymized CVs in one click.",
-    sub: "Strip identifying details for blind evaluation and public tenders -- consistently, across your whole team.",
+    sub: "Strip identifying details for blind evaluation and public tenders - consistently, across your whole team.",
     problemToday:
-      "Public tenders and blind-evaluation processes require anonymized CVs, and manual redaction is slow and inconsistent -- one team member's idea of 'anonymized' rarely matches another's.",
+      "Public tenders and blind-evaluation processes require anonymized CVs, and manual redaction is slow and inconsistent - one team member's idea of 'anonymized' rarely matches another's.",
     steps: [
       {
         title: "Generate a CV",
@@ -182,11 +182,11 @@ export const useCases: UseCasePage[] = [
       {
         question: "What counts as an identifying detail?",
         answer:
-          "You control the rules -- typically name, photo, and any other details your evaluation process treats as identifying.",
+          "You control the rules - typically name, photo, and any other details your evaluation process treats as identifying.",
       },
       {
         question: "Is anonymization consistent across the team?",
-        answer: "Yes -- every anonymized CV follows the same configured rules, regardless of who generates it.",
+        answer: "Yes - every anonymized CV follows the same configured rules, regardless of who generates it.",
       },
     ],
     related: [
@@ -195,9 +195,9 @@ export const useCases: UseCasePage[] = [
       { label: "Specialist staffing & talent agencies", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "Anonymize consultant CVs for blind & tender submission -- MagicCV",
+      title: "Anonymize consultant CVs for blind & tender submission - MagicCV",
       description:
-        "Strip identifying details for blind evaluation and public tenders -- consistently, across your whole team.",
+        "Strip identifying details for blind evaluation and public tenders - consistently, across your whole team.",
       keywords: ["CV anonymization tool", "anonymized CV for tenders"],
     },
   },
@@ -206,7 +206,7 @@ export const useCases: UseCasePage[] = [
     slug: "translate-cvs",
     job: "Produce accurate, on-brand CVs in multiple European languages for cross-border bids.",
     h1: "Every CV, in every language you bid in.",
-    sub: "Generate accurate, professional CVs in EN, DE, FR, NL, ES and more -- without retyping or re-formatting.",
+    sub: "Generate accurate, professional CVs in EN, DE, FR, NL, ES and more - without retyping or re-formatting.",
     problemToday:
       "Cross-border bids and multilingual evaluation panels mean the same CV needs to exist in several languages, kept in sync as the consultant's profile changes. Manual translation is slow and drifts out of date.",
     steps: [
@@ -235,7 +235,7 @@ export const useCases: UseCasePage[] = [
       },
       {
         question: "Do translated CVs stay in sync as the profile updates?",
-        answer: "Yes -- regenerate any language on demand from the current master profile.",
+        answer: "Yes - regenerate any language on demand from the current master profile.",
       },
     ],
     related: [
@@ -244,9 +244,9 @@ export const useCases: UseCasePage[] = [
       { label: "Software & IT consulting", href: "/solutions/it-consulting" },
     ],
     seo: {
-      title: "Translate consultant CVs into any language -- MagicCV",
+      title: "Translate consultant CVs into any language - MagicCV",
       description:
-        "Generate accurate, professional CVs in EN, DE, FR, NL, ES and more -- without retyping or re-formatting.",
+        "Generate accurate, professional CVs in EN, DE, FR, NL, ES and more - without retyping or re-formatting.",
       keywords: ["multilingual CV generator", "CV translation tool consulting"],
     },
   },

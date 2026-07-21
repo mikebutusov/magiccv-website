@@ -6,7 +6,7 @@ export const roles: RolePage[] = [
     slug: "sales",
     reader: "Sales / business-development leads who own proposal win-rate and pipeline velocity.",
     h1: "Win more of the proposals you submit.",
-    sub: "Stop letting slow, generic CVs cost you bids. MagicCV gives sales teams RFP-ready consultant packs in minutes -- tailored to each opportunity.",
+    sub: "Stop letting slow, generic CVs cost you bids. MagicCV gives sales teams RFP-ready consultant packs in minutes - tailored to each opportunity.",
     pain: {
       quote: "We lose RFPs we should win, and CV prep is always the bottleneck.",
       answer: "MagicCV gives you tailored, on-brand CV packs that match the brief, ready before the deadline.",
@@ -24,11 +24,11 @@ export const roles: RolePage[] = [
       },
       {
         title: "Tailor every CV to the opportunity's win conditions",
-        body: "Each CV foregrounds what this specific brief is evaluating on -- not a generic summary.",
+        body: "Each CV foregrounds what this specific brief is evaluating on - not a generic summary.",
         screenshotAlt: "Tailored CV highlighting win-condition experience",
       },
       {
-        title: "Never miss a deadline -- a pack in 15 minutes",
+        title: "Never miss a deadline - a pack in 15 minutes",
         body: "Go from brief to a submission-ready CV pack fast enough to stop treating this as the bottleneck.",
         screenshotAlt: "Proposal CV pack generated quickly before a deadline",
       },
@@ -50,7 +50,7 @@ export const roles: RolePage[] = [
       { label: "MagicCV vs SharePoint + Word", href: "/compare/sharepoint-word" },
     ],
     seo: {
-      title: "MagicCV for Sales Teams -- Win more consulting proposals",
+      title: "MagicCV for Sales Teams - Win more consulting proposals",
       description:
         "Stop letting slow, generic CVs cost you bids. MagicCV gives sales teams RFP-ready consultant packs in minutes.",
       keywords: ["proposal CV tool for sales", "win more RFPs consulting"],
@@ -64,7 +64,7 @@ export const roles: RolePage[] = [
     sub: "Keep every consultant CV current, searchable, and instantly formatted for any brief or bid.",
     pain: {
       quote: "I'm constantly chasing consultants for updated CVs and reformatting them by hand.",
-      answer: "MagicCV gives every person one central, always-current profile -- generate any format on demand.",
+      answer: "MagicCV gives every person one central, always-current profile - generate any format on demand.",
       proofPoints: [
         "No more chasing consultants for updates",
         "A single source of truth per person",
@@ -111,11 +111,11 @@ export const roles: RolePage[] = [
   {
     _type: "rolePage",
     slug: "hr",
-    reader: "HR / People Ops -- the data steward persona. Cares about clean data and no parallel systems.",
+    reader: "HR / People Ops - the data steward persona. Cares about clean data and no parallel systems.",
     h1: "One source of truth for every consultant CV.",
-    sub: "Stop maintaining CVs in five places. MagicCV keeps profiles clean, consistent, and compliant -- with no shadow IT.",
+    sub: "Stop maintaining CVs in five places. MagicCV keeps profiles clean, consistent, and compliant - with no shadow IT.",
     pain: {
-      quote: "CVs live in shared drives, inboxes, and people's laptops -- the data is a mess.",
+      quote: "CVs live in shared drives, inboxes, and people's laptops - the data is a mess.",
       answer: "MagicCV replaces that with structured, governed profiles and role-based access.",
       proofPoints: [
         "Clean, structured data instead of scattered files",
@@ -152,7 +152,7 @@ export const roles: RolePage[] = [
       { label: "Trust Center", href: "/trust" },
     ],
     seo: {
-      title: "MagicCV for HR & People Ops -- Clean, compliant CV data",
+      title: "MagicCV for HR & People Ops - Clean, compliant CV data",
       description:
         "Stop maintaining CVs in five places. MagicCV keeps profiles clean, consistent, and compliant.",
       keywords: ["GDPR CV management", "HR consultant CV system"],
@@ -163,7 +163,7 @@ export const roles: RolePage[] = [
     slug: "project-delivery",
     reader: "Delivery / engagement / practice leads who staff projects and need CVs for client-facing proposals and engagement kickoffs.",
     h1: "Put the right people in front of every client.",
-    sub: "Generate engagement-ready, on-brand consultant CVs that match the client's requirements -- without pulling delivery time onto admin.",
+    sub: "Generate engagement-ready, on-brand consultant CVs that match the client's requirements - without pulling delivery time onto admin.",
     pain: {
       quote: "Every new engagement means scrambling for current CVs in the right format for that client.",
       answer: "MagicCV gives you instant, client-tailored CV packs so delivery leads staff and pitch faster.",

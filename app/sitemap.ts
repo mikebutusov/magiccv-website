@@ -19,6 +19,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/legal/privacy",
     "/legal/dpa",
     "/legal/terms",
+    "/de",
+    "/de/pricing",
+    "/fr",
+    "/fr/pricing",
+    "/nl",
+    "/nl/pricing",
+    "/sv",
+    "/sv/pricing",
   ];
 
   const [features, useCases, roles, industries, comparisons, posts] = await Promise.all([

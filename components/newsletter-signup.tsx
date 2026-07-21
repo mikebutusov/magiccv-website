@@ -2,13 +2,13 @@
 
 import { useId, useState } from "react";
 
-/** UI + local success state only -- see DemoForm for the CRM-wiring note. */
+/** UI + local success state only - see DemoForm for the CRM-wiring note. */
 export function NewsletterSignup({ compact = false }: { compact?: boolean }) {
   const id = useId();
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
-    return <p className="text-sm text-primary">Thanks -- check your inbox to confirm.</p>;
+    return <p className="text-sm text-primary">Thanks - check your inbox to confirm.</p>;
   }
 
   return (

@@ -13,22 +13,23 @@ import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "MagicCV -- AI CV & Resume Platform for Consulting Firms",
+  title: "MagicCV - AI CV & Resume Platform for Consulting Firms",
   description:
-    "Keep every consultant profile current and turn it into a tailored, on-brand CV -- for any client, bid, or language, in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free plan -- no credit card.",
+    "Keep every consultant profile current and turn it into a tailored, on-brand CV - for any client, bid, or language, in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free plan - no credit card.",
   path: "/",
   keywords: ["CV management for consulting", "consultant CV software", "consultant CV database"],
+  languages: { en: "/", de: "/de", fr: "/fr", nl: "/nl", sv: "/sv", "x-default": "/" },
 });
 
 const HOW_IT_WORKS = [
   {
     title: "Import your consultants once",
-    body: "Bring your existing CVs in to create structured, always-current profiles for your whole team -- one source of truth instead of files scattered across drives and inboxes.",
+    body: "Bring your existing CVs in to create structured, always-current profiles for your whole team - one source of truth instead of files scattered across drives and inboxes.",
     screenshotAlt: "Consultant profile import",
   },
   {
     title: "Tailor to any client, brief, or format",
-    body: "Pick a consultant and a purpose -- a client intro, a bid, a specific template -- and MagicCV reshapes their CV around it. Paste an RFP when you have one; it's one path, not the only one.",
+    body: "Pick a consultant and a purpose - a client intro, a bid, a specific template - and MagicCV reshapes their CV around it. Paste an RFP when you have one; it's one path, not the only one.",
     screenshotAlt: "Tailoring a CV to a brief",
   },
   {
@@ -91,7 +92,7 @@ export default function HomePage() {
       <Hero
         eyebrow="AI-native CV management for consulting firms"
         h1="Every consultant CV, on-brand and ready in minutes."
-        sub="MagicCV keeps your team's profiles current and turns them into tailored, on-brand CVs -- for any client, bid, or language. One source of truth, minutes instead of evenings."
+        sub="MagicCV keeps your team's profiles current and turns them into tailored, on-brand CVs - for any client, bid, or language. One source of truth, minutes instead of evenings."
         visual={<CvGeneratorShot />}
         stats={[
           { value: "1 day → 15 min", label: "per CV pack" },
@@ -108,7 +109,7 @@ export default function HomePage() {
             Consultant CVs shouldn&rsquo;t be this much work.
           </h2>
           <p className="mt-4 text-lg text-ink-soft">
-            CVs live in shared drives, inboxes, and laptops -- out of date the moment you need them. Every
+            CVs live in shared drives, inboxes, and laptops - out of date the moment you need them. Every
             client intro, bid, or new engagement means chasing people for updates and reformatting by hand,
             and the quality drifts every time. MagicCV makes the current version the easy version.
           </p>

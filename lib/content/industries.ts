@@ -8,7 +8,7 @@ export const industries: IndustryPage[] = [
     angle:
       "Tech CVs must show the right stack, certifications, and project experience per bid. RFPs demand specific skills mapping.",
     h1: "CVs that prove your team can deliver the stack.",
-    sub: "Match consultants by skills and tech experience, then generate RFP-ready CVs that speak the client's requirements -- in any language.",
+    sub: "Match consultants by skills and tech experience, then generate RFP-ready CVs that speak the client's requirements - in any language.",
     keyPoints: [
       {
         title: "Skills and tech matching to RFP requirements",
@@ -36,7 +36,7 @@ export const industries: IndustryPage[] = [
       {
         question: "Can MagicCV handle detailed skills-matrix CVs?",
         answer:
-          "Yes -- MagicCV is built around matching consultants' skills and tech experience against RFP requirements, which is exactly what skills-matrix formats need.",
+          "Yes - MagicCV is built around matching consultants' skills and tech experience against RFP requirements, which is exactly what skills-matrix formats need.",
       },
       {
         question: "Does it support framework agreement formats?",
@@ -52,7 +52,7 @@ export const industries: IndustryPage[] = [
     seo: {
       title: "MagicCV for Software & IT Consulting Firms",
       description:
-        "Match consultants by skills and tech experience, then generate RFP-ready CVs -- in any language.",
+        "Match consultants by skills and tech experience, then generate RFP-ready CVs - in any language.",
       keywords: ["IT consulting CV management", "tech consultant CV for RFP"],
     },
   },
@@ -63,7 +63,7 @@ export const industries: IndustryPage[] = [
     angle:
       "Proposals are won on the strength and relevance of the named team. CVs must foreground the most relevant engagements per pitch.",
     h1: "Show the most relevant team for every pitch.",
-    sub: "MagicCV reasons about the brief and surfaces each consultant's most relevant experience -- on-brand, partner-ready, in minutes.",
+    sub: "MagicCV reasons about the brief and surfaces each consultant's most relevant experience - on-brand, partner-ready, in minutes.",
     keyPoints: [
       {
         title: "Experience-relevance reasoning per brief",
@@ -91,12 +91,12 @@ export const industries: IndustryPage[] = [
       {
         question: "Does this work for partner-level bios, not just consultant CVs?",
         answer:
-          "Yes -- the same tailoring and brand-template system applies whether it's a consultant CV or a partner bio.",
+          "Yes - the same tailoring and brand-template system applies whether it's a consultant CV or a partner bio.",
       },
       {
         question: "How does MagicCV decide which engagements to foreground?",
         answer:
-          "It reasons about the brief's stated requirements and surfaces the consultant's most relevant real experience -- it never invents engagements.",
+          "It reasons about the brief's stated requirements and surfaces the consultant's most relevant real experience - it never invents engagements.",
       },
     ],
     related: [
@@ -107,7 +107,7 @@ export const industries: IndustryPage[] = [
     seo: {
       title: "MagicCV for Strategy & Management Consulting",
       description:
-        "MagicCV reasons about the brief and surfaces each consultant's most relevant experience -- on-brand, partner-ready.",
+        "MagicCV reasons about the brief and surfaces each consultant's most relevant experience - on-brand, partner-ready.",
       keywords: ["management consulting proposal CVs", "strategy consulting bid CV"],
     },
   },
@@ -117,7 +117,7 @@ export const industries: IndustryPage[] = [
     reader: "Design / creative / digital agencies pitching for projects and retainers; portfolio + team credentials matter.",
     angle:
       "Agencies pitch teams and creative credentials; CVs/bios must look on-brand and be tailored to each pitch quickly.",
-    h1: "On-brand team bios for every pitch -- without the design time.",
+    h1: "On-brand team bios for every pitch - without the design time.",
     sub: "Generate beautifully consistent, tailored consultant and creative profiles that match your studio brand and the client brief.",
     keyPoints: [
       {
@@ -146,7 +146,7 @@ export const industries: IndustryPage[] = [
       {
         question: "Can we keep our studio's exact visual identity?",
         answer:
-          "Yes -- set your brand template once (fonts, colors, layout) and every generated bio inherits it automatically.",
+          "Yes - set your brand template once (fonts, colors, layout) and every generated bio inherits it automatically.",
       },
       {
         question: "Is this just for CVs, or team bios too?",
@@ -168,11 +168,11 @@ export const industries: IndustryPage[] = [
     _type: "industryPage",
     slug: "engineering-consulting",
     reader:
-      "Civil/structural/MEP/environmental engineering consultancies -- extremely tender- and CV-heavy, especially for public procurement.",
+      "Civil/structural/MEP/environmental engineering consultancies - extremely tender- and CV-heavy, especially for public procurement.",
     angle:
       "Public and private tenders require standardized, evidence-backed engineer CVs (qualifications, registrations, project references) in strict formats and often multiple languages.",
     h1: "Tender-ready engineer CVs in the exact format every bid demands.",
-    sub: "Standardized, evidence-backed CVs with qualifications, registrations, and project references -- formatted for any tender, in any language.",
+    sub: "Standardized, evidence-backed CVs with qualifications, registrations, and project references - formatted for any tender, in any language.",
     keyPoints: [
       {
         title: "Strict tender and procurement formats",
@@ -200,7 +200,7 @@ export const industries: IndustryPage[] = [
       {
         question: "Does MagicCV support the strict formats public tenders require?",
         answer:
-          "Yes -- you can set up client- or tender-specific templates so CVs export in the exact structure a given tender requires.",
+          "Yes - you can set up client- or tender-specific templates so CVs export in the exact structure a given tender requires.",
       },
       {
         question: "Can we anonymize engineer CVs for blind evaluation?",
@@ -255,7 +255,7 @@ export const industries: IndustryPage[] = [
       {
         question: "Can we tag consultants by regulatory credential and sector?",
         answer:
-          "Yes -- tag profiles by sector and credential so the most relevant expertise surfaces automatically for each engagement.",
+          "Yes - tag profiles by sector and credential so the most relevant expertise surfaces automatically for each engagement.",
       },
       {
         question: "How is data governed across the firm?",
@@ -282,7 +282,7 @@ export const industries: IndustryPage[] = [
     angle:
       "Government procurement demands standardized CV templates, anonymization for blind evaluation, language localization, and airtight compliance. This is MagicCV's sharpest fit.",
     h1: "Built for the demands of public-sector tenders.",
-    sub: "Standardized templates, anonymization, multilingual output, and GDPR-by-design -- everything EU and government procurement requires.",
+    sub: "Standardized templates, anonymization, multilingual output, and GDPR-by-design - everything EU and government procurement requires.",
     keyPoints: [
       {
         title: "Government and EU template compliance",
@@ -310,7 +310,7 @@ export const industries: IndustryPage[] = [
       {
         question: "Is MagicCV built for EU public procurement specifically?",
         answer:
-          "Yes -- standardized templates, anonymization for blind evaluation, multilingual output, and GDPR-by-design data handling are core to how MagicCV is built, not an add-on.",
+          "Yes - standardized templates, anonymization for blind evaluation, multilingual output, and GDPR-by-design data handling are core to how MagicCV is built, not an add-on.",
       },
       {
         question: "Where is our data stored?",
@@ -336,9 +336,9 @@ export const industries: IndustryPage[] = [
     reader:
       "Specialist (non-commodity) staffing/talent agencies placing professionals and submitting candidate CVs to clients.",
     angle:
-      "Agencies live and die by fast, polished, client-formatted candidate CVs and anonymized profiles. Note: commodity recruitment is out of scope -- this page targets specialist/professional placement.",
+      "Agencies live and die by fast, polished, client-formatted candidate CVs and anonymized profiles. Note: commodity recruitment is out of scope - this page targets specialist/professional placement.",
     h1: "Polished, client-ready candidate CVs at agency speed.",
-    sub: "Format, brand, and anonymize candidate profiles for every client submission -- in minutes, in any language.",
+    sub: "Format, brand, and anonymize candidate profiles for every client submission - in minutes, in any language.",
     keyPoints: [
       {
         title: "Fast, client-formatted submissions",
@@ -366,7 +366,7 @@ export const industries: IndustryPage[] = [
       {
         question: "Is MagicCV a fit for high-volume commodity recruitment?",
         answer:
-          "No -- MagicCV is built for specialist and professional-services placement, where CV quality and tailoring per client matter, not high-volume commodity staffing.",
+          "No - MagicCV is built for specialist and professional-services placement, where CV quality and tailoring per client matter, not high-volume commodity staffing.",
       },
       {
         question: "Can candidate CVs be anonymized for client submission?",
@@ -382,7 +382,7 @@ export const industries: IndustryPage[] = [
     seo: {
       title: "MagicCV for Specialist Staffing & Talent Agencies",
       description:
-        "Format, brand, and anonymize candidate profiles for every client submission -- in minutes, in any language.",
+        "Format, brand, and anonymize candidate profiles for every client submission - in minutes, in any language.",
       keywords: ["staffing agency CV formatting", "candidate CV anonymization tool"],
     },
   },

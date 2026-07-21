@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
+import Link from "next/link";
 
 const ROLE_OPTIONS = ["Bid/Proposal Manager", "Head of Ops/COO", "Managing Partner", "IT/Security", "Other"];
 const FIRM_SIZE_OPTIONS = ["10-25", "25-100", "100-250", "250+"];
@@ -14,7 +15,7 @@ const USE_CASE_OPTIONS = [
 
 /**
  * UI + client-side validation only. Submission is a local no-op until a
- * CRM (HubSpot/Attio) is wired up -- see PRD §2.1. Swapping in a real
+ * CRM (HubSpot/Attio) is wired up - see PRD §2.1. Swapping in a real
  * POST is a one-function change (see handleSubmit below).
  */
 export function DemoForm() {
@@ -35,12 +36,12 @@ export function DemoForm() {
   if (submitted) {
     return (
       <div className="rounded-2xl border border-border bg-surface p-8 text-center" role="status">
-        <h3 className="text-xl font-medium text-ink">Thanks -- we&rsquo;ll be in touch shortly.</h3>
+        <h3 className="text-xl font-medium text-ink">Thanks - we&rsquo;ll be in touch shortly.</h3>
         <p className="mt-2 text-ink-soft">
           Prefer not to wait? You can also{" "}
-          <a href="/demo" className="text-primary underline underline-offset-4">
+          <Link href="/demo" className="text-primary underline underline-offset-4">
             start a free trial
-          </a>{" "}
+          </Link>{" "}
           right now.
         </p>
       </div>

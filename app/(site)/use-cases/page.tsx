@@ -10,7 +10,7 @@ export const revalidate = 60;
 
 export const metadata = buildMetadata({
   title: "MagicCV Use Cases",
-  description: "Whatever the job-to-be-done -- tailoring, packing, centralizing, anonymizing, or translating CVs -- see exactly how MagicCV does it.",
+  description: "Whatever the job-to-be-done - tailoring, packing, centralizing, anonymizing, or translating CVs - see exactly how MagicCV does it.",
   path: "/use-cases",
 });
 

@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container";
 
 /**
- * SAMPLE DATA -- fictional consulting firm names, not real customers. These
+ * SAMPLE DATA - fictional consulting firm names, not real customers. These
  * are placeholder wordmarks to be replaced with real design-partner logos
  * before the site is promoted. No real brands/trademarks are used.
  */

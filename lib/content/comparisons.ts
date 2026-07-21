@@ -15,7 +15,7 @@ export const comparisons: ComparisonPage[] = [
     ],
     whereMagicCvDiffers: [
       "RFP-to-CV reasoning that starts from the brief, not a template",
-      "Public, self-serve pricing -- no demo gate to see cost",
+      "Public, self-serve pricing - no demo gate to see cost",
       "Built for mid-market firms, not enterprise-first",
       "Live in about a week, not a quarter-long rollout",
       "EU-native: multilingual, GDPR-by-design, anonymization built in",
@@ -38,7 +38,7 @@ export const comparisons: ComparisonPage[] = [
       },
       {
         question: "Can I try MagicCV without a sales call?",
-        answer: "Yes -- pricing is public and there's a free plan (10 profiles, 30 CVs), so you can start without booking a demo.",
+        answer: "Yes - pricing is public and there's a free plan (10 profiles, 30 CVs), so you can start without booking a demo.",
       },
     ],
     related: [
@@ -47,7 +47,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Flowcase -- honest comparison",
+      title: "MagicCV vs Flowcase - honest comparison",
       description:
         "How MagicCV compares to Flowcase for consulting CV management: pricing, AI, implementation, EU compliance.",
       keywords: ["Flowcase alternative", "Flowcase vs MagicCV"],
@@ -75,7 +75,7 @@ export const comparisons: ComparisonPage[] = [
       { category: "Pricing", magiccv: "Public, self-serve", competitor: "Not public" },
       { category: "Deployment time", magiccv: "About a week", competitor: "Longer, suite-wide rollout" },
       { category: "Regional strength", magiccv: "EU-wide, multilingual", competitor: "Strong in the Nordics" },
-      { category: "Switching cost", magiccv: "Low -- narrow, additive tool", competitor: "Higher once fully embedded" },
+      { category: "Switching cost", magiccv: "Low - narrow, additive tool", competitor: "Higher once fully embedded" },
     ],
     guidance:
       "Replacing your HRIS, CRM, and resource planning all at once? Cinode. Want to fix proposals first and keep your other tools? MagicCV.",
@@ -83,12 +83,12 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "Does MagicCV replace resource planning or a CRM?",
         answer:
-          "No -- MagicCV is focused specifically on the RFP-to-CV workflow. If you need a broader suite covering resource planning and sales, Cinode's scope is wider.",
+          "No - MagicCV is focused specifically on the RFP-to-CV workflow. If you need a broader suite covering resource planning and sales, Cinode's scope is wider.",
       },
       {
         question: "Can MagicCV and Cinode be used side by side?",
         answer:
-          "Some firms use MagicCV for proposal CVs specifically while keeping a broader platform for resourcing -- it depends on how much of the suite you're actually using today.",
+          "Some firms use MagicCV for proposal CVs specifically while keeping a broader platform for resourcing - it depends on how much of the suite you're actually using today.",
       },
     ],
     related: [
@@ -97,7 +97,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Cinode -- honest comparison",
+      title: "MagicCV vs Cinode - honest comparison",
       description: "How MagicCV compares to Cinode: focus, deployment speed, cost, and regional fit.",
       keywords: ["Cinode alternative", "Cinode vs MagicCV"],
     },
@@ -131,7 +131,7 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "Is Sprint CV a bad choice?",
         answer:
-          "No -- it's a solid, focused product, particularly for firms primarily operating in Iberia. MagicCV's edge is broader EU language coverage and RFP-to-CV reasoning rather than template parsing.",
+          "No - it's a solid, focused product, particularly for firms primarily operating in Iberia. MagicCV's edge is broader EU language coverage and RFP-to-CV reasoning rather than template parsing.",
       },
     ],
     related: [
@@ -139,7 +139,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Sprint CV -- honest comparison",
+      title: "MagicCV vs Sprint CV - honest comparison",
       description: "How MagicCV compares to Sprint CV for consulting and staffing CV management.",
       keywords: ["Sprint CV alternative"],
     },
@@ -166,7 +166,7 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "What's the practical difference between 'AI-native' and 'AI-assisted'?",
         answer:
-          "MagicCV starts from the RFP and reasons about which experience matters before touching a template. Template-first tools start from a CV format and use AI to help fill it in -- the brief comes second.",
+          "MagicCV starts from the RFP and reasons about which experience matters before touching a template. Template-first tools start from a CV format and use AI to help fill it in - the brief comes second.",
       },
     ],
     related: [
@@ -174,7 +174,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs CuViBox -- honest comparison",
+      title: "MagicCV vs CuViBox - honest comparison",
       description: "How MagicCV compares to CuViBox: template-first vs AI-native CV generation.",
       keywords: ["CuViBox alternative"],
     },
@@ -204,7 +204,7 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "Does MagicCV do resource planning like Napta?",
         answer:
-          "No -- MagicCV is focused on the RFP-to-CV workflow specifically. If you need broader resource management, Napta's scope is wider.",
+          "No - MagicCV is focused on the RFP-to-CV workflow specifically. If you need broader resource management, Napta's scope is wider.",
       },
     ],
     related: [
@@ -212,7 +212,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Napta -- honest comparison",
+      title: "MagicCV vs Napta - honest comparison",
       description: "How MagicCV compares to Napta: focused CV-for-RFP tool vs broad resource-management suite.",
       keywords: ["Napta alternative"],
     },
@@ -237,15 +237,15 @@ export const comparisons: ComparisonPage[] = [
       { category: "Deadline risk", magiccv: "Built for fast turnaround", competitor: "Last-minute scrambles are common" },
     ],
     guidance:
-      "SharePoint and Word cost nothing to license -- but the hours spent chasing, reformatting, and scrambling before deadlines are a real, recurring cost. Use the calculator below to see what that's likely costing your team.",
+      "SharePoint and Word cost nothing to license - but the hours spent chasing, reformatting, and scrambling before deadlines are a real, recurring cost. Use the calculator below to see what that's likely costing your team.",
     faqs: [
       {
         question: "Isn't 'free' always cheaper than a paid tool?",
         answer:
-          "Only if you don't count the time cost. Hours spent per RFP chasing and reformatting CVs add up -- often to more than a MagicCV plan costs per month. The ROI calculator on this page and on Pricing walks through the math with your own numbers.",
+          "Only if you don't count the time cost. Hours spent per RFP chasing and reformatting CVs add up - often to more than a MagicCV plan costs per month. The ROI calculator on this page and on Pricing walks through the math with your own numbers.",
       },
       {
-        question: "We already have a shared drive system that mostly works -- why switch?",
+        question: "We already have a shared drive system that mostly works - why switch?",
         answer:
           "If it's genuinely working with no lost RFPs, inconsistency, or scrambling, you may not need to. Most teams that evaluate MagicCV are looking because at least one of those pains is already costing them time or bids.",
       },
@@ -256,7 +256,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "For Sales teams", href: "/solutions/sales" },
     ],
     seo: {
-      title: "MagicCV vs SharePoint + Word -- the real cost of doing nothing",
+      title: "MagicCV vs SharePoint + Word - the real cost of doing nothing",
       description: "The hidden cost of managing consultant CVs in SharePoint and Word, and what it adds up to.",
       keywords: ["consultant CV SharePoint", "stop managing CVs in Word"],
     },
@@ -291,7 +291,7 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "Is CVGate a fair alternative to MagicCV?",
         answer:
-          "Yes -- it's genuinely focused on consulting CV and proposal management with public pricing. The main difference is MagicCV's AI-native tailoring and its EU-native anonymization and multilingual output.",
+          "Yes - it's genuinely focused on consulting CV and proposal management with public pricing. The main difference is MagicCV's AI-native tailoring and its EU-native anonymization and multilingual output.",
       },
     ],
     related: [
@@ -300,7 +300,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs CVGate -- honest comparison",
+      title: "MagicCV vs CVGate - honest comparison",
       description: "How MagicCV compares to CVGate for consulting CV management and proposals: AI tailoring, anonymization, multilingual, pricing.",
       keywords: ["CVGate alternative", "CVGate vs MagicCV"],
     },
@@ -318,7 +318,7 @@ export const comparisons: ComparisonPage[] = [
       "Fast, high-volume reformatting for staffing and recruitment",
     ],
     whereMagicCvDiffers: [
-      "Starts from the brief and reshapes which experience to foreground -- not only reformatting",
+      "Starts from the brief and reshapes which experience to foreground - not only reformatting",
       "Centralized, always-current consultant profiles as the source of truth",
       "Built around the consulting proposal workflow, with public self-serve pricing",
     ],
@@ -344,7 +344,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs CV-Transformer -- honest comparison",
+      title: "MagicCV vs CV-Transformer - honest comparison",
       description: "How MagicCV compares to CV-Transformer: reformatting vs AI reasoning, anonymization, languages, and pricing.",
       keywords: ["CV-Transformer alternative", "CV Transformer vs MagicCV"],
     },
@@ -362,7 +362,7 @@ export const comparisons: ComparisonPage[] = [
       "Great for high-volume recruitment and RPO formatting",
     ],
     whereMagicCvDiffers: [
-      "Does the reasoning, not just the formatting -- reshapes CVs around a brief or client",
+      "Does the reasoning, not just the formatting - reshapes CVs around a brief or client",
       "Centralized consultant profiles kept current over time",
       "Anonymization, multilingual output, and proposal packs for EU consulting bids",
     ],
@@ -378,7 +378,7 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "Is CV Converter cheaper than MagicCV?",
         answer:
-          "For pure per-file formatting, its pay-as-you-go pricing can be very low. MagicCV covers a broader workflow -- profile management, tailoring, anonymization, multilingual packs -- so the two solve different scopes.",
+          "For pure per-file formatting, its pay-as-you-go pricing can be very low. MagicCV covers a broader workflow - profile management, tailoring, anonymization, multilingual packs - so the two solve different scopes.",
       },
     ],
     related: [
@@ -387,7 +387,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs CV Converter -- honest comparison",
+      title: "MagicCV vs CV Converter - honest comparison",
       description: "How MagicCV compares to CV Converter: format-only conversion vs full CV management and AI tailoring.",
       keywords: ["CV Converter alternative", "cvconverter vs MagicCV"],
     },
@@ -405,7 +405,7 @@ export const comparisons: ComparisonPage[] = [
       "Deep skills taxonomy (thousands of certifications, tech skills, capabilities)",
     ],
     whereMagicCvDiffers: [
-      "Works from your existing profiles and CVs -- no need to first adopt a separate skills-data product",
+      "Works from your existing profiles and CVs - no need to first adopt a separate skills-data product",
       "RFP-to-CV reasoning that re-emphasizes real experience for each brief",
       "EU-native anonymization and multilingual output for tenders, with public self-serve pricing",
     ],
@@ -431,7 +431,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs MuchSkills CV Inventory -- honest comparison",
+      title: "MagicCV vs MuchSkills CV Inventory - honest comparison",
       description: "How MagicCV compares to MuchSkills CV Inventory: profile-driven vs skills-database-driven consultant CVs.",
       keywords: ["MuchSkills alternative", "CV Inventory vs MagicCV"],
     },
@@ -473,7 +473,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs SprintCV Enterprise CV Manager -- honest comparison",
+      title: "MagicCV vs SprintCV Enterprise CV Manager - honest comparison",
       description: "How MagicCV compares to SprintCV's enterprise CV manager: AI reasoning, pricing, EU languages.",
       keywords: ["SprintCV alternative", "Sprint CV enterprise vs MagicCV"],
     },
@@ -503,7 +503,7 @@ export const comparisons: ComparisonPage[] = [
       { category: "Pricing", magiccv: "Public, self-serve", competitor: "Public" },
     ],
     guidance:
-      "Enhancv is a great choice if you're producing candidate resumes -- especially recruitment and outplacement work where ATS-friendliness matters. If your CVs go into consulting proposals and tenders, MagicCV is built for that job.",
+      "Enhancv is a great choice if you're producing candidate resumes - especially recruitment and outplacement work where ATS-friendliness matters. If your CVs go into consulting proposals and tenders, MagicCV is built for that job.",
     faqs: [
       {
         question: "Can Enhancv do consulting proposal CVs?",
@@ -517,7 +517,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Enhancv -- honest comparison",
+      title: "MagicCV vs Enhancv - honest comparison",
       description: "How MagicCV compares to Enhancv: consulting proposal CVs vs candidate/job-seeker resume building.",
       keywords: ["Enhancv alternative", "Enhancv vs MagicCV"],
     },
@@ -545,7 +545,7 @@ export const comparisons: ComparisonPage[] = [
       { category: "Anonymization / multilingual", magiccv: "Built in", competitor: "Varies" },
     ],
     guidance:
-      "VisualCV is a strong general resume/CV builder, including for teams that want consistent branded CVs. If your work is consulting proposals -- tailoring to briefs, packs, tenders -- MagicCV is the more specialized fit.",
+      "VisualCV is a strong general resume/CV builder, including for teams that want consistent branded CVs. If your work is consulting proposals - tailoring to briefs, packs, tenders - MagicCV is the more specialized fit.",
     faqs: [
       {
         question: "Is VisualCV built for consulting proposals?",
@@ -559,7 +559,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs VisualCV -- honest comparison",
+      title: "MagicCV vs VisualCV - honest comparison",
       description: "How MagicCV compares to VisualCV: consulting proposal CVs vs general resume/CV building for teams.",
       keywords: ["VisualCV alternative", "VisualCV business vs MagicCV"],
     },
@@ -593,7 +593,7 @@ export const comparisons: ComparisonPage[] = [
       {
         question: "Does MagicCV optimize CVs for ATS like Rezi?",
         answer:
-          "No -- ATS keyword optimization is a job-seeker concern. MagicCV optimizes consultant CVs for the client's brief and the demands of proposals and tenders.",
+          "No - ATS keyword optimization is a job-seeker concern. MagicCV optimizes consultant CVs for the client's brief and the demands of proposals and tenders.",
       },
     ],
     related: [
@@ -602,7 +602,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Rezi -- honest comparison",
+      title: "MagicCV vs Rezi - honest comparison",
       description: "How MagicCV compares to Rezi: consulting proposal CVs vs white-label ATS resume building.",
       keywords: ["Rezi alternative", "Rezi enterprise vs MagicCV"],
     },
@@ -612,14 +612,14 @@ export const comparisons: ComparisonPage[] = [
     slug: "neobrain",
     competitorName: "Neobrain",
     h1: "MagicCV vs Neobrain",
-    sub: "A different category -- skills & talent management vs proposal CVs.",
+    sub: "A different category - skills & talent management vs proposal CVs.",
     whereCompetitorWins: [
       "Enterprise skills-based talent management: skills mapping, internal mobility, workforce planning",
       "Performance and career-development modules, HRIS integrations",
       "Strong fit for large HR organizations modernizing around skills",
     ],
     whereMagicCvDiffers: [
-      "Produces client-facing consultant CVs and proposal packs -- not internal HR planning",
+      "Produces client-facing consultant CVs and proposal packs - not internal HR planning",
       "Brief-driven tailoring, on-brand export, anonymization, multilingual for tenders",
       "Live in a week with public, self-serve pricing",
     ],
@@ -644,7 +644,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs Neobrain -- honest comparison",
+      title: "MagicCV vs Neobrain - honest comparison",
       description: "How MagicCV compares to Neobrain: client-facing proposal CVs vs enterprise skills and talent management.",
       keywords: ["Neobrain alternative", "Neobrain vs MagicCV"],
     },
@@ -654,14 +654,14 @@ export const comparisons: ComparisonPage[] = [
     slug: "techwolf",
     competitorName: "TechWolf",
     h1: "MagicCV vs TechWolf",
-    sub: "A different category -- skills intelligence vs proposal CVs.",
+    sub: "A different category - skills intelligence vs proposal CVs.",
     whereCompetitorWins: [
       "Enterprise skills-intelligence infrastructure that infers skills from work signals",
       "Integrates with major HCMs (Workday, SAP SuccessFactors) at very large scale",
       "Best-in-class for continuous, automated skills data across huge workforces",
     ],
     whereMagicCvDiffers: [
-      "Turns profiles into client-ready CVs and proposal packs -- not internal skills data",
+      "Turns profiles into client-ready CVs and proposal packs - not internal skills data",
       "Brief-driven tailoring, on-brand export, anonymization, multilingual for EU tenders",
       "Mid-market friendly: live in a week, public self-serve pricing",
     ],
@@ -672,12 +672,12 @@ export const comparisons: ComparisonPage[] = [
       { category: "Pricing", magiccv: "Public, self-serve", competitor: "Not public" },
     ],
     guidance:
-      "TechWolf is a powerful skills-intelligence layer for large enterprises -- a different job from MagicCV. If you want automated, continuous skills data across a huge workforce, TechWolf. If you want client-ready consultant CVs and proposal packs, MagicCV.",
+      "TechWolf is a powerful skills-intelligence layer for large enterprises - a different job from MagicCV. If you want automated, continuous skills data across a huge workforce, TechWolf. If you want client-ready consultant CVs and proposal packs, MagicCV.",
     faqs: [
       {
         question: "Does MagicCV infer skills from work activity like TechWolf?",
         answer:
-          "No -- that's TechWolf's specialty. MagicCV works from consultant profiles and CVs to produce client-facing documents; the two operate in different layers of the stack.",
+          "No - that's TechWolf's specialty. MagicCV works from consultant profiles and CVs to produce client-facing documents; the two operate in different layers of the stack.",
       },
     ],
     related: [
@@ -686,7 +686,7 @@ export const comparisons: ComparisonPage[] = [
       { label: "Comparison hub", href: "/compare" },
     ],
     seo: {
-      title: "MagicCV vs TechWolf -- honest comparison",
+      title: "MagicCV vs TechWolf - honest comparison",
       description: "How MagicCV compares to TechWolf: client-facing proposal CVs vs enterprise skills intelligence.",
       keywords: ["TechWolf alternative", "TechWolf vs MagicCV"],
     },

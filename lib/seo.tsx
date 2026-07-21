@@ -6,25 +6,33 @@ export function buildMetadata({
   description,
   path,
   keywords,
+  languages,
+  ogLocale = "en_US",
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
+  /** hreflang map, e.g. { en: "/", de: "/de", "x-default": "/" } (paths, not full URLs) */
+  languages?: Record<string, string>;
+  ogLocale?: string;
 }): Metadata {
   const url = `${site.url}${path}`;
+  const languageUrls = languages
+    ? Object.fromEntries(Object.entries(languages).map(([lang, p]) => [lang, `${site.url}${p}`]))
+    : undefined;
   return {
     title,
     description,
     keywords,
-    alternates: { canonical: url },
+    alternates: { canonical: url, ...(languageUrls ? { languages: languageUrls } : {}) },
     openGraph: {
       title,
       description,
       url,
       siteName: site.name,
       images: [{ url: site.ogImage }],
-      locale: "en_US",
+      locale: ogLocale,
       type: "website",
     },
     twitter: {

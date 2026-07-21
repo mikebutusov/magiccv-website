@@ -8,23 +8,34 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { primaryNav, site } from "@/lib/site";
+import { dictionaries, localePrefix, type AnyLocale } from "@/lib/i18n";
 
-export function SiteHeader() {
+export function SiteHeader({ locale = "en" }: { locale?: AnyLocale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const dict = locale === "en" ? null : dictionaries[locale];
+  const prefix = localePrefix(locale);
+  const t = {
+    top: (label: string) => dict?.nav.top[label] ?? label,
+    pricing: dict?.nav.pricing ?? "Pricing",
+    blog: dict?.nav.blog ?? "Blog",
+    login: dict?.nav.login ?? "Log in",
+    bookDemo: dict?.nav.bookDemo ?? "Book a demo",
+    getStarted: dict?.nav.getStarted ?? "Get started free",
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-paper/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between gap-6">
-        <Link href="/" aria-label="MagicCV home">
+        <Link href={prefix || "/"} aria-label="MagicCV home">
           <Logo />
         </Link>
 
-        <NavigationMenu.Root className="relative hidden lg:block" delayDuration={100}>
+        <NavigationMenu.Root className="relative hidden xl:block" delayDuration={100}>
           <NavigationMenu.List className="flex items-center gap-1">
             {primaryNav.map((section) => (
               <NavigationMenu.Item key={section.label} className="relative">
-                <NavigationMenu.Trigger className="group flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink data-[state=open]:bg-ink/5 data-[state=open]:text-ink">
-                  {section.label}
+                <NavigationMenu.Trigger className="group flex items-center gap-1 whitespace-nowrap rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink data-[state=open]:bg-ink/5 data-[state=open]:text-ink">
+                  {t.top(section.label)}
                   <ChevronDown
                     className="h-3.5 w-3.5 transition-transform group-data-[state=open]:rotate-180"
                     aria-hidden
@@ -60,10 +71,10 @@ export function SiteHeader() {
             <NavigationMenu.Item>
               <NavigationMenu.Link asChild>
                 <Link
-                  href="/pricing"
-                  className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
+                  href={`${prefix}/pricing`}
+                  className="block whitespace-nowrap rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
                 >
-                  Pricing
+                  {t.pricing}
                 </Link>
               </NavigationMenu.Link>
             </NavigationMenu.Item>
@@ -71,33 +82,33 @@ export function SiteHeader() {
               <NavigationMenu.Link asChild>
                 <Link
                   href="/blog"
-                  className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
+                  className="block whitespace-nowrap rounded-xl px-3 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink"
                 >
-                  Blog
+                  {t.blog}
                 </Link>
               </NavigationMenu.Link>
             </NavigationMenu.Item>
           </NavigationMenu.List>
         </NavigationMenu.Root>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <a
             href={site.appUrl}
-            className="text-sm font-medium text-ink-soft transition-colors hover:text-ink"
+            className="whitespace-nowrap text-sm font-medium text-ink-soft transition-colors hover:text-ink"
           >
-            Log in
+            {t.login}
           </a>
           <Button href="/demo" variant="secondary">
-            Book a demo
+            {t.bookDemo}
           </Button>
-          <Button href={site.appUrl} variant="primary">
-            Get started free
+          <Button href={site.signUpUrl} variant="primary">
+            {t.getStarted}
           </Button>
         </div>
 
         <button
           type="button"
-          className="lg:hidden"
+          className="xl:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
@@ -107,11 +118,11 @@ export function SiteHeader() {
       </Container>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-surface lg:hidden">
+        <div className="border-t border-border bg-surface xl:hidden">
           <Container className="flex flex-col gap-1 py-4">
             {primaryNav.map((section) => (
               <div key={section.label} className="py-2">
-                <p className="px-2 text-xs font-semibold uppercase tracking-wide text-muted">{section.label}</p>
+                <p className="px-2 text-xs font-semibold uppercase tracking-wide text-muted">{t.top(section.label)}</p>
                 {section.groups.map((group) => (
                   <div key={group.heading} className="mt-1">
                     {section.groups.length > 1 && (
@@ -131,21 +142,21 @@ export function SiteHeader() {
                 ))}
               </div>
             ))}
-            <Link href="/pricing" className="rounded px-2 py-2 text-sm font-medium text-ink" onClick={() => setMobileOpen(false)}>
-              Pricing
+            <Link href={`${prefix}/pricing`} className="rounded px-2 py-2 text-sm font-medium text-ink" onClick={() => setMobileOpen(false)}>
+              {t.pricing}
             </Link>
             <Link href="/blog" className="rounded px-2 py-2 text-sm font-medium text-ink" onClick={() => setMobileOpen(false)}>
-              Blog
+              {t.blog}
             </Link>
             <a href={site.appUrl} className="rounded px-2 py-2 text-sm font-medium text-ink">
-              Log in
+              {t.login}
             </a>
             <div className="mt-3 flex flex-col gap-2">
               <Button href="/demo" variant="secondary">
-                Book a demo
+                {t.bookDemo}
               </Button>
-              <Button href={site.appUrl} variant="primary">
-                Get started free
+              <Button href={site.signUpUrl} variant="primary">
+                {t.getStarted}
               </Button>
             </div>
           </Container>

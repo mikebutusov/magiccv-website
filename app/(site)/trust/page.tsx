@@ -6,7 +6,7 @@ import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "MagicCV Trust & Security -- GDPR, data residency, SSO",
+  title: "MagicCV Trust & Security - GDPR, data residency, SSO",
   description: "GDPR-by-design, EU data residency, SSO, audit logs, and a factual, current picture of MagicCV's security posture.",
   path: "/trust",
   keywords: ["GDPR CV tool", "consulting software data residency"],
@@ -16,7 +16,7 @@ const SECTIONS = [
   {
     icon: ShieldCheck,
     title: "GDPR-by-design",
-    body: "Data handling is built around GDPR requirements from the ground up -- not retrofitted. Anonymization, access control, and retention are core parts of how consultant data is stored and processed, not optional add-ons.",
+    body: "Data handling is built around GDPR requirements from the ground up - not retrofitted. Anonymization, access control, and retention are core parts of how consultant data is stored and processed, not optional add-ons.",
   },
   {
     icon: Globe2,
@@ -36,7 +36,7 @@ const SECTIONS = [
   {
     icon: FileCheck,
     title: "DPA template",
-    body: "A Data Processing Agreement template is available on request -- reach out and we'll send the current version for your legal team to review.",
+    body: "A Data Processing Agreement template is available on request - reach out and we'll send the current version for your legal team to review.",
   },
   {
     icon: Database,
@@ -53,7 +53,7 @@ export default function TrustPage() {
       <Section>
         <h1 className="text-4xl font-medium text-ink md:text-5xl">Trust & security, kept factual and current.</h1>
         <p className="mt-4 max-w-measure text-lg text-ink-soft">
-          Built for the scrutiny European consulting firms bring to procurement. No overstated certifications --
+          Built for the scrutiny European consulting firms bring to procurement. No overstated certifications -
           what&rsquo;s live is live, and what&rsquo;s roadmap is clearly marked as roadmap.
         </p>
       </Section>
@@ -94,7 +94,7 @@ export default function TrustPage() {
       <Section className="border-t border-border text-center">
         <h2 className="text-2xl font-medium text-ink">Need a completed security questionnaire?</h2>
         <p className="mx-auto mt-3 max-w-measure text-ink-soft">
-          We&rsquo;ll work through your IT/security team&rsquo;s questionnaire directly -- no generic trust-center PDF required.
+          We&rsquo;ll work through your IT/security team&rsquo;s questionnaire directly - no generic trust-center PDF required.
         </p>
         <div className="mt-6 flex justify-center">
           <Button href="/demo">Request a security review</Button>
