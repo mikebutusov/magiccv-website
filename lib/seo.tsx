@@ -29,7 +29,8 @@ export function buildMetadata({
     description,
     keywords,
     alternates: { canonical: url, ...(languageUrls ? { languages: languageUrls } : {}) },
-    // og:image / twitter:image come from the app/opengraph-image.tsx file convention.
+    // Image is generated at build time by app/opengraph-image.tsx; referenced
+    // explicitly because page-level openGraph replaces file-convention images.
     openGraph: {
       title,
       description,
@@ -37,11 +38,13 @@ export function buildMetadata({
       siteName: site.name,
       locale: ogLocale,
       type: "website",
+      images: [{ url: `${site.url}/opengraph-image`, width: 1200, height: 630, alt: `${site.name} - CV & resume management software` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [`${site.url}/opengraph-image`],
     },
   };
 }
