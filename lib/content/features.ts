@@ -5,25 +5,30 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "rfp-to-cv",
     name: "RFP-to-CV reasoning",
-    h1: "It starts with the RFP, not a template.",
-    sub: "MagicCV reads the brief, understands the win conditions, and reshapes each CV to match - the AI-native difference.",
+    h1: "The RFP lands Friday afternoon. Your CVs are shaped around it by Monday morning.",
+    sub: "MagicCV reads the brief, extracts the win conditions, and reworks each consultant's CV to match - built for bid teams tailoring 10+ CVs per submission.",
     whatItDoesBody:
-      "Template tools start from a CV and hope it fits the brief. MagicCV starts from the RFP: it reads the win conditions, identifies which experience is relevant, and re-emphasizes it in each consultant's CV. Every claim stays traceable to the source profile - we don't fabricate, we re-emphasize. An optional conservative 'do-not-generate' mode is available for cases where a human should review before anything is written.",
+      "Every bid manager knows the drill. The RFP arrives with a 40-page annex, the evaluation criteria are buried in section 7, and someone has to reshape a dozen consultant CVs around requirements the CVs were never written for. So you open final_v3_JS_edit.docx, start moving bullet points around by hand, and hope you didn't miss the mandatory certification listed on page 23. Multiply that by 12 CVs and a Thursday deadline, and tailoring is the task that eats the week.\n\nMagicCV starts from the brief instead of the template. Upload the RFP - the full document, the criteria sheet, or a short summary - and it extracts the required skills, certifications, and evaluation criteria. Then it rewrites each selected consultant's CV from their structured profile, pulling forward the projects and experience that answer the brief and trimming what doesn't. Every claim traces back to a fact in the source profile; nothing is invented to fit. You review, adjust anything through chat-based editing, and export on your template.",
     benefits: [
       {
-        title: "Reads the brief like a proposal manager would",
-        body: "MagicCV parses the RFP for win conditions, required skills, and evaluation criteria - the same things an experienced bid manager looks for first.",
-        screenshotAlt: "RFP-to-CV generation: brief analysis view",
+        title: "The requirements surfaced before you finish reading the cover page",
+        body: "Upload the RFP and MagicCV pulls out required skills, mandatory certifications, and evaluation criteria - the same list an experienced bid manager builds by hand, without the highlighter pass through the annex.",
+        screenshotAlt: "Brief analysis panel listing 9 extracted requirements and 3 evaluation criteria from an uploaded 40-page RFP PDF",
       },
       {
-        title: "Re-emphasizes, never fabricates",
-        body: "Every sentence in a generated CV traces back to a fact in the consultant's source profile. Nothing is invented to fit the brief.",
-        screenshotAlt: "RFP-to-CV generation: claim provenance view",
+        title: "Twelve tailored CVs from one brief, not twelve editing sessions",
+        body: "Select the consultants on the bid and MagicCV reworks each CV against the extracted requirements - reordering projects, adjusting emphasis, and cutting irrelevant detail. What used to be an evening per CV becomes a review pass per CV.",
+        screenshotAlt: "Batch view of 12 consultant CVs regenerated against one RFP, each marked ready for review",
       },
       {
-        title: "A conservative mode when you want a human in the loop",
-        body: "Turn on do-not-generate mode to have MagicCV flag relevant experience for review rather than writing the CV outright.",
-        screenshotAlt: "RFP-to-CV generation: conservative mode toggle",
+        title: "Every sentence traceable, nothing fabricated",
+        body: "Generated CVs only re-emphasize and reorder experience that already exists in the consultant's profile. Each claim links back to its source, so you can defend every line in front of an evaluation panel.",
+        screenshotAlt: "Generated CV with a claim highlighted and its source entry shown in the consultant's profile",
+      },
+      {
+        title: "A human in the loop whenever you want one",
+        body: "Turn on conservative do-not-generate mode and MagicCV flags the relevant experience for your review instead of writing the CV outright. Or generate first and fine-tune wording through chat before anything leaves the building.",
+        screenshotAlt: "Conservative mode toggle with flagged experience suggestions awaiting reviewer approval",
       },
     ],
     connectsTo: [
@@ -35,17 +40,37 @@ export const features: FeaturePage[] = [
       {
         question: "Does MagicCV ever invent experience a consultant doesn't have?",
         answer:
-          "No. RFP-to-CV reasoning only re-emphasizes and reorders real experience from a consultant's source profile. Every claim in a generated CV is traceable back to that profile.",
+          "No. RFP-to-CV reasoning only re-emphasizes and reorders real experience from the consultant's source profile. Every claim in a generated CV traces back to that profile, so if a project isn't in the profile, it won't appear in the CV.",
       },
       {
-        question: "What if I want a person to check the output before it's used?",
+        question: "What do I upload - the full RFP or a summary?",
         answer:
-          "Turn on conservative ('do-not-generate') mode. MagicCV will surface the relevant experience and suggested emphasis for your review instead of producing a final CV automatically.",
+          "Whatever you have. A full RFP with annexes, an evaluation criteria sheet, or three paragraphs pasted from the client's email all work. MagicCV extracts requirements from the document you give it; more detail simply means a sharper match.",
       },
       {
-        question: "What do I paste in - the full RFP or a summary?",
+        question: "How long does it take to tailor a full team pack for one bid?",
         answer:
-          "Paste the brief as you have it, whether that's a full RFP document, an evaluation criteria sheet, or a short summary. MagicCV extracts what it needs from whatever you provide.",
+          "Extraction runs in minutes, and each CV regenerates on demand from the consultant's profile. For a typical 10-12 person submission, the work shifts from a day of manual editing to a review pass - reading each CV and adjusting wording through chat where needed.",
+      },
+      {
+        question: "Can someone review the output before it goes to the client?",
+        answer:
+          "Yes, and we recommend it. Use chat-based editing to adjust any section, or switch on conservative do-not-generate mode so MagicCV surfaces relevant experience for approval instead of writing the CV automatically. You decide how much autonomy the AI gets.",
+      },
+      {
+        question: "Do tailored CVs come out in our template?",
+        answer:
+          "Yes. Tailoring changes the content; your brand template controls the presentation. Every generated CV exports as a pixel-consistent PDF or Word file in your house style, or in a client-specific template if the tender demands one.",
+      },
+      {
+        question: "How is this different from pasting a CV and an RFP into ChatGPT?",
+        answer:
+          "A general chatbot has no memory of your team and no guardrails - it will happily invent a certification to fit the brief. MagicCV works from structured profiles, keeps every claim traceable to its source, applies your template on export, and does it for 12 consultants at once instead of one paste job at a time.",
+      },
+      {
+        question: "What happens to the RFPs and CV data we upload?",
+        answer:
+          "MagicCV is built GDPR-by-design with EU data residency, and Enterprise plans include a DPA and audit logs. Your briefs and profiles stay your data. The Trust Center covers data handling, retention, and processing in detail.",
       },
     ],
     related: [
@@ -64,25 +89,30 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "brand-templates",
     name: "Brand-consistent exports",
-    h1: "Every CV, perfectly on-brand.",
-    sub: "Your fonts, colors, and layout - applied automatically to every consultant CV and proposal pack.",
+    h1: "Never send an off-brand CV again.",
+    sub: "Set your template once and every consultant CV exports as a pixel-consistent PDF or Word file - no more Thursday-night reformatting before a submission.",
     whatItDoesBody:
-      "Set your brand once - fonts, colors, logo placement, layout - and every CV MagicCV generates uses it automatically. Export to PDF or DOCX, and switch to client- or tender-specific templates when a bid demands a particular format, without touching the underlying profile data.",
+      "Ask any proposal manager what the CV pack looked like before the last deadline: three consultants still on the 2019 template, one partner who keeps a personal version with his own fonts, and a contractor's CV in Calibri when the brand guide says otherwise. Fixing it means reformatting 12 documents by hand the night before submission - and the client still spots the one page where the logo sits 5mm too low.\n\nWith MagicCV, presentation is separated from content. You define the template once - fonts, colors, logo placement, section layout - and every CV generated from a consultant's profile inherits it automatically. Exports come out as submission-ready PDF or Word files, identical to the pixel across the whole pack. When a client or a government tender mandates its own format, you switch templates for that bid without touching the underlying profile data, and switch back when it's done.",
     benefits: [
       {
-        title: "One brand template, applied everywhere",
-        body: "Define your firm's visual identity once. Every consultant CV and every proposal pack inherits it automatically - no manual formatting per bid.",
-        screenshotAlt: "Brand template editor with firm logo and colors applied",
+        title: "One template, zero drift",
+        body: "Define your firm's visual identity once and every CV inherits it on export. The partner's personal version, the 2019 layout, the wrong-font contractor CV - all replaced by one source of formatting truth.",
+        screenshotAlt: "Brand template editor showing font, color, and logo settings applied to a live CV preview",
       },
       {
-        title: "Client- and tender-specific formats on demand",
-        body: "Keep your house style as the default, and switch to a client's required template or a government tender format without rebuilding anything by hand.",
-        screenshotAlt: "Template picker showing house style vs. client-specific format",
+        title: "Client and tender formats without rebuilding anything",
+        body: "Keep your house style as the default and add client-specific or tender-mandated templates alongside it. Reformatting a 12-person pack for a government framework becomes a template switch, not a week of copy-paste.",
+        screenshotAlt: "Template picker showing a house-style template next to a client-mandated tender format for the same consultant",
       },
       {
-        title: "Export to PDF or DOCX",
-        body: "Generate submission-ready files in the format your proposal process actually needs.",
-        screenshotAlt: "Export dialog showing PDF and DOCX output options",
+        title: "Submission-ready PDF and Word, from the same source",
+        body: "Export any CV or full team pack to PDF or DOCX. Both come from the same template system, so the Word file a client asks to edit matches the PDF you submitted.",
+        screenshotAlt: "Export dialog with PDF and Word options for an 8-consultant proposal pack",
+      },
+      {
+        title: "Rebrand once, update every CV",
+        body: "Content lives in profiles; presentation lives in the template. Change the logo or color palette after a rebrand and every future export - across 200 profiles - picks it up immediately, with nothing to chase down.",
+        screenshotAlt: "Updated brand colors propagating across a grid of consultant CV previews",
       },
     ],
     connectsTo: [
@@ -92,13 +122,39 @@ export const features: FeaturePage[] = [
     ],
     faqs: [
       {
+        question: "Can we keep our existing Word template?",
+        answer:
+          "Yes - recreate your current layout in MagicCV's template system, including fonts, colors, logo placement, and section order. From then on, every CV exports in that format automatically instead of depending on whoever formatted the document last.",
+      },
+      {
         question: "Can we use a different template for a specific client or tender?",
         answer:
-          "Yes. Set your house brand as the default and layer in client-specific or tender-specific templates whenever a bid requires it, without touching the underlying profile data.",
+          "Yes. Your house style stays the default, and you add client-specific or tender-specific templates alongside it. Switching a whole CV pack to a mandated format is a template selection, not a manual rework - the profile data underneath never changes.",
       },
       {
         question: "What export formats are supported?",
-        answer: "PDF and DOCX today, both generated from the same on-brand template system.",
+        answer:
+          "PDF and Word (DOCX), both generated from the same template system. The Word version matches the PDF, so you can submit one and hand the other to a client who insists on editing.",
+      },
+      {
+        question: "Can consultants break the formatting when they update their CV?",
+        answer:
+          "No. Consultants update the content of their profile - projects, skills, certifications - while the template controls presentation. There's no document for them to reformat, so the pack stays consistent no matter who edited what.",
+      },
+      {
+        question: "What happens when we rebrand?",
+        answer:
+          "Update the template once - new logo, colors, fonts - and every CV exported from that point on uses the new identity. You skip the usual rebrand cleanup of hunting old-template CVs out of SharePoint folders for months.",
+      },
+      {
+        question: "Is template-based export available on every plan?",
+        answer:
+          "Yes. On-brand PDF and Word export works on Free, Pro, and Enterprise. Plans differ in scale: Free covers 10 profiles and 30 CVs total, Pro covers 200 profiles and 600 CVs per month, and Enterprise is unlimited.",
+      },
+      {
+        question: "Do translated or anonymized CVs keep the same template?",
+        answer:
+          "Yes. Translation and anonymization change the content layer only - the exported file keeps your fonts, layout, and branding. A blind CV for a tender looks exactly like your standard CV, minus the identifying details.",
       },
     ],
     related: [
@@ -106,7 +162,7 @@ export const features: FeaturePage[] = [
       { label: "Build a proposal-ready CV pack", href: "/use-cases/proposal-cv-pack" },
     ],
     seo: {
-      title: "Brand-consistent CV templates & exports - MagicCV",
+      title: "Brand-consistent CV templates & exports",
       description:
         "Your fonts, colors, and layout applied automatically to every consultant CV and proposal pack. PDF and DOCX export.",
       keywords: ["branded CV template tool", "consistent consultant CVs"],
@@ -116,25 +172,30 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "anonymization",
     name: "Anonymization & GDPR",
-    h1: "Anonymization built in, not bolted on.",
-    sub: "One-click blind CVs for tenders and competitive bids, with GDPR-by-design throughout.",
+    h1: "Blind CVs in one click, not one evening of manual redaction.",
+    sub: "One-click anonymization for public tenders, blind recruitment processes, and competitive bids - the same rules applied to every CV, every time.",
     whatItDoesBody:
-      "Toggle anonymization on any CV to strip names, photos, and other identifying details according to rules you control - consistently, across your whole team, every time. Built for blind evaluation processes and public tenders, and backed by GDPR-by-design data handling end to end. See the Trust Center for the full compliance picture.",
+      "The tender says candidate CVs must be anonymized. So the night before submission, someone works through 14 documents deleting names, photos, and employer references by hand - and misses the consultant's surname in a page footer, or the client name buried in a project description on page 3. One missed field can void a submission in a blind evaluation, and manual redaction gives you 14 chances to miss one.\n\nMagicCV makes anonymization a property of the export, not a task. Toggle it on any CV or full team pack and identifying details are stripped according to rules you configure - names, photos, and whichever other fields your process treats as identifying. The same rules apply to every consultant, every time, so a 14-person pack is as consistent as a single CV. Underneath, MagicCV is GDPR-by-design with EU data residency; the Trust Center covers the full compliance picture.",
     benefits: [
       {
-        title: "One-click anonymization",
-        body: "Strip identifying details from any CV with a single toggle - no manual redaction, no inconsistency between consultants.",
-        screenshotAlt: "Anonymization toggle showing before/after CV comparison",
+        title: "From an evening of redaction to a single toggle",
+        body: "Switch on anonymization at export and names, photos, and other identifying details come out - no manual find-and-delete pass, no footer or header that slips through, no second pair of eyes needed just to catch misses.",
+        screenshotAlt: "Anonymization toggle with a before/after comparison of the same consultant CV, name and photo removed",
       },
       {
-        title: "Rule control over what gets removed",
-        body: "Configure exactly which fields count as identifying for your process, so anonymized CVs meet the specific tender or evaluation requirement.",
-        screenshotAlt: "Anonymization rule configuration panel",
+        title: "Your rules decide what counts as identifying",
+        body: "Blind recruitment processes and public tenders disagree about what must be hidden - some want employer names gone, some only names and photos. Configure which fields are stripped so each submission meets its specific requirement.",
+        screenshotAlt: "Anonymization rule panel with field-level toggles for name, photo, employer names, and contact details",
       },
       {
-        title: "Consistent at scale",
-        body: "Every anonymized CV follows the same rules, whether it's one submission or a full team pack for a public tender.",
-        screenshotAlt: "Anonymized CV pack for a multi-consultant team",
+        title: "Whole team packs, identical treatment",
+        body: "Anonymize a 14-consultant pack for a public tender and every CV follows the same rules. In a blind evaluation, consistency is the requirement - one differently-redacted CV can identify a candidate by omission.",
+        screenshotAlt: "Anonymized CV pack for a 14-consultant tender submission, all profiles showing role codes instead of names",
+      },
+      {
+        title: "GDPR by design underneath",
+        body: "Anonymization sits on top of GDPR-by-design data handling with EU data residency, audit logs, and a DPA on Enterprise. Blind CVs are one output of a system built to handle personal data properly, not a patch on one that wasn't.",
+        screenshotAlt: "Trust Center overview showing EU data residency and GDPR data-handling commitments",
       },
     ],
     connectsTo: [
@@ -143,14 +204,39 @@ export const features: FeaturePage[] = [
     ],
     faqs: [
       {
-        question: "What gets removed when a CV is anonymized?",
+        question: "What exactly gets removed when a CV is anonymized?",
         answer:
-          "Names, photos, and other identifying details are stripped according to rules you configure - built to match blind-evaluation and public-tender requirements.",
+          "Names, photos, and any other fields you configure as identifying - contact details, employer names, client names in project descriptions. You control the rule set, so the output matches what your tender or blind recruitment process actually requires.",
       },
       {
-        question: "Is this GDPR-compliant?",
+        question: "Does an anonymized CV still use our template?",
         answer:
-          "Anonymization is one part of MagicCV's GDPR-by-design approach. See the Trust Center for the full picture on data residency, retention, and processing.",
+          "Yes. Anonymization strips content; the template controls presentation. A blind CV exports in the same fonts, layout, and branding as your standard CV, so the pack still looks like your firm - just without the identifying details.",
+      },
+      {
+        question: "Can we get the identified version back after the blind evaluation?",
+        answer:
+          "Yes. Anonymization is applied at export and never alters the underlying profile. Once the evaluation stage passes, export the same consultant's CV with anonymization off and you have the full version - no separate documents to maintain.",
+      },
+      {
+        question: "Is MagicCV GDPR-compliant?",
+        answer:
+          "MagicCV is built GDPR-by-design with EU data residency, and Enterprise plans add a DPA and audit logs. Anonymized exports are one part of that; the Trust Center covers data residency, retention, and processing in full.",
+      },
+      {
+        question: "Is MagicCV SOC 2 certified?",
+        answer:
+          "SOC 2 certification is in progress - we won't claim it before it's complete. Today MagicCV offers GDPR-by-design data handling, EU data residency, SSO and a DPA on Enterprise, and audit logs. The Trust Center has the current status.",
+      },
+      {
+        question: "Does this work for blind recruitment as well as tenders?",
+        answer:
+          "Yes. The same one-click anonymization covers blind recruitment screening - strip names, photos, and other bias-carrying fields before CVs reach reviewers, then share the identified version once a shortlist is agreed.",
+      },
+      {
+        question: "How do we know every CV in a pack was anonymized the same way?",
+        answer:
+          "Because the rules are applied by the system, not by whoever edited each document. Every CV in the pack passes through the same configured rule set at export, so there's no per-document variance to audit the night before a deadline.",
       },
     ],
     related: [
@@ -169,25 +255,30 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "multilingual",
     name: "Multilingual & translation",
-    h1: "Bid in every European language.",
-    sub: "Generate professional, on-brand CVs in EN, DE, FR, NL, ES and more from a single master profile.",
+    h1: "One master profile. Every language your clients tender in.",
+    sub: "Translate consultant CVs into any language with layout and branding intact - built for cross-border bids and multilingual evaluation panels.",
     whatItDoesBody:
-      "Maintain one master profile per consultant, then generate accurate, on-brand CVs in any supported language on demand - no retyping, no separate documents to keep in sync. Coverage today spans the core EU languages MagicCV's mid-market consulting customers bid in most, with more on the roadmap.",
+      "A German framework tender asks for CVs auf Deutsch by Thursday. Your masters are in English, the last agency translation took three days and came back as plain text that broke the template, and the German versions someone made last year have quietly drifted out of date - the consultant's two newest projects never made it in. Now you're reconciling two documents per person under deadline pressure, in a language half the bid team doesn't read.\n\nMagicCV keeps one master profile per consultant and generates the language at export. Pick the language the bid requires and the CV comes out translated with the layout, fonts, and branding untouched - the same template, the same structure, in French, German, Dutch, or whatever the evaluation panel reads. There are no parallel documents to keep in sync: update the profile once and every language version reflects it. Wording can be adjusted through chat-based editing before anything is submitted.",
     benefits: [
       {
-        title: "One master profile, many languages",
-        body: "Maintain a single source of truth per consultant. Generate a translated, on-brand CV in any supported language whenever a bid needs it.",
-        screenshotAlt: "Language picker generating a CV in multiple EU languages",
+        title: "No parallel versions to keep in sync",
+        body: "The master profile is the single source of truth. Add a new project once and the English, German, and French CVs all carry it at the next export - the quiet drift between language versions simply can't happen.",
+        screenshotAlt: "One consultant profile with export buttons for English, German, and French CV versions",
       },
       {
-        title: "Built for EU procurement",
-        body: "Cross-border tenders and multilingual evaluation panels are the normal case for MagicCV's customers, not an edge case.",
-        screenshotAlt: "Multilingual CV pack for a cross-border tender",
+        title: "Layout and branding survive translation",
+        body: "Translation happens inside the template, not in a text file that someone re-flows afterwards. German runs about 20% longer than English, and the layout absorbs it - your fonts, logo, and section structure come through intact.",
+        screenshotAlt: "Side-by-side English and German CV exports of the same consultant, identical layout in both",
       },
       {
-        title: "Consistent quality across languages",
-        body: "The same brand template and the same underlying facts carry through every language version - nothing drifts between translations.",
-        screenshotAlt: "Side-by-side CV comparison across two languages",
+        title: "Three-day agency turnaround becomes an export setting",
+        body: "When the tender demands a language you didn't plan for, you pick it at export instead of briefing a translation agency and waiting. The Thursday deadline stops depending on someone else's queue.",
+        screenshotAlt: "Language picker at CV export with a translated PDF generating for a cross-border tender",
+      },
+      {
+        title: "Built for cross-border procurement",
+        body: "Multilingual evaluation panels and cross-border frameworks are the normal case for consulting and IT services firms bidding in Europe. Combine translation with anonymization and your template for a submission-ready pack in the panel's language.",
+        screenshotAlt: "Multilingual CV pack for a cross-border tender, six consultants exported in two languages",
       },
     ],
     connectsTo: [
@@ -196,14 +287,44 @@ export const features: FeaturePage[] = [
     ],
     faqs: [
       {
-        question: "Which languages are supported today?",
+        question: "Which languages can MagicCV translate CVs into?",
         answer:
-          "EN, DE, FR, NL and ES are supported today, covering the core languages MagicCV's mid-market European customers bid in. More EU languages are on the roadmap.",
+          "Any language a bid requires - the core European business languages like English, German, French, Dutch, Spanish, and Swedish are the most common among our customers, but the translation isn't limited to a fixed list. Layout and branding are preserved regardless of language.",
       },
       {
-        question: "Do I need to maintain a separate profile per language?",
+        question: "Do we need to maintain a separate profile per language?",
         answer:
-          "No. Maintain one master profile per consultant and generate any supported language on demand - there's nothing to keep manually in sync.",
+          "No. Each consultant has one master profile, and language versions are generated at export. Update the profile once - a new project, a new certification - and every language version includes it the next time you export.",
+      },
+      {
+        question: "Will translation break our CV layout?",
+        answer:
+          "No. Translation happens within your brand template, so fonts, logo placement, and section structure carry through. Languages that run longer than English, like German or French, are absorbed by the layout rather than pushed into a reformatting job.",
+      },
+      {
+        question: "Can a native speaker review the translation before we submit?",
+        answer:
+          "Yes, and for high-stakes submissions we recommend it. Any section can be adjusted through chat-based editing before export, so a native-speaking colleague can fix a term in minutes rather than re-translating the document.",
+      },
+      {
+        question: "How does it handle technical and domain-specific terminology?",
+        answer:
+          "The AI translates in context, which handles most consulting, engineering, and IT terminology well. For niche domain terms or client-preferred vocabulary, review the export and correct through chat - the fix takes minutes, not another agency round.",
+      },
+      {
+        question: "Does the master profile have to be in English?",
+        answer:
+          "No. Import CVs in the language they were written in - MagicCV parses them into structured profiles either way, and you export into whichever language each bid requires.",
+      },
+      {
+        question: "Is translation included in the price, or billed separately?",
+        answer:
+          "It's included. Translated exports count toward your plan's CV allowance like any other export - 30 CVs total on Free, 600 per month on Pro, unlimited on Enterprise. There's no per-word or per-language fee.",
+      },
+      {
+        question: "Can we translate and anonymize the same CV?",
+        answer:
+          "Yes. Translation, anonymization, and your brand template all apply at export, so one click produces a blind German CV in your house style for a cross-border tender that requires both.",
       },
     ],
     related: [
@@ -211,7 +332,7 @@ export const features: FeaturePage[] = [
       { label: "Public-sector & tender-driven consultancies", href: "/solutions/public-sector" },
     ],
     seo: {
-      title: "Multilingual CVs & translation - MagicCV",
+      title: "Multilingual CVs & translation",
       description:
         "Generate professional, on-brand CVs in EN, DE, FR, NL, ES and more from a single master profile.",
       keywords: ["multilingual CV tool", "CV in multiple languages"],
@@ -221,25 +342,30 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "profiles-skills",
     name: "Centralized profiles & skills intelligence",
-    h1: "Your team's resume database - one structured profile per person.",
-    sub: "A searchable resume database and skills matrix for your whole team: import once, keep profiles current, and generate any output on demand.",
+    h1: "From CVs scattered across SharePoint to one searchable resume database.",
+    sub: "A searchable resume database and skills matrix for your whole bench: import the CVs you already have, keep one structured profile per person, and generate any output from it.",
     whatItDoesBody:
-      "Replace scattered CVs in shared drives and inboxes with one structured CV database - one always-current profile per consultant. CV parsing turns existing files into structured profiles today, with LinkedIn and HRIS enrichment on the roadmap. Then search your whole bench like a skills matrix - by skill, certification, or experience - and generate whatever output a bid requires. It works as talent management software with resume search built in: the database stays your single source of truth.",
+      "Right now the answer to \"who has done pharma work and speaks French?\" lives in a SharePoint folder full of files named final_v3_JS_edit.docx, a staffing grid in Excel that was accurate in March, and the memory of whoever staffed the last similar project. Finding out means opening documents one by one or emailing the whole practice - and when the deadline is 48 hours out, you shortlist from the CVs you can find, not the consultants you actually have.\n\nMagicCV replaces the folder with a structured database: one profile per person, parsed automatically from the Word, PDF, or LinkedIn CVs you already have. Skills, sectors, languages, and certifications become searchable fields instead of prose trapped in documents. Search the whole bench like a skills matrix, open a profile, and generate whatever the bid needs - tailored, translated, anonymized, on your template. HRIS enrichment (Personio, BambooHR, HiBob) is on the roadmap to reduce manual upkeep further.",
     benefits: [
       {
-        title: "Structured profiles, not freeform documents",
-        body: "Each consultant's experience, skills, and certifications live as structured data - searchable and reusable, not locked inside a Word file.",
-        screenshotAlt: "Structured consultant profile editor",
+        title: "Structured data instead of 200 Word files",
+        body: "Each consultant's experience, skills, certifications, and languages live as structured fields, not prose locked in a document. The same profile powers search, tailoring, translation, and export - update it once and every output reflects it.",
+        screenshotAlt: "Structured consultant profile with separate sections for projects, skills, certifications, and languages",
       },
       {
-        title: "Import and enrich",
-        body: "Bring existing CVs in to start. LinkedIn and HRIS enrichment (Personio, BambooHR, HiBob) are on the roadmap to keep profiles current automatically.",
-        screenshotAlt: "Profile import flow from existing CV files",
+        title: "Import the CVs you already have",
+        body: "Upload Word and PDF files straight from SharePoint, or pull from LinkedIn - MagicCV parses each one into a structured profile automatically. Migrating a 50-person bench is an upload session, not a retyping project.",
+        screenshotAlt: "Bulk import screen parsing a batch of Word and PDF CVs into structured profiles",
       },
       {
-        title: "Find the right person fast",
-        body: "Search your whole bench by skill, certification, or past project to staff the next brief in minutes, not a scramble through folders.",
-        screenshotAlt: "Skills search across the consultant bench",
+        title: "Answer 'who knows Kubernetes?' in seconds",
+        body: "Search the whole bench by skill, certification, sector, or language and get a shortlist instantly. Staffing a brief stops depending on the Excel grid from March or on emailing the practice and waiting until Monday.",
+        screenshotAlt: "Skills matrix search filtered to consultants with AWS certification and German, showing 6 matches",
+      },
+      {
+        title: "Profiles that stay current without the Friday chase",
+        body: "Consultants update their own profile in one place, and AI-assisted editing makes it a five-minute task instead of a document-formatting session. The version you pull for a bid is the current one - not the copy someone last touched in 2023.",
+        screenshotAlt: "Profile update view with AI chat adding a recently completed project to a consultant's record",
       },
     ],
     connectsTo: [
@@ -248,14 +374,44 @@ export const features: FeaturePage[] = [
     ],
     faqs: [
       {
-        question: "How do I get existing CVs into MagicCV?",
+        question: "What happens to the CVs we already have in SharePoint?",
         answer:
-          "Import your existing CV files to create structured profiles. LinkedIn and HRIS enrichment (Personio, BambooHR, HiBob) are on the roadmap to keep them current with less manual upkeep.",
+          "You upload them. MagicCV parses Word and PDF files - and LinkedIn profiles - into structured profiles automatically, one per person. A 50-person bench typically migrates in an upload session rather than a manual retyping project, and the old folder can be retired.",
       },
       {
-        question: "Can I search across all consultants by skill?",
+        question: "How do we keep 200 consultant CVs up to date without chasing people?",
         answer:
-          "Yes. Every profile is structured data, so you can search your whole bench by skill, certification, or past project to staff a brief quickly.",
+          "Two ways. Consultants update their own profile in one place, with AI-assisted editing that turns it into a five-minute task. And because outputs are generated from the profile, there are no stray document copies drifting out of date - the database version is the only version.",
+      },
+      {
+        question: "Can we search across all consultants by skill?",
+        answer:
+          "Yes - that's the point of a resume database over a folder. Every profile is structured data, so you can filter the whole bench by skill, certification, sector, or language and get a staffing shortlist in seconds instead of opening files one by one.",
+      },
+      {
+        question: "How is this different from our ATS or HRIS?",
+        answer:
+          "An ATS tracks applicants through hiring; an HRIS manages employment records. Neither produces a client-ready CV. MagicCV is CV management software for the people you already employ: it keeps their profiles structured and searchable, then generates tailored, on-brand CVs for bids. HRIS enrichment (Personio, BambooHR, HiBob) is on the roadmap so records flow in rather than being retyped.",
+      },
+      {
+        question: "How many profiles can we store on each plan?",
+        answer:
+          "Free covers 10 profiles and 30 CVs total - enough to trial with one team. Pro ($50/month) covers 200 profiles and 600 CVs per month. Enterprise is unlimited, with SSO and a DPA included. You can start on Free and upgrade when the bench outgrows it.",
+      },
+      {
+        question: "Who can see and edit profiles?",
+        answer:
+          "Profiles are managed centrally, so bid and resourcing teams work from the same database while consultants keep their own records current. Enterprise adds SSO for access control and audit logs for tracking who changed what.",
+      },
+      {
+        question: "Is a centralized resume database GDPR-compliant?",
+        answer:
+          "Centralizing actually helps: personal data sits in one governed system instead of scattered across inboxes and shared drives where nobody can answer a deletion request. MagicCV is GDPR-by-design with EU data residency, and the Trust Center covers retention and processing in detail.",
+      },
+      {
+        question: "What outputs can we generate from a profile?",
+        answer:
+          "Any CV the bid requires: tailored against an RFP, translated into the tender's language, anonymized for blind evaluation, always exported on your brand template as PDF or Word. One profile is the source for all of it - no per-output document copies.",
       },
     ],
     related: [

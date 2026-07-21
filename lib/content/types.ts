@@ -78,6 +78,8 @@ export interface RolePage {
   featureRows: FeatureRowItem[];
   stats: StatItem[];
   includeRoiTeaser?: boolean;
+  /** Optional during locale transition - localized files may lag the EN rewrite. */
+  faqs?: FaqItem[];
   related: RelatedLink[];
   seo: SeoMeta;
 }

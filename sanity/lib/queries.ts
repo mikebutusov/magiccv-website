@@ -80,6 +80,7 @@ export const rolesQuery = defineQuery(`
     featureRows[]${FEATURE_ROWS},
     stats[]${STATS},
     includeRoiTeaser,
+    ${FAQS},
     ${RELATED}, ${SEO}
   }
 `);
@@ -91,6 +92,7 @@ export const roleBySlugQuery = defineQuery(`
     featureRows[]${FEATURE_ROWS},
     stats[]${STATS},
     includeRoiTeaser,
+    ${FAQS},
     ${RELATED}, ${SEO}
   }
 `);

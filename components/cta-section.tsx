@@ -6,11 +6,13 @@ export function CTASection({
   body = "See it on your own consultants, or start free today - no credit card.",
   primaryCta = { label: "Get started free", href: "https://getmagic.cv/sign-up" },
   secondaryCta = { label: "Book a demo", href: "/demo" },
+  trustLine = "GDPR by design · EU data residency · Free plan, no credit card",
 }: {
   headline?: string;
   body?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
+  trustLine?: string;
 }) {
   return (
     <section className="border-y border-border bg-surface py-16 md:py-20">
@@ -33,6 +35,7 @@ export function CTASection({
                 {secondaryCta.label}
               </Button>
             </div>
+            <p className="mt-3 text-sm text-primary-tint/90">{trustLine}</p>
           </div>
         </div>
       </Container>

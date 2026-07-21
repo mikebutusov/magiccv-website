@@ -88,6 +88,7 @@ for (const r of roles) {
     featureRows: rows(r.featureRows),
     stats: stats(r.stats),
     includeRoiTeaser: r.includeRoiTeaser ?? false,
+    faqs: faqs(r.faqs ?? []),
     related: related(r.related),
     seo: seo(r.seo),
   });

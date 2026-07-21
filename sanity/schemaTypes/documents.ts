@@ -110,6 +110,7 @@ export const rolePage = defineType({
     defineField({ name: "featureRows", title: "Feature rows", type: "array", of: [{ type: "featureRow" }] }),
     defineField({ name: "stats", type: "array", of: [{ type: "stat" }] }),
     defineField({ name: "includeRoiTeaser", title: "Include ROI calculator", type: "boolean", initialValue: false }),
+    defineField({ name: "faqs", type: "array", of: [{ type: "faqItem" }] }),
     defineField({ name: "related", title: "Related links", type: "array", of: [{ type: "relatedLink" }] }),
     defineField({ name: "seo", type: "seo", validation: (r) => r.required() }),
   ],

@@ -54,6 +54,35 @@ export interface TestimonialOverride {
   initials: string;
 }
 
+/** Three-quote grid for the homepage - same fictional sample data as above. */
+export function TestimonialGrid({ title, subtitle }: { title: string; subtitle?: string }) {
+  const items = SAMPLE_TESTIMONIALS.slice(0, 3);
+  return (
+    <Container>
+      <h2 className="text-3xl font-medium text-ink">{title}</h2>
+      {subtitle && <p className="mt-3 max-w-measure text-lg text-ink-soft">{subtitle}</p>}
+      <div className="mt-8 grid gap-5 md:grid-cols-3">
+        {items.map((t) => (
+          <figure key={t.name} className="flex flex-col rounded-3xl border border-border bg-surface p-7">
+            <blockquote className="flex-1 text-[1.05rem] leading-normal font-medium text-ink">
+              &ldquo;{t.quote}&rdquo;
+            </blockquote>
+            <figcaption className="mt-6 flex items-center gap-3">
+              <Avatar initials={t.initials} className="h-10 w-10 text-xs" />
+              <div>
+                <p className="text-sm font-semibold text-ink">{t.name}</p>
+                <p className="text-sm text-muted">
+                  {t.role} · {t.firm}
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </Container>
+  );
+}
+
 export function TestimonialBlock({
   context = "default",
   override,

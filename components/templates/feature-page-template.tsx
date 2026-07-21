@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Hero } from "@/components/hero";
 import { FeatureRowList } from "@/components/feature-row";
 import { FAQAccordion } from "@/components/faq-accordion";
+import { TestimonialBlock } from "@/components/testimonial-block";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
@@ -29,7 +30,7 @@ export function FeaturePageTemplate({ feature, locale = "en" }: { feature: Featu
       <Section>
         <h2 className="text-2xl font-medium text-ink">{ctx.tpl.whatItDoes}</h2>
         <div className="mt-6 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
-          <p className="max-w-measure text-lg text-ink-soft">{feature.whatItDoesBody}</p>
+          <p className="max-w-measure whitespace-pre-line text-lg text-ink-soft">{feature.whatItDoesBody}</p>
           <GenericUiShot variant={1} />
         </div>
       </Section>
@@ -58,10 +59,14 @@ export function FeaturePageTemplate({ feature, locale = "en" }: { feature: Featu
       )}
 
       <Section className="border-t border-border bg-surface">
-        <FAQAccordion faqs={feature.faqs} title={ctx.tpl.faqTitle} />
+        <TestimonialBlock context={`feature-${feature.slug}`} override={ctx.testimonial} />
       </Section>
 
       <Section className="border-t border-border">
+        <FAQAccordion faqs={feature.faqs} title={ctx.tpl.faqTitle} />
+      </Section>
+
+      <Section className="border-t border-border bg-surface">
         <RelatedLinks
           links={feature.related.map((l) => ({ ...l, href: ctx.px(l.href) }))}
           title={ctx.tpl.relatedTitle}

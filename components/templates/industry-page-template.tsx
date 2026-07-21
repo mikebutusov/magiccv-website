@@ -26,7 +26,7 @@ export function IndustryPageTemplate({ industry, locale = "en" }: { industry: In
       <Hero h1={industry.h1} sub={industry.sub} visual={heroShotFor("industry", industry.slug)} {...ctx.heroCtas} />
 
       <Section>
-        <p className="max-w-measure text-lg text-ink-soft">{industry.angle}</p>
+        <p className="max-w-measure whitespace-pre-line text-lg text-ink-soft">{industry.angle}</p>
         {industry.note && (
           <p className="mt-4 max-w-measure rounded-xl border border-border bg-surface p-4 text-sm text-muted">
             {industry.note}

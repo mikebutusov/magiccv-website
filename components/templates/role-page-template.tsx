@@ -5,6 +5,7 @@ import { FeatureRowList } from "@/components/feature-row";
 import { StatStrip } from "@/components/stat-strip";
 import { TestimonialBlock } from "@/components/testimonial-block";
 import { ROICalculator } from "@/components/roi-calculator";
+import { FAQAccordion } from "@/components/faq-accordion";
 import { RelatedLinks } from "@/components/related-links";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
@@ -53,6 +54,10 @@ export function RolePageTemplate({ role, locale = "en" }: { role: RolePage; loca
       </Section>
 
       <Section className="border-t border-border bg-surface">
+        <FAQAccordion faqs={role.faqs ?? []} title={ctx.tpl.faqTitle} />
+      </Section>
+
+      <Section className="border-t border-border">
         <RelatedLinks
           links={role.related.map((l) => ({ ...l, href: ctx.px(l.href) }))}
           title={ctx.tpl.relatedTitle}

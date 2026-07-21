@@ -6,8 +6,9 @@ import { FeatureRow } from "@/components/feature-row";
 import { ROICalculator } from "@/components/roi-calculator";
 import { CvGeneratorShot } from "@/components/product-shots/cv-generator-shot";
 import { CvListShot } from "@/components/product-shots/cv-list-shot";
+import { CvPreviewShot } from "@/components/product-shots/cv-preview-shot";
 import { ImportShot } from "@/components/product-shots/import-shot";
-import { TestimonialBlock } from "@/components/testimonial-block";
+import { TestimonialGrid } from "@/components/testimonial-block";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
@@ -33,19 +34,24 @@ export const metadata = buildMetadata({
 
 const HOW_IT_WORKS = [
   {
-    title: "Import your consultants once",
-    body: "Bring your existing CVs in to create structured, always-current profiles for your whole team - one source of truth instead of files scattered across drives and inboxes.",
-    screenshotAlt: "Consultant profile import",
+    title: "Import every CV you already have",
+    body: "Drop in Word files, PDFs, or LinkedIn exports. MagicCV parses each one into a structured profile - skills, projects, certifications, languages - so the mess you have today becomes the database you search tomorrow. No retyping, no template migration project.",
+    screenshotAlt: "Import screen parsing a Word CV into a structured profile",
   },
   {
-    title: "Tailor to any client, brief, or format",
-    body: "Pick a consultant and a purpose - a client intro, a bid, a specific template - and MagicCV reshapes their CV around it. Paste an RFP when you have one; it's one path, not the only one.",
-    screenshotAlt: "Tailoring a CV to a brief",
+    title: "Find the right people in seconds",
+    body: "Search the whole bench like a skills matrix: React and German, PRINCE2 and public sector, whatever the brief asks for. Availability, seniority, and past projects sit on the same card - so staffing a bid is a query, not a call-around.",
+    screenshotAlt: "CV list filtered by skills with availability badges",
   },
   {
-    title: "Export an on-brand pack in any language",
-    body: "Get a submission-ready CV or full pack in your firm's brand, anonymized if you need it, in the language you're working in.",
-    screenshotAlt: "Generated on-brand CV pack",
+    title: "Tailor to the brief, not from a blank page",
+    body: "Paste the RFP or describe the client, and MagicCV reshapes each CV around the requirements - reordering projects, surfacing the relevant experience, and keeping every claim traceable to the consultant's real profile. Then refine it in chat.",
+    screenshotAlt: "AI tailoring a CV against pasted RFP requirements",
+  },
+  {
+    title: "Send a pack that looks like one firm",
+    body: "Export to your brand template as PDF or Word - anonymized for blind submissions, translated for cross-border bids. Ten CVs, one visual standard, ready before the kickoff call.",
+    screenshotAlt: "Export dialog with brand template, anonymization and language options",
   },
 ];
 
@@ -53,31 +59,31 @@ const CAPABILITIES = [
   {
     icon: Sparkles,
     title: "RFP-to-CV reasoning",
-    body: "Starts from the brief, not a template.",
+    body: "Paste the RFP and get CVs reshaped around its actual requirements - the right projects first, every claim traceable to the profile.",
     href: "/features/rfp-to-cv",
   },
   {
     icon: FileText,
     title: "Brand-consistent exports",
-    body: "Every CV, perfectly on-brand.",
+    body: "Your fonts, your layout, your rules - enforced automatically on every export, whoever hits the button.",
     href: "/features/brand-templates",
   },
   {
     icon: ShieldCheck,
     title: "Anonymization & GDPR",
-    body: "Built in, not bolted on.",
+    body: "One-click blind CVs for tenders and agency submissions, plus EU data residency and GDPR-by-design handling underneath.",
     href: "/features/anonymization",
   },
   {
     icon: Globe2,
     title: "Multilingual & translation",
-    body: "Bid in every European language.",
+    body: "Translate a CV without losing structure or layout. Bid in German on Monday, French on Wednesday, same profile.",
     href: "/features/multilingual",
   },
   {
     icon: Layers,
     title: "Centralized profiles & skills",
-    body: "One structured profile, endlessly reusable.",
+    body: "A searchable resume database and skills matrix for the whole team - import once, reuse for every client and bid.",
     href: "/features/profiles-skills",
   },
 ];
@@ -102,7 +108,7 @@ export default function HomePage() {
       <Hero
         eyebrow="AI-native CV management software for consulting firms"
         h1="Every consultant CV, on-brand and ready in minutes."
-        sub="MagicCV keeps your team's profiles current and turns them into tailored, on-brand CVs - for any client, bid, or language. One source of truth, minutes instead of evenings."
+        sub="Stop rebuilding CVs in Word the night before a deadline. MagicCV keeps one structured profile per consultant and turns it into a tailored, on-brand CV for any client, bid, or language - in minutes, not evenings."
         visual={<CvGeneratorShot />}
         stats={[
           { value: "1 day → 15 min", label: "per CV pack" },
@@ -119,19 +125,46 @@ export default function HomePage() {
             Consultant CVs shouldn&rsquo;t be this much work.
           </h2>
           <p className="mt-4 text-lg text-ink-soft">
-            CVs live in shared drives, inboxes, and laptops - out of date the moment you need them. Every
-            client intro, bid, or new engagement means chasing people for updates and reformatting by hand,
-            and the quality drifts every time. MagicCV makes the current version the easy version.
+            Every firm has the same folder: seventeen versions of the same CV, none of them current, one of
+            them called final_v3_edited.docx. When a bid lands, someone spends the evening chasing consultants
+            for updates and reformatting Word files by hand - and the quality still drifts from one document
+            to the next.
           </p>
+          <p className="mt-4 text-lg text-ink-soft">
+            MagicCV replaces the folder with one structured profile per person. The current version becomes
+            the easy version - searchable, on-brand, and ready to tailor to whatever lands next.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              who: "If you run bids",
+              pain: "The RFP names 3 roles and a 48-hour window. You need matched consultants and a consistent pack - not a formatting session.",
+            },
+            {
+              who: "If you run resourcing",
+              pain: "A client asks who's available with React and German. Today that answer lives in people's heads and out-of-date spreadsheets.",
+            },
+            {
+              who: "If you run the firm",
+              pain: "Every CV that goes out is your brand. Right now its quality depends on who happened to edit it last, and at what hour.",
+            },
+          ].map((c) => (
+            <div key={c.who} className="rounded-2xl border border-border bg-surface p-6">
+              <p className="text-sm font-semibold uppercase tracking-wide text-primary">{c.who}</p>
+              <p className="mt-3 text-ink-soft">{c.pain}</p>
+            </div>
+          ))}
         </div>
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <h2 className="text-3xl font-medium text-ink">How it works</h2>
+        <h2 className="text-3xl font-medium text-ink">From scattered files to submission-ready, in four steps</h2>
         <div className="divide-y divide-border">
-          <FeatureRow item={HOW_IT_WORKS[0]} visual={<ImportShot />} />
-          <FeatureRow item={HOW_IT_WORKS[1]} reverse visual={<CvListShot />} />
-          <FeatureRow item={HOW_IT_WORKS[2]} visual={<CvGeneratorShot />} />
+          <FeatureRow item={HOW_IT_WORKS[0]} visual={<ImportShot />} stepNumber={1} />
+          <FeatureRow item={HOW_IT_WORKS[1]} reverse visual={<CvListShot />} stepNumber={2} />
+          <FeatureRow item={HOW_IT_WORKS[2]} visual={<CvGeneratorShot />} stepNumber={3} />
+          <FeatureRow item={HOW_IT_WORKS[3]} reverse visual={<CvPreviewShot />} stepNumber={4} />
         </div>
       </Section>
 
@@ -275,7 +308,10 @@ export default function HomePage() {
       </Section>
 
       <Section className="border-t border-border bg-surface">
-        <TestimonialBlock />
+        <TestimonialGrid
+          title="Teams stopped losing evenings to CV formatting"
+          subtitle="Early feedback from pilot teams. (Sample quotes - real customer stories are on the way.)"
+        />
       </Section>
 
       <Section className="border-t border-border">
@@ -321,6 +357,26 @@ export default function HomePage() {
                 question: "Can I search the resume database by skills?",
                 answer:
                   "Yes - every profile is structured data, so it works like talent management software with resume search built in: filter your whole bench by skill, certification, language, or past project to staff the next brief in minutes.",
+              },
+              {
+                question: "What happens to the CVs we already have in SharePoint?",
+                answer:
+                  "You import them. MagicCV parses Word files and PDFs into structured profiles automatically, so your existing CVs become the starting data rather than a migration problem. Most teams import their bench in an afternoon.",
+              },
+              {
+                question: "Can we keep our existing CV template?",
+                answer:
+                  "Yes. Your brand template - fonts, layout, logo placement - is set up once and enforced on every export. Consultants and bid teams generate CVs that all look like they came from the same design team, because effectively they did.",
+              },
+              {
+                question: "How much does CV management software cost?",
+                answer:
+                  "MagicCV is self-serve and public: Free covers 10 profiles and 30 generated CVs, Pro is $50/month for 200 profiles and 600 CVs, and Enterprise adds SSO, unlimited scale, and a DPA. No demo gate, no annual lock-in to see a price.",
+              },
+              {
+                question: "Is our CV data safe - and are we GDPR-compliant using it?",
+                answer:
+                  "CV data is personal data, and MagicCV treats it that way: EU data residency, GDPR-by-design handling, audit logs, and one-click anonymization for blind submissions. The Trust Center documents the current security posture honestly, including what's still in progress.",
               },
             ]}
           />

@@ -8,11 +8,13 @@ export function FeatureRow({
   reverse = false,
   visual,
   variant = 0,
+  stepNumber,
 }: {
   item: FeatureRowItem;
   reverse?: boolean;
   visual?: React.ReactNode;
   variant?: number;
+  stepNumber?: number;
 }) {
   return (
     <div
@@ -22,19 +24,33 @@ export function FeatureRow({
       )}
     >
       <div>
+        {stepNumber != null && (
+          <span
+            aria-hidden
+            className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary-tint text-sm font-bold tabular-nums text-primary"
+          >
+            {String(stepNumber).padStart(2, "0")}
+          </span>
+        )}
         <h2 className="text-2xl font-medium text-ink">{item.title}</h2>
-        <p className="mt-4 max-w-measure text-ink-soft">{item.body}</p>
+        <p className="mt-4 max-w-measure whitespace-pre-line text-ink-soft">{item.body}</p>
       </div>
       {visual ?? <GenericUiShot variant={variant} />}
     </div>
   );
 }
 
-export function FeatureRowList({ items }: { items: FeatureRowItem[] }) {
+export function FeatureRowList({ items, numbered = false }: { items: FeatureRowItem[]; numbered?: boolean }) {
   return (
     <Container className="divide-y divide-border">
       {items.map((item, i) => (
-        <FeatureRow key={item.title} item={item} reverse={i % 2 === 1} variant={i} />
+        <FeatureRow
+          key={item.title}
+          item={item}
+          reverse={i % 2 === 1}
+          variant={i}
+          stepNumber={numbered ? i + 1 : undefined}
+        />
       ))}
     </Container>
   );
