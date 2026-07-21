@@ -20,7 +20,7 @@ export function ComparePageTemplate({ comparison }: { comparison: ComparisonPage
         h1={comparison.h1}
         sub={comparison.sub}
         visual={heroShotFor("comparison", comparison.slug)}
-        primaryCta={{ label: "Start free trial", href: "/pricing" }}
+        primaryCta={{ label: "Get started free", href: "/pricing" }}
       />
 
       <Section>

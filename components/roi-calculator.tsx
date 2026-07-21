@@ -3,9 +3,9 @@
 import { useId, useMemo, useState } from "react";
 import { pricingTiers } from "@/lib/site";
 
-const currency = new Intl.NumberFormat("en-IE", {
+const currency = new Intl.NumberFormat("en-US", {
   style: "currency",
-  currency: "EUR",
+  currency: "USD",
   maximumFractionDigits: 0,
 });
 
@@ -15,16 +15,16 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
   const [hoursPerPack, setHoursPerPack] = useState(4);
   const [hourlyCost, setHourlyCost] = useState(60);
 
-  const growthPlan = pricingTiers.find((t) => t.id === "growth")!;
+  const proPlan = pricingTiers.find((t) => t.id === "pro")!;
 
   const { monthlyCost, annualCost, planMultiple } = useMemo(() => {
     const monthly = proposalsPerMonth * hoursPerPack * hourlyCost;
     return {
       monthlyCost: monthly,
       annualCost: monthly * 12,
-      planMultiple: monthly / growthPlan.priceMonthly,
+      planMultiple: monthly / (proPlan.priceMonthly || 1),
     };
-  }, [proposalsPerMonth, hoursPerPack, hourlyCost, growthPlan.priceMonthly]);
+  }, [proposalsPerMonth, hoursPerPack, hourlyCost, proPlan.priceMonthly]);
 
   return (
     <div className="rounded-3xl border border-border bg-surface p-6 md:p-8">
@@ -52,7 +52,7 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
         />
         <RangeField
           id={`${id}-rate`}
-          label="Hourly cost (EUR)"
+          label="Hourly cost (USD)"
           value={hourlyCost}
           min={20}
           max={200}
@@ -64,9 +64,9 @@ export function ROICalculator({ title = "What is the status quo costing you?" }:
         <Output label="Monthly hidden cost" value={currency.format(monthlyCost)} />
         <Output label="Annual hidden cost" value={currency.format(annualCost)} />
         <Output
-          label={`vs MagicCV ${growthPlan.name} plan`}
+          label={`vs MagicCV ${proPlan.name} plan`}
           value={`${planMultiple.toFixed(1)}x`}
-          hint={`${growthPlan.name} is ${currency.format(growthPlan.priceMonthly)}/mo`}
+          hint={`${proPlan.name} is ${currency.format(proPlan.priceMonthly ?? 0)}/mo`}
         />
       </div>
     </div>

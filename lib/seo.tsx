@@ -56,9 +56,9 @@ export function softwareApplicationJsonLd() {
     description: site.description,
     offers: {
       "@type": "AggregateOffer",
-      priceCurrency: "EUR",
-      lowPrice: "49",
-      highPrice: "499",
+      priceCurrency: "USD",
+      lowPrice: "0",
+      highPrice: "50",
     },
   };
 }
@@ -72,9 +72,9 @@ export function productJsonLd() {
     brand: { "@type": "Brand", name: site.name },
     offers: {
       "@type": "AggregateOffer",
-      priceCurrency: "EUR",
-      lowPrice: "49",
-      highPrice: "499",
+      priceCurrency: "USD",
+      lowPrice: "0",
+      highPrice: "50",
       offerCount: "4",
     },
   };

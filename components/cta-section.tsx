@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/container";
 
 export function CTASection({
   headline = "From scattered CVs to a polished, on-brand pack in minutes.",
-  body = "See it on your own consultants, or start a free 14-day trial today.",
-  primaryCta = { label: "Start free trial", href: "/demo" },
+  body = "See it on your own consultants, or start free today -- no credit card.",
+  primaryCta = { label: "Get started free", href: "https://app.magiccv.com" },
   secondaryCta = { label: "Book a demo", href: "/demo" },
 }: {
   headline?: string;

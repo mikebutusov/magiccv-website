@@ -8,9 +8,9 @@ import { buildMetadata, JsonLd, productJsonLd } from "@/lib/seo";
 import { pricingFaqs, pricingFeatureMatrix } from "@/lib/content/pricing-faqs";
 
 export const metadata = buildMetadata({
-  title: "Pricing -- Plans from EUR49/mo",
+  title: "Pricing -- Free plan, Pro at $50/mo",
   description:
-    "Transparent pricing for consulting CV management. Starter, Growth, Scale, Enterprise. 14-day free trial, no credit card.",
+    "Transparent pricing for consulting CV management. Start free (10 profiles, 30 CVs -- no credit card), Pro at $50/mo, custom Enterprise.",
   path: "/pricing",
   keywords: ["MagicCV pricing", "consultant CV software pricing"],
 });
@@ -29,20 +29,17 @@ export default function PricingPage() {
       <Section className="border-t border-border bg-surface">
         <h2 className="text-2xl font-medium text-ink">Compare every feature by plan</h2>
         <div className="mt-6 overflow-x-auto rounded-2xl border border-border">
-          <table className="w-full min-w-[720px] border-collapse text-left text-sm">
+          <table className="w-full min-w-[640px] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-paper">
                 <th scope="col" className="border-b border-border p-4 font-medium text-muted">
                   Feature
                 </th>
                 <th scope="col" className="border-b border-border p-4 font-medium text-ink-soft">
-                  Starter
+                  Free
                 </th>
                 <th scope="col" className="border-b border-border bg-primary-tint p-4 font-semibold text-primary">
-                  Growth
-                </th>
-                <th scope="col" className="border-b border-border p-4 font-medium text-ink-soft">
-                  Scale
+                  Pro
                 </th>
                 <th scope="col" className="border-b border-border p-4 font-medium text-ink-soft">
                   Enterprise
@@ -54,7 +51,7 @@ export default function PricingPage() {
                 <Fragment key={group.group}>
                   <tr className="bg-paper/60">
                     <th
-                      colSpan={5}
+                      colSpan={4}
                       scope="colgroup"
                       className="border-b border-border p-3 text-xs font-semibold uppercase tracking-wide text-muted"
                     >
@@ -66,11 +63,10 @@ export default function PricingPage() {
                       <th scope="row" className="border-b border-border p-4 font-medium text-ink">
                         {row.feature}
                       </th>
-                      <td className="border-b border-border p-4 text-ink-soft">{row.starter}</td>
+                      <td className="border-b border-border p-4 text-ink-soft">{row.free}</td>
                       <td className="border-b border-border bg-primary-tint/30 p-4 font-medium text-primary">
-                        {row.growth}
+                        {row.pro}
                       </td>
-                      <td className="border-b border-border p-4 text-ink-soft">{row.scale}</td>
                       <td className="border-b border-border p-4 text-ink-soft">{row.enterprise}</td>
                     </tr>
                   ))}
@@ -90,10 +86,10 @@ export default function PricingPage() {
 
       <Section className="border-t border-border bg-surface">
         <div className="grid gap-4 rounded-3xl border border-border bg-paper p-6 text-sm text-ink-soft sm:grid-cols-2 lg:grid-cols-4">
-          <p>14-day free trial, no credit card required.</p>
-          <p>30-day money-back guarantee on all paid plans.</p>
-          <p>Annual prepay: 20% off the monthly price.</p>
-          <p>Card (Stripe), SEPA, or invoice (Scale and above).</p>
+          <p>Free plan -- no credit card, no expiry.</p>
+          <p>Pro is month-to-month; cancel anytime.</p>
+          <p>Payment by card (Stripe); invoicing on Enterprise.</p>
+          <p>Custom contracts &amp; DPA on Enterprise.</p>
         </div>
       </Section>
 

@@ -8,7 +8,7 @@ export function Hero({
   eyebrow,
   h1,
   sub,
-  primaryCta = { label: "Start free trial", href: "/demo" },
+  primaryCta = { label: "Get started free", href: "https://app.magiccv.com" },
   secondaryCta = { label: "Book a demo", href: "/demo" },
   visual,
   stats,

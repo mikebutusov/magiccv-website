@@ -15,7 +15,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "MagicCV -- AI CV & Resume Platform for Consulting Firms",
   description:
-    "Keep every consultant profile current and turn it into a tailored, on-brand CV -- for any client, bid, or language, in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free 14-day trial.",
+    "Keep every consultant profile current and turn it into a tailored, on-brand CV -- for any client, bid, or language, in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free plan -- no credit card.",
   path: "/",
   keywords: ["CV management for consulting", "consultant CV software", "consultant CV database"],
 });

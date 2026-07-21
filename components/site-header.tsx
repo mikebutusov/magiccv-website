@@ -90,8 +90,8 @@ export function SiteHeader() {
           <Button href="/demo" variant="secondary">
             Book a demo
           </Button>
-          <Button href="/demo" variant="primary">
-            Start free trial
+          <Button href={site.appUrl} variant="primary">
+            Get started free
           </Button>
         </div>
 
@@ -144,8 +144,8 @@ export function SiteHeader() {
               <Button href="/demo" variant="secondary">
                 Book a demo
               </Button>
-              <Button href="/demo" variant="primary">
-                Start free trial
+              <Button href={site.appUrl} variant="primary">
+                Get started free
               </Button>
             </div>
           </Container>

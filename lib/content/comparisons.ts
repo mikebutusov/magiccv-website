@@ -38,7 +38,7 @@ export const comparisons: ComparisonPage[] = [
       },
       {
         question: "Can I try MagicCV without a sales call?",
-        answer: "Yes -- pricing is public and you can start a 14-day free trial without booking a demo first.",
+        answer: "Yes -- pricing is public and there's a free plan (10 profiles, 30 CVs), so you can start without booking a demo.",
       },
     ],
     related: [

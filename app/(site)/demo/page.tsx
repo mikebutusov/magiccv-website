@@ -41,9 +41,9 @@ export default function DemoPage() {
               <p className="text-sm text-ink-soft">
                 Prefer to just try it?{" "}
                 <Link href="/pricing" className="font-semibold text-primary hover:text-primary-soft">
-                  Start a free 14-day trial
+                  Start on the free plan
                 </Link>{" "}
-                instead -- no credit card required.
+                instead -- 10 profiles and 30 CVs, no credit card.
               </p>
               <p className="mt-3 flex items-center gap-2 text-xs font-medium text-muted">
                 <ShieldCheck className="h-4 w-4 text-primary" aria-hidden />

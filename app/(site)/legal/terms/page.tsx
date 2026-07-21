@@ -14,7 +14,7 @@ export default function TermsPage() {
       sections={[
         "Account eligibility and responsibilities",
         "Subscription plans, billing, and cancellation",
-        "Free trial terms (14 days, no credit card)",
+        "Free plan terms (10 profiles / 30 CVs, no credit card)",
         "Acceptable use",
         "Intellectual property",
         "Limitation of liability",
