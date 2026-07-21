@@ -1,9 +1,10 @@
 export const site = {
   name: "MagicCV",
-  tagline: "Win more proposals. Faster.",
+  tagline: "Every consultant CV, on-brand and ready in minutes.",
   description:
-    "MagicCV turns any RFP into the right consultants and tailored, on-brand CVs -- in any language, in minutes.",
+    "MagicCV keeps your consultants' profiles current and turns them into tailored, on-brand CVs -- for any client, bid, or language, in minutes. GDPR-ready, built for European consulting firms.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.magiccv.com",
+  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.magiccv.com",
   ogImage: "/og/default.png",
   social: {
     linkedin: "https://www.linkedin.com/company/magiccv",
@@ -20,10 +21,30 @@ export const primaryNav = [
     label: "Product",
     groups: [
       {
-        heading: "Product",
+        heading: "Features",
         items: [
-          { label: "Features", href: "/features" },
-          { label: "Use cases", href: "/use-cases" },
+          { label: "RFP-to-CV reasoning", href: "/features/rfp-to-cv" },
+          { label: "Brand-consistent exports", href: "/features/brand-templates" },
+          { label: "Anonymization & GDPR", href: "/features/anonymization" },
+          { label: "Multilingual & translation", href: "/features/multilingual" },
+          { label: "Centralized profiles & skills", href: "/features/profiles-skills" },
+          { label: "All features", href: "/features" },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Use cases",
+    groups: [
+      {
+        heading: "Use cases",
+        items: [
+          { label: "Centralize & standardize CVs", href: "/use-cases/centralize-cvs" },
+          { label: "Tailor CVs to every brief", href: "/use-cases/tailor-cvs" },
+          { label: "Build a proposal-ready CV pack", href: "/use-cases/proposal-cv-pack" },
+          { label: "Anonymize CVs", href: "/use-cases/anonymize-cvs" },
+          { label: "Translate CVs into any language", href: "/use-cases/translate-cvs" },
+          { label: "All use cases", href: "/use-cases" },
         ],
       },
     ],
@@ -58,15 +79,15 @@ export const primaryNav = [
     label: "Comparisons",
     groups: [
       {
-        heading: "Comparisons",
+        heading: "Popular comparisons",
         items: [
-          { label: "All comparisons", href: "/compare" },
           { label: "vs Flowcase", href: "/compare/flowcase" },
           { label: "vs Cinode", href: "/compare/cinode" },
-          { label: "vs Sprint CV", href: "/compare/sprint-cv" },
-          { label: "vs CuViBox", href: "/compare/cuvibox" },
           { label: "vs Napta", href: "/compare/napta" },
+          { label: "vs CV Converter", href: "/compare/cvconverter" },
+          { label: "vs MuchSkills", href: "/compare/muchskills" },
           { label: "vs SharePoint + Word", href: "/compare/sharepoint-word" },
+          { label: "All comparisons", href: "/compare" },
         ],
       },
     ],

@@ -30,14 +30,17 @@ export function PricingTable() {
           type="button"
           role="switch"
           aria-checked={annual}
+          aria-label="Toggle annual billing"
           onClick={() => setAnnual((v) => !v)}
-          className="relative h-7 w-12 rounded-full bg-primary/20 transition-colors data-[state=checked]:bg-primary"
-          data-state={annual ? "checked" : "unchecked"}
+          className={clsx(
+            "relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+            annual ? "bg-primary" : "bg-ink/20",
+          )}
         >
           <span
             className={clsx(
-              "absolute top-1 h-5 w-5 rounded-full bg-primary transition-transform",
-              annual ? "translate-x-6" : "translate-x-1",
+              "inline-block h-5 w-5 transform rounded-full bg-white shadow-sm transition-transform",
+              annual ? "translate-x-[22px]" : "translate-x-0.5",
             )}
           />
         </button>

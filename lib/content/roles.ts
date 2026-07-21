@@ -44,7 +44,7 @@ export const roles: RolePage[] = [
     ],
     includeRoiTeaser: true,
     related: [
-      { label: "Tailor CVs to every RFP", href: "/use-cases/tailor-cvs" },
+      { label: "Tailor CVs to every brief", href: "/use-cases/tailor-cvs" },
       { label: "Build a proposal-ready CV pack", href: "/use-cases/proposal-cv-pack" },
       { label: "RFP-to-CV reasoning", href: "/features/rfp-to-cv" },
       { label: "MagicCV vs SharePoint + Word", href: "/compare/sharepoint-word" },

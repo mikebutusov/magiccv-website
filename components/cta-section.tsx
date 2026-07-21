@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 
 export function CTASection({
-  headline = "From RFP to tailored CV pack in 15 minutes.",
-  body = "See it on your own scenario, or start a free 14-day trial today.",
+  headline = "From scattered CVs to a polished, on-brand pack in minutes.",
+  body = "See it on your own consultants, or start a free 14-day trial today.",
   primaryCta = { label: "Start free trial", href: "/demo" },
   secondaryCta = { label: "Book a demo", href: "/demo" },
 }: {

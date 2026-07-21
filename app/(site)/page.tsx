@@ -15,26 +15,26 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "MagicCV -- AI CV & Resume Platform for Consulting Firms",
   description:
-    "Turn any RFP into tailored, on-brand consultant CVs in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free 14-day trial.",
+    "Keep every consultant profile current and turn it into a tailored, on-brand CV -- for any client, bid, or language, in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free 14-day trial.",
   path: "/",
-  keywords: ["CV management for consulting", "proposal CV tool", "consultant CV software"],
+  keywords: ["CV management for consulting", "consultant CV software", "consultant CV database"],
 });
 
 const HOW_IT_WORKS = [
   {
     title: "Import your consultants once",
-    body: "Bring your existing CVs in to create structured, always-current profiles for your whole bench.",
+    body: "Bring your existing CVs in to create structured, always-current profiles for your whole team -- one source of truth instead of files scattered across drives and inboxes.",
     screenshotAlt: "Consultant profile import",
   },
   {
-    title: "Paste the RFP brief",
-    body: "Drop in the RFP, an evaluation sheet, or a short summary of what the client needs.",
-    screenshotAlt: "RFP brief input",
+    title: "Tailor to any client, brief, or format",
+    body: "Pick a consultant and a purpose -- a client intro, a bid, a specific template -- and MagicCV reshapes their CV around it. Paste an RFP when you have one; it's one path, not the only one.",
+    screenshotAlt: "Tailoring a CV to a brief",
   },
   {
-    title: "Get a tailored, on-brand, translated CV pack",
-    body: "MagicCV reasons about the brief and produces a submission-ready pack in your firm's brand, in the language you need.",
-    screenshotAlt: "Generated CV pack ready for submission",
+    title: "Export an on-brand pack in any language",
+    body: "Get a submission-ready CV or full pack in your firm's brand, anonymized if you need it, in the language you're working in.",
+    screenshotAlt: "Generated on-brand CV pack",
   },
 ];
 
@@ -89,12 +89,12 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="AI-native CV Management for consulting firms"
-        h1="Win more proposals. Faster."
-        sub="MagicCV turns any RFP into the right consultants and tailored, on-brand CVs -- in any language, in minutes."
+        eyebrow="AI-native CV management for consulting firms"
+        h1="Every consultant CV, on-brand and ready in minutes."
+        sub="MagicCV keeps your team's profiles current and turns them into tailored, on-brand CVs -- for any client, bid, or language. One source of truth, minutes instead of evenings."
         visual={<CvGeneratorShot />}
         stats={[
-          { value: "1 day → 15 min", label: "per CV pack", isPlaceholder: true },
+          { value: "1 day → 15 min", label: "per CV pack" },
           { value: "5+", label: "EU languages" },
           { value: "GDPR-by-design", label: "built in from day one" },
         ]}
@@ -105,12 +105,12 @@ export default function HomePage() {
       <Section className="border-t border-border">
         <div className="max-w-measure">
           <h2 className="text-3xl font-medium text-ink">
-            The Friday-night CV scramble is a solved problem now.
+            Consultant CVs shouldn&rsquo;t be this much work.
           </h2>
           <p className="mt-4 text-lg text-ink-soft">
-            Every RFP means the same thing: hours chasing consultants for current CVs, reformatting them
-            by hand, and hoping quality holds up across the whole pack. Inconsistent output costs bids you
-            should have won.
+            CVs live in shared drives, inboxes, and laptops -- out of date the moment you need them. Every
+            client intro, bid, or new engagement means chasing people for updates and reformatting by hand,
+            and the quality drifts every time. MagicCV makes the current version the easy version.
           </p>
         </div>
       </Section>
@@ -150,7 +150,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-medium text-ink">Consistent quality, at any volume</h2>
             <p className="mt-4 max-w-measure text-lg text-ink-soft">
               For the COO or Managing Partner: scale proposal output without scaling headcount, and get
-              visible ROI on every RFP the team touches.
+              visible ROI on every CV the team sends out.
             </p>
             <Link
               href="/pricing"

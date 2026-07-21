@@ -45,7 +45,7 @@ export const useCases: UseCasePage[] = [
       { label: "For Sales teams", href: "/solutions/sales" },
     ],
     seo: {
-      title: "Tailor consultant CVs to every RFP -- MagicCV",
+      title: "Tailor consultant CVs to every brief -- MagicCV",
       description:
         "MagicCV reasons about the RFP and reshapes each consultant's CV to foreground what matters for this opportunity.",
       keywords: ["tailor CV to RFP", "customize consultant CV"],

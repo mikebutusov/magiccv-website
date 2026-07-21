@@ -7,7 +7,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
-import { primaryNav } from "@/lib/site";
+import { primaryNav, site } from "@/lib/site";
 
 export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -80,7 +80,13 @@ export function SiteHeader() {
           </NavigationMenu.List>
         </NavigationMenu.Root>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex">
+          <a
+            href={site.appUrl}
+            className="text-sm font-medium text-ink-soft transition-colors hover:text-ink"
+          >
+            Log in
+          </a>
           <Button href="/demo" variant="secondary">
             Book a demo
           </Button>
@@ -131,6 +137,9 @@ export function SiteHeader() {
             <Link href="/blog" className="rounded px-2 py-2 text-sm font-medium text-ink" onClick={() => setMobileOpen(false)}>
               Blog
             </Link>
+            <a href={site.appUrl} className="rounded px-2 py-2 text-sm font-medium text-ink">
+              Log in
+            </a>
             <div className="mt-3 flex flex-col gap-2">
               <Button href="/demo" variant="secondary">
                 Book a demo

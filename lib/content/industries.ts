@@ -155,7 +155,7 @@ export const industries: IndustryPage[] = [
     ],
     related: [
       { label: "Brand-consistent exports", href: "/features/brand-templates" },
-      { label: "Tailor CVs to every RFP", href: "/use-cases/tailor-cvs" },
+      { label: "Tailor CVs to every brief", href: "/use-cases/tailor-cvs" },
     ],
     seo: {
       title: "MagicCV for Design & Creative Agencies",

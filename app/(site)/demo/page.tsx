@@ -7,13 +7,13 @@ import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   title: "Book a MagicCV demo",
-  description: "See a live RFP-to-CV walkthrough on your own scenario. 30 minutes, no slides.",
+  description: "See MagicCV on your own consultants and scenario -- from messy CVs to an on-brand pack. 30 minutes, no slides.",
   path: "/demo",
 });
 
 const EXPECTATIONS = [
-  "We walk through your current proposal / CV process",
-  "A live RFP-to-CV run on your own scenario",
+  "We walk through your current CV / proposal process",
+  "A live run on your own scenario -- a client intro, a bid, or a full pack",
   "Transparent pricing -- no surprises after the call",
 ];
 
@@ -24,10 +24,10 @@ export default function DemoPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
             <h1 className="text-4xl font-medium text-ink md:text-5xl">
-              See MagicCV on your own RFP.
+              See MagicCV on your own consultants.
             </h1>
             <p className="mt-4 max-w-measure text-lg text-ink-soft">
-              30 minutes, no slides -- we&apos;ll run a live RFP-to-CV with your scenario.
+              30 minutes, no slides -- we&apos;ll run your scenario live, from messy CVs to an on-brand pack.
             </p>
             <ul className="mt-8 space-y-3">
               {EXPECTATIONS.map((item) => (

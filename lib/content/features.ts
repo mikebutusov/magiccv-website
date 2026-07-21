@@ -49,7 +49,7 @@ export const features: FeaturePage[] = [
       },
     ],
     related: [
-      { label: "Tailor CVs to every RFP", href: "/use-cases/tailor-cvs" },
+      { label: "Tailor CVs to every brief", href: "/use-cases/tailor-cvs" },
       { label: "Build a proposal-ready CV pack", href: "/use-cases/proposal-cv-pack" },
       { label: "MagicCV vs Flowcase", href: "/compare/flowcase" },
     ],

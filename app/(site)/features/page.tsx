@@ -44,7 +44,7 @@ export default async function FeaturesHubPage() {
         <RelatedLinks
           title="Explore use cases"
           links={[
-            { label: "Tailor CVs to every RFP", href: "/use-cases/tailor-cvs" },
+            { label: "Tailor CVs to every brief", href: "/use-cases/tailor-cvs" },
             { label: "Build a proposal-ready CV pack", href: "/use-cases/proposal-cv-pack" },
             { label: "All use cases", href: "/use-cases" },
           ]}

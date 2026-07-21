@@ -5,7 +5,7 @@ import { useId, useState } from "react";
 const ROLE_OPTIONS = ["Bid/Proposal Manager", "Head of Ops/COO", "Managing Partner", "IT/Security", "Other"];
 const FIRM_SIZE_OPTIONS = ["10-25", "25-100", "100-250", "250+"];
 const USE_CASE_OPTIONS = [
-  "Tailor CVs to every RFP",
+  "Tailor CVs to every brief",
   "Build a proposal-ready CV pack",
   "Centralize & standardize CVs",
   "Anonymize CVs",
