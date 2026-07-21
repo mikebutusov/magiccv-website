@@ -106,7 +106,7 @@ export const useCases: UseCasePage[] = [
     slug: "centralize-cvs",
     job: "Verstreute CVs auf Netzlaufwerken durch eine strukturierte, aktuelle und verlässliche Datenbasis ersetzen.",
     h1: "Ein Zuhause für jeden Berater-CV.",
-    sub: "Einmal importieren, aktuell halten und jedes Format auf Abruf generieren - Schluss mit der Suche in SharePoint.",
+    sub: "CV-Datenbank-Software, die die SharePoint-Suche beendet: einmal importieren, jedes Profil aktuell halten und jedes Format auf Abruf erstellen.",
     problemToday:
       "CVs liegen auf Netzlaufwerken, in Postfächern und auf Laptops - mehrere Versionen des CVs derselben Person, und keine ist eindeutig die aktuelle. Die richtige Datei zu finden kostet jedes einzelne Mal Zeit.",
     steps: [
@@ -244,7 +244,7 @@ export const useCases: UseCasePage[] = [
       { label: "Software- & IT-Beratung", href: "/solutions/it-consulting" },
     ],
     seo: {
-      title: "Berater-CVs in jede Sprache übersetzen - MagicCV",
+      title: "CV übersetzen - professionelle Lebensläufe in jeder Sprache",
       description:
         "Erstellen Sie präzise, professionelle CVs auf EN, DE, FR, NL, ES und in weiteren Sprachen - ohne Abtippen und Neuformatieren.",
       keywords: ["mehrsprachiger CV-Generator", "CV Übersetzungstool Beratung"],

@@ -211,7 +211,7 @@ export const features: FeaturePage[] = [
       { label: "Offentlig sektor & upphandlingsdrivna konsultbolag", href: "/solutions/public-sector" },
     ],
     seo: {
-      title: "Flerspråkiga CV:n & översättning - MagicCV",
+      title: "Flerspråkiga CV:n - översätt CV utan omformatering",
       description:
         "Generera professionella, varumärkesanpassade CV:n på EN, DE, FR, NL, ES med flera från en enda masterprofil.",
       keywords: ["flerspråkigt CV-verktyg", "CV på flera språk"],
@@ -221,8 +221,8 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "profiles-skills",
     name: "Centraliserade profiler & kompetensintelligens",
-    h1: "En strukturerad profil per person - oändligt återanvändbar.",
-    sub: "Importera, berika och sök i hela teamet på kompetens och erfarenhet; generera vilket underlag som helst på begäran.",
+    h1: "Teamets CV-databas - en strukturerad profil per person.",
+    sub: "En sökbar CV-databas och kompetensmatris för hela teamet: importera en gång, håll profilerna aktuella och generera valfritt format på begäran.",
     whatItDoesBody:
       "Ersätt utspridda CV:n på delade enheter och i inkorgar med en strukturerad, alltid aktuell profil per konsult. Importera från befintliga filer i dag, med LinkedIn- och HRIS-berikning på roadmapen, och sök sedan i hela konsultstyrkan på kompetens eller erfarenhet och generera det underlag ett anbud kräver - på begäran, från en enda sanningskälla.",
     benefits: [

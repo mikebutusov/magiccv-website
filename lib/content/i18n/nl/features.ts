@@ -211,7 +211,7 @@ export const features: FeaturePage[] = [
       { label: "Publieke sector & aanbestedingsgedreven consultancy", href: "/solutions/public-sector" },
     ],
     seo: {
-      title: "Meertalige cv's & vertaling - MagicCV",
+      title: "Meertalige cv's - cv vertalen zonder opnieuw opmaken",
       description:
         "Genereer professionele, on-brand cv's in EN, DE, FR, NL, ES en meer, vanuit één masterprofiel.",
       keywords: ["meertalige cv-tool", "cv in meerdere talen"],
@@ -221,8 +221,8 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "profiles-skills",
     name: "Gecentraliseerde profielen & skills-intelligentie",
-    h1: "Eén gestructureerd profiel per persoon - eindeloos herbruikbaar.",
-    sub: "Importeer, verrijk en doorzoek je hele team op vaardigheden en ervaring; genereer elke output op aanvraag.",
+    h1: "De cv-database van je team - één gestructureerd profiel per persoon.",
+    sub: "Een doorzoekbare cv-database en vaardighedenmatrix voor je hele team: importeer één keer, houd profielen actueel en genereer elk format op aanvraag.",
     whatItDoesBody:
       "Vervang verspreide cv's op gedeelde schijven en in inboxen door één gestructureerd, altijd actueel profiel per consultant. Importeer vandaag vanuit bestaande bestanden, met LinkedIn- en HRIS-verrijking op de roadmap. Doorzoek vervolgens je hele bench op vaardigheid of ervaring en genereer wat een bid ook vereist - op aanvraag, vanuit één bron van waarheid.",
     benefits: [

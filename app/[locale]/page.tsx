@@ -9,6 +9,7 @@ import { CvGeneratorShot } from "@/components/product-shots/cv-generator-shot";
 import { CvListShot } from "@/components/product-shots/cv-list-shot";
 import { ImportShot } from "@/components/product-shots/import-shot";
 import { TestimonialBlock } from "@/components/testimonial-block";
+import { FAQAccordion } from "@/components/faq-accordion";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
@@ -202,6 +203,19 @@ export default async function LocalizedHomePage({ params }: { params: Promise<{ 
 
       <Section className="border-t border-border bg-surface">
         <TestimonialBlock context={`home-${locale}`} />
+      </Section>
+
+      <Section className="border-t border-border">
+        <div className="max-w-measure">
+          <h2 className="text-3xl font-medium text-ink">{t.seoBlock.h2}</h2>
+          <div className="mt-5 space-y-4 text-lg text-ink-soft">
+            <p>{t.seoBlock.p1}</p>
+            <p>{t.seoBlock.p2}</p>
+          </div>
+        </div>
+        <div className="mt-10">
+          <FAQAccordion title={t.seoBlock.faqTitle} faqs={t.seoBlock.faqs} />
+        </div>
       </Section>
 
       <CTASection

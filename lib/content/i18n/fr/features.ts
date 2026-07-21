@@ -211,7 +211,7 @@ export const features: FeaturePage[] = [
       { label: "Cabinets orientés secteur public & appels d'offres", href: "/solutions/public-sector" },
     ],
     seo: {
-      title: "CV multilingues & traduction - MagicCV",
+      title: "CV multilingues - traduire les CV sans retaper ni reformater",
       description:
         "Générez des CV professionnels et à votre image en EN, DE, FR, NL, ES et plus encore, à partir d'un seul profil maître.",
       keywords: ["outil de CV multilingue", "CV en plusieurs langues"],
@@ -221,8 +221,8 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "profiles-skills",
     name: "Profils centralisés & intelligence des compétences",
-    h1: "Un profil structuré par personne - réutilisable à l'infini.",
-    sub: "Importez, enrichissez et recherchez toute votre équipe par compétences et expérience ; générez n'importe quel livrable à la demande.",
+    h1: "La cvthèque de votre équipe - un profil structuré par personne.",
+    sub: "Une cvthèque consultable et une matrice de compétences pour toute l'équipe : importez une fois, gardez les profils à jour et générez tout format à la demande.",
     whatItDoesBody:
       "Remplacez les CV éparpillés dans les disques partagés et les boîtes mail par un profil structuré et toujours à jour par consultant. Importez depuis vos fichiers existants dès aujourd'hui, avec l'enrichissement LinkedIn et HRIS sur la feuille de route, puis recherchez dans tout votre vivier par compétence ou expérience et générez le livrable qu'exige chaque dossier - à la demande, depuis une source de vérité unique.",
     benefits: [

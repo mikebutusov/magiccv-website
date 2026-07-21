@@ -106,7 +106,7 @@ export const useCases: UseCasePage[] = [
     slug: "centralize-cvs",
     job: "Remplacer les CV éparpillés sur les disques partagés par une source de vérité unique, structurée et à jour.",
     h1: "Un seul foyer pour chaque CV de consultant.",
-    sub: "Importez une fois, maintenez à jour, et générez n'importe quel format à la demande - fini les recherches dans SharePoint.",
+    sub: "Un logiciel de cvthèque qui met fin à la chasse dans SharePoint : importez une fois, gardez chaque profil à jour et générez tout format à la demande.",
     problemToday:
       "Les CV vivent dans des disques partagés, des boîtes mail et des ordinateurs portables - plusieurs versions du CV d'une même personne, sans qu'aucune ne soit clairement la version à jour. Retrouver le bon fichier coûte du temps à chaque fois.",
     steps: [
@@ -244,7 +244,7 @@ export const useCases: UseCasePage[] = [
       { label: "Conseil en logiciel & IT", href: "/solutions/it-consulting" },
     ],
     seo: {
-      title: "Traduire les CV de consultants dans n'importe quelle langue - MagicCV",
+      title: "Traduire un CV - des CV professionnels dans chaque langue",
       description:
         "Générez des CV précis et professionnels en EN, DE, FR, NL, ES et plus encore - sans ressaisie ni remise en forme.",
       keywords: ["générateur de CV multilingue", "outil de traduction de CV conseil"],

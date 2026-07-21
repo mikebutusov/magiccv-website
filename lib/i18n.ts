@@ -96,6 +96,13 @@ export interface Dict {
     trustTitle: string;
     trustP: string;
     trustLink: string;
+    seoBlock: {
+      h2: string;
+      p1: string;
+      p2: string;
+      faqTitle: string;
+      faqs: { question: string; answer: string }[];
+    };
   };
   pricing: {
     seoTitle: string;
@@ -184,6 +191,18 @@ const de: Dict = {
     trustTitle: "Von Tag eins auf EU-Vertrauen gebaut",
     trustP: "EU-Datenresidenz, SSO, AVV-Vorlagen und DSGVO-by-Design durchgängig.",
     trustLink: "Zum Trust Center",
+    seoBlock: {
+      h2: "CV-Management-Software, gebaut für die Realität von Beratungen",
+      p1: "Die meiste Software für Lebenslauf-Verwaltung wurde für Recruiter gebaut, die tausende Bewerbungen sichten. MagicCV ist anders: ein CV-Management-System für die Menschen, die Sie bereits beschäftigen - eine durchsuchbare Lebenslauf-Datenbank, in der Skills, Projekte und Zertifizierungen jedes Consultants als strukturierte Daten liegen statt in veralteten Word-Dateien.",
+      p2: "Damit werden die mühsamen Teile der CV-Datenpflege automatisch: Bestehende Dateien importieren und per CV-Parsing strukturieren. Das ganze Team wie eine Kompetenzmatrix durchsuchen. In Minuten einen maßgeschneiderten, markenkonformen CV für jeden Kunden, jedes Angebot und jede Sprache erstellen - mit der Datenbank als einziger Quelle der Wahrheit.",
+      faqTitle: "CV-Management-Software, kurz erklärt",
+      faqs: [
+        { question: "Was ist CV-Management-Software?", answer: "CV-Management-Software hält die CVs Ihres Teams in einer strukturierten, durchsuchbaren Datenbank und erstellt daraus auf Abruf gepflegte, aktuelle Dokumente. Statt der Jagd nach der neuesten Word-Datei pflegen Sie ein Profil pro Person und exportieren maßgeschneiderte, markenkonforme CVs für jeden Kunden, jedes Angebot und jede Sprache." },
+        { question: "Was unterscheidet eine CV-Datenbank von einem Bewerbermanagement-System (ATS)?", answer: "Ein ATS verwaltet externe Bewerbungen entlang eines Einstellungsprozesses. Eine CV-Datenbank wie MagicCV verwaltet die Menschen, die Sie bereits haben - Consultants, deren CVs Sie Kunden präsentieren - und hält deren Profile aktuell und sofort exportierbar im Design Ihrer Firma." },
+        { question: "Eignet sich MagicCV als Lebenslauf-Verwaltung für Recruiting-Teams?", answer: "Ja. Recruiting- und Resourcing-Teams nutzen MagicCV als Kandidaten-Datenbank: CVs einmal importieren, strukturierte Profile aktuell halten, nach Skills suchen und in Minuten kundenfertige, anonymisierte oder übersetzte CVs exportieren." },
+        { question: "Kann ich die Lebenslauf-Datenbank nach Skills durchsuchen?", answer: "Ja - jedes Profil ist strukturierte Daten. Filtern Sie Ihr gesamtes Team nach Skill, Zertifizierung, Sprache oder Projekt und besetzen Sie den nächsten Brief in Minuten." },
+      ],
+    },
   },
   pricing: {
     seoTitle: "Preise - Kostenloser Plan, Pro für 50 $/Monat",
@@ -329,6 +348,18 @@ const fr: Dict = {
     trustTitle: "Bâti sur la confiance européenne dès le premier jour",
     trustP: "Résidence des données en UE, SSO, modèles de DPA et RGPD by design de bout en bout.",
     trustLink: "Visiter le Trust Center",
+    seoBlock: {
+      h2: "Un logiciel de gestion de CV pensé pour le conseil",
+      p1: "La plupart des logiciels de gestion de CV ont été conçus pour des recruteurs qui trient des milliers de candidatures. MagicCV est différent : c'est une cvthèque pour les personnes que vous employez déjà - une base de données consultable où les compétences, projets et certifications de chaque consultant vivent en données structurées plutôt qu'en fichiers Word périmés.",
+      p2: "Les tâches ingrates de la gestion des CV deviennent automatiques : importez vos fichiers existants et laissez le parsing construire les profils. Cherchez dans toute l'équipe comme dans une matrice de compétences. Générez en minutes un CV sur mesure, à votre image, pour chaque client, appel d'offres ou langue - la cvthèque restant votre source unique de vérité.",
+      faqTitle: "Le logiciel de gestion de CV, expliqué",
+      faqs: [
+        { question: "Qu'est-ce qu'un logiciel de gestion de CV ?", answer: "Un logiciel de gestion de CV conserve les CV de votre équipe dans une base structurée et consultable - une cvthèque - et génère à la demande des documents soignés et à jour. Au lieu de courir après le dernier fichier Word, vous maintenez un profil par personne et exportez des CV sur mesure, à votre image, pour chaque client, proposition ou langue." },
+        { question: "Quelle différence entre une cvthèque et un ATS ?", answer: "Un ATS gère des candidats externes dans un pipeline de recrutement. Une cvthèque comme MagicCV gère les personnes que vous avez déjà - les consultants dont vous présentez les CV aux clients - en gardant leurs profils à jour et instantanément exportables à la marque de votre cabinet." },
+        { question: "MagicCV convient-il aux équipes de recrutement ?", answer: "Oui. Les équipes recrutement et staffing utilisent MagicCV pour la gestion des candidatures : importez les CV une fois, gardez des profils structurés à jour, cherchez par compétence et exportez en minutes des CV prêts pour le client, anonymisés ou traduits." },
+        { question: "Peut-on chercher dans la cvthèque par compétence ?", answer: "Oui - chaque profil est une donnée structurée. Filtrez toute votre équipe par compétence, certification, langue ou projet passé et staffez le prochain brief en minutes." },
+      ],
+    },
   },
   pricing: {
     seoTitle: "Tarifs - Offre gratuite, Pro à 50 $/mois",
@@ -474,6 +505,18 @@ const nl: Dict = {
     trustTitle: "Vanaf dag één gebouwd op Europees vertrouwen",
     trustP: "EU-dataresidentie, SSO, DPA-templates en AVG by design, overal.",
     trustLink: "Naar het Trust Center",
+    seoBlock: {
+      h2: "Cv-managementsoftware, gebouwd rond hoe consultancy echt werkt",
+      p1: "De meeste cv-managementsoftware is gebouwd voor recruiters die duizenden sollicitaties screenen. MagicCV is anders: een cv-managementsysteem voor de mensen die je al in dienst hebt - een doorzoekbare cv-database waarin de skills, projecten en certificeringen van elke consultant als gestructureerde data leven in plaats van in verouderde Word-bestanden.",
+      p2: "Zo wordt het lastige deel van cv-beheer automatisch: importeer bestaande bestanden en laat cv-parsing het profiel opbouwen. Doorzoek je hele team als een vaardighedenmatrix. Genereer in minuten een op maat gemaakt, merkconform cv voor elke klant, offerte of taal - met de database als enige bron van waarheid.",
+      faqTitle: "Cv-managementsoftware, uitgelegd",
+      faqs: [
+        { question: "Wat is cv-managementsoftware?", answer: "Cv-managementsoftware bewaart de cv's van je team in één gestructureerde, doorzoekbare database en genereert op aanvraag verzorgde, actuele documenten. In plaats van te jagen op het nieuwste Word-bestand onderhoud je één profiel per persoon en exporteer je op maat gemaakte, merkconforme cv's voor elke klant, elk voorstel en elke taal." },
+        { question: "Wat is het verschil tussen een cv-database en een ATS?", answer: "Een ATS beheert externe kandidaten in een wervingspijplijn. Een cv-database zoals MagicCV beheert de mensen die je al hebt - consultants van wie je de cv's aan klanten presenteert - en houdt hun profielen actueel en direct exporteerbaar in de huisstijl van je bureau." },
+        { question: "Werkt MagicCV als recruitmentsoftware met kandidatendatabase?", answer: "Ja. Recruitment- en resourcingteams gebruiken MagicCV als kandidatendatabase: importeer cv's één keer, houd gestructureerde profielen actueel, zoek op skills en exporteer in minuten klantklare, geanonimiseerde of vertaalde cv's." },
+        { question: "Kan ik de cv-database doorzoeken op skills?", answer: "Ja - elk profiel is gestructureerde data. Filter je hele team op skill, certificering, taal of eerder project en bezet de volgende brief in minuten." },
+      ],
+    },
   },
   pricing: {
     seoTitle: "Prijzen - Gratis plan, Pro voor $50/maand",
@@ -619,6 +662,18 @@ const sv: Dict = {
     trustTitle: "Byggt på europeiskt förtroende från dag ett",
     trustP: "Datalagring inom EU, SSO, DPA-mallar och GDPR by design rakt igenom.",
     trustLink: "Besök Trust Center",
+    seoBlock: {
+      h2: "CV-hanteringsprogram byggt för hur konsultarbete faktiskt fungerar",
+      p1: "De flesta CV-hanteringsprogram byggdes för rekryterare som gallrar tusentals ansökningar. MagicCV är annorlunda: ett CV-hanteringssystem för de människor ni redan anställer - en sökbar CV-databas där varje konsults kompetenser, projekt och certifieringar ligger som strukturerad data i stället för i inaktuella Word-filer.",
+      p2: "Då blir de tunga delarna av CV-hantering automatiska: importera befintliga filer och låt CV-parsning bygga profilen. Sök hela teamet som i en kompetensmatris. Generera på minuter ett skräddarsytt CV i er profil för varje kund, anbud och språk - med databasen som enda sanningskälla.",
+      faqTitle: "CV-hanteringsprogram, förklarat",
+      faqs: [
+        { question: "Vad är ett CV-hanteringsprogram?", answer: "Ett CV-hanteringsprogram håller teamets CV:n i en strukturerad, sökbar databas och genererar putsade, aktuella dokument på begäran. I stället för att jaga den senaste Word-filen underhåller ni en profil per person och exporterar skräddarsydda CV:n i er profil för varje kund, anbud och språk." },
+        { question: "Vad skiljer en CV-databas från ett ATS?", answer: "Ett ATS hanterar externa kandidater i en rekryteringspipeline. En CV-databas som MagicCV hanterar de människor ni redan har - konsulter vars CV:n ni presenterar för kunder - och håller deras profiler aktuella och direkt exporterbara i er grafiska profil." },
+        { question: "Fungerar MagicCV som rekryteringsverktyg med kompetensdatabas?", answer: "Ja. Rekryterings- och bemanningsteam använder MagicCV som kompetensdatabas: importera CV:n en gång, håll strukturerade profiler aktuella, sök på kompetens och exportera kundklara, anonymiserade eller översatta CV:n på minuter." },
+        { question: "Kan jag söka i CV-databasen på kompetens?", answer: "Ja - varje profil är strukturerad data. Filtrera hela teamet på kompetens, certifiering, språk eller tidigare projekt och bemanna nästa brief på minuter." },
+      ],
+    },
   },
   pricing: {
     seoTitle: "Priser - Gratisplan, Pro för 50 $/mån",

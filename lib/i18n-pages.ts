@@ -141,13 +141,13 @@ const de: PageDict = {
     learnMore: "Mehr erfahren",
   },
   featuresHub: {
-    seoTitle: "MagicCV Funktionen",
+    seoTitle: "CV-Management-Software: alle Funktionen",
     seoDesc: "Alles, damit CVs Aufträge gewinnen: RFP-to-CV-Reasoning, Marken-Templates, Anonymisierung, Mehrsprachigkeit und zentrale Profile.",
     title: "Alles, damit CVs Aufträge gewinnen.",
     sub: "Fünf Fähigkeiten, ein Workflow - vom Lesen des Briefs bis zum abgabefertigen, markenkonformen CV-Paket.",
   },
   useCasesHub: {
-    seoTitle: "MagicCV Anwendungsfälle",
+    seoTitle: "Lebenslauf-Verwaltung in der Praxis: Anwendungsfälle",
     seoDesc: "Was auch immer ansteht - zuschneiden, bündeln, zentralisieren, anonymisieren oder übersetzen - so macht es MagicCV.",
     title: "Was immer Sie mit einem CV vorhaben - MagicCV kann es.",
     sub: "Fünf Aufgaben, dieselbe zugrunde liegende Logik und Profildaten.",
@@ -274,13 +274,13 @@ const fr: PageDict = {
     learnMore: "En savoir plus",
   },
   featuresHub: {
-    seoTitle: "Fonctionnalités MagicCV",
+    seoTitle: "Logiciel de gestion de CV : fonctionnalités",
     seoDesc: "Tout pour que vos CV remportent des missions : raisonnement RFP-to-CV, templates de marque, anonymisation, multilingue et profils centralisés.",
     title: "Tout pour que vos CV remportent des missions.",
     sub: "Cinq capacités, un seul workflow - de la lecture du brief au dossier de CV prêt à soumettre, à votre image.",
   },
   useCasesHub: {
-    seoTitle: "Cas d'usage MagicCV",
+    seoTitle: "Gestion des CV en pratique : cas d'usage",
     seoDesc: "Quel que soit le besoin - adapter, assembler, centraliser, anonymiser ou traduire des CV - voici comment MagicCV s'y prend.",
     title: "Quoi que vous vouliez faire d'un CV, MagicCV le fait.",
     sub: "Cinq missions, la même logique sous-jacente et les mêmes données de profil.",
@@ -407,13 +407,13 @@ const nl: PageDict = {
     learnMore: "Meer informatie",
   },
   featuresHub: {
-    seoTitle: "MagicCV Functies",
+    seoTitle: "Cv-managementsoftware: alle functies",
     seoDesc: "Alles om met cv's opdrachten te winnen: RFP-naar-cv-redenering, merktemplates, anonimisering, meertaligheid en centrale profielen.",
     title: "Alles om met cv's opdrachten te winnen.",
     sub: "Vijf capaciteiten, één workflow - van het lezen van de brief tot een indieningsklaar, merkconform cv-pakket.",
   },
   useCasesHub: {
-    seoTitle: "MagicCV Use cases",
+    seoTitle: "Cv-beheer in de praktijk: use cases",
     seoDesc: "Wat de klus ook is - afstemmen, bundelen, centraliseren, anonimiseren of vertalen van cv's - zo pakt MagicCV het aan.",
     title: "Wat je ook met een cv wilt doen, MagicCV doet het.",
     sub: "Vijf klussen, dezelfde onderliggende logica en profieldata.",
@@ -540,13 +540,13 @@ const sv: PageDict = {
     learnMore: "Läs mer",
   },
   featuresHub: {
-    seoTitle: "MagicCV Funktioner",
+    seoTitle: "CV-hanteringsprogram: alla funktioner",
     seoDesc: "Allt för att CV:n ska vinna uppdrag: RFP-till-CV-resonemang, profilmallar, anonymisering, flerspråkighet och centrala profiler.",
     title: "Allt för att CV:n ska vinna uppdrag.",
     sub: "Fem förmågor, ett arbetsflöde - från att läsa briefen till ett inlämningsklart CV-paket i er profil.",
   },
   useCasesHub: {
-    seoTitle: "MagicCV Användningsfall",
+    seoTitle: "CV-hantering i praktiken: användningsfall",
     seoDesc: "Vad uppgiften än är - skräddarsy, paketera, centralisera, anonymisera eller översätta CV:n - så gör MagicCV det.",
     title: "Vad ni än vill göra med ett CV gör MagicCV det.",
     sub: "Fem uppgifter, samma underliggande logik och profildata.",

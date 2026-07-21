@@ -106,7 +106,7 @@ export const useCases: UseCasePage[] = [
     slug: "centralize-cvs",
     job: "Ersätt utspridda CV:n på delade enheter med en strukturerad, aktuell sanningskälla.",
     h1: "Ett hem för varje konsult-CV.",
-    sub: "Importera en gång, håll aktuellt och generera vilket format som helst på begäran - slut på letandet i SharePoint.",
+    sub: "En CV-databas som gör slut på letandet i SharePoint: importera en gång, håll varje profil aktuell och generera valfritt format på begäran.",
     problemToday:
       "CV:n ligger på delade enheter, i inkorgar och på folks laptoppar - flera versioner av samma persons CV, utan att någon av dem tydligt är den aktuella. Att hitta rätt fil kostar tid varje gång den behövs.",
     steps: [
@@ -244,7 +244,7 @@ export const useCases: UseCasePage[] = [
       { label: "Mjukvaru- & IT-konsulting", href: "/solutions/it-consulting" },
     ],
     seo: {
-      title: "Översätt konsult-CV:n till vilket språk som helst - MagicCV",
+      title: "Översätta CV - professionella CV:n på varje språk",
       description:
         "Generera korrekta, professionella CV:n på EN, DE, FR, NL, ES med flera - utan att skriva om eller formatera om.",
       keywords: ["flerspråkig CV-generator", "CV-översättningsverktyg konsultbolag"],

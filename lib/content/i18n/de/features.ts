@@ -211,7 +211,7 @@ export const features: FeaturePage[] = [
       { label: "Beratungen im öffentlichen Sektor & Ausschreibungsgeschäft", href: "/solutions/public-sector" },
     ],
     seo: {
-      title: "Mehrsprachige CVs & Übersetzung - MagicCV",
+      title: "Mehrsprachige CVs - Lebenslauf übersetzen ohne Neuformatierung",
       description:
         "Erstellen Sie professionelle, markenkonforme CVs auf EN, DE, FR, NL, ES und in weiteren Sprachen - aus einem einzigen Master-Profil.",
       keywords: ["mehrsprachiges CV Tool", "CV in mehreren Sprachen", "Lebenslauf übersetzen Beratung"],
@@ -221,8 +221,8 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "profiles-skills",
     name: "Zentrale Profile & Skills-Intelligenz",
-    h1: "Ein strukturiertes Profil pro Person - unbegrenzt wiederverwendbar.",
-    sub: "Importieren, anreichern und durchsuchen Sie Ihr gesamtes Team nach Skills und Erfahrung - und generieren Sie jedes Ausgabeformat auf Abruf.",
+    h1: "Die Lebenslauf-Datenbank Ihres Teams - ein strukturiertes Profil pro Person.",
+    sub: "Eine durchsuchbare Lebenslauf-Datenbank und Kompetenzmatrix für Ihr ganzes Team: einmal importieren, Profile aktuell halten und jedes Format auf Abruf erstellen.",
     whatItDoesBody:
       "Ersetzen Sie verstreute CVs in Netzlaufwerken und Postfächern durch ein strukturiertes, stets aktuelles Profil pro Berater. Importieren Sie heute aus vorhandenen Dateien - LinkedIn- und HRIS-Anreicherung sind auf der Roadmap - und durchsuchen Sie dann Ihre gesamte Bench nach Skills oder Erfahrung, um jedes von einem Angebot geforderte Ausgabeformat zu generieren: auf Abruf, aus einer einzigen verlässlichen Datenbasis.",
     benefits: [

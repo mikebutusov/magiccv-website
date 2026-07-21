@@ -106,7 +106,7 @@ export const useCases: UseCasePage[] = [
     slug: "centralize-cvs",
     job: "Vervang verspreide cv's op gedeelde schijven door één gestructureerde, actuele bron van waarheid.",
     h1: "Eén thuis voor elk consultant-cv.",
-    sub: "Importeer eenmalig, houd actueel en genereer elk format op aanvraag - nooit meer zoeken in SharePoint.",
+    sub: "Cv-databasesoftware die het zoeken in SharePoint beëindigt: importeer één keer, houd elk profiel actueel en genereer elk format op aanvraag.",
     problemToday:
       "Cv's leven op gedeelde schijven, in inboxen en op laptops van medewerkers - meerdere versies van het cv van dezelfde persoon, waarvan geen enkele duidelijk de actuele is. Het juiste bestand vinden kost tijd, elke keer dat het nodig is.",
     steps: [
@@ -244,7 +244,7 @@ export const useCases: UseCasePage[] = [
       { label: "Software- & IT-consultancy", href: "/solutions/it-consulting" },
     ],
     seo: {
-      title: "Vertaal consultant-cv's naar elke taal - MagicCV",
+      title: "Cv vertalen - professionele cv's in elke taal",
       description:
         "Genereer nauwkeurige, professionele cv's in EN, DE, FR, NL, ES en meer - zonder overtypen of heropmaken.",
       keywords: ["meertalige cv-generator", "cv-vertaaltool consultancy"],
