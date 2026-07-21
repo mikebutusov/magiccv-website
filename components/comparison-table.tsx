@@ -24,8 +24,11 @@ export function ComparisonTable({
             <th scope="col" className="border-b border-border p-4 font-medium text-muted">
               <span className="sr-only">Category</span>
             </th>
-            <th scope="col" className="border-b border-border bg-primary-tint p-4 font-semibold text-primary">
-              MagicCV
+            <th scope="col" className="border-b border-primary/30 bg-primary-tint p-4 font-semibold text-primary">
+              <span className="inline-flex items-center gap-1.5">
+                <span aria-hidden className="h-2 w-2 rounded-full bg-primary" />
+                MagicCV
+              </span>
             </th>
             <th scope="col" className="border-b border-border p-4 font-medium text-ink-soft">
               {competitorName}

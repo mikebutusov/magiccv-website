@@ -13,10 +13,12 @@ export function RelatedLinks({ links, title = "Related" }: { links: RelatedLink[
           <li key={link.href}>
             <Link
               href={link.href}
-              className="flex items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-3 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="card-lift group flex items-center justify-between gap-2 rounded-xl border border-border bg-surface px-5 py-4 text-sm font-medium text-ink hover:border-primary/40 hover:text-primary"
             >
               {link.label}
-              <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden />
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-tint text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+              </span>
             </Link>
           </li>
         ))}

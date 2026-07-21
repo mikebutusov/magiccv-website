@@ -63,8 +63,11 @@ export function TestimonialGrid({ title, subtitle }: { title: string; subtitle?:
       {subtitle && <p className="mt-3 max-w-measure text-lg text-ink-soft">{subtitle}</p>}
       <div className="mt-8 grid gap-5 md:grid-cols-3">
         {items.map((t) => (
-          <figure key={t.name} className="flex flex-col rounded-3xl border border-border bg-surface p-7">
-            <blockquote className="flex-1 text-[1.05rem] leading-normal font-medium text-ink">
+          <figure key={t.name} className="card-lift relative flex flex-col overflow-hidden rounded-3xl border border-border bg-surface p-7">
+            <span aria-hidden className="pointer-events-none absolute -top-4 right-4 font-display text-[6rem] leading-none text-primary-tint">
+              &rdquo;
+            </span>
+            <blockquote className="relative flex-1 text-[1.05rem] leading-normal font-medium text-ink">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
             <figcaption className="mt-6 flex items-center gap-3">
@@ -93,8 +96,11 @@ export function TestimonialBlock({
   const t = override ?? pick(context);
   return (
     <Container>
-      <figure className="rounded-3xl border border-border bg-surface p-8 md:p-10">
-        <blockquote className="max-w-3xl text-2xl leading-snug font-medium text-ink md:text-[1.75rem]">
+      <figure className="relative overflow-hidden rounded-3xl border border-border bg-surface p-8 md:p-10">
+        <span aria-hidden className="pointer-events-none absolute -top-6 right-6 font-display text-[9rem] leading-none text-primary-tint">
+          &rdquo;
+        </span>
+        <blockquote className="relative max-w-3xl text-2xl leading-snug font-medium text-ink md:text-[1.75rem]">
           &ldquo;{t.quote}&rdquo;
         </blockquote>
         <figcaption className="mt-6 flex items-center gap-3">

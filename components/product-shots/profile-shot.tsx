@@ -26,7 +26,7 @@ export function ProfileShot() {
             </div>
           </div>
           <div className="mt-3 flex flex-wrap gap-1">
-            {["React", "TypeScript", "Node.js", "English — B2"].map((t) => (
+            {["React", "TypeScript", "Node.js", "English - B2"].map((t) => (
               <Chip key={t}>{t}</Chip>
             ))}
           </div>

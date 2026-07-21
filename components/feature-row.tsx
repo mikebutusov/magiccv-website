@@ -35,7 +35,16 @@ export function FeatureRow({
         <h2 className="text-2xl font-medium text-ink">{item.title}</h2>
         <p className="mt-4 max-w-measure whitespace-pre-line text-ink-soft">{item.body}</p>
       </div>
-      {visual ?? <GenericUiShot variant={variant} />}
+      <div className="relative">
+        <div
+          aria-hidden
+          className={clsx(
+            "pointer-events-none absolute -inset-4 rounded-[1.75rem] bg-gradient-to-br to-transparent",
+            reverse ? "from-primary-tint/70 via-primary-tint/25" : "from-primary-tint/50 via-primary-tint/20",
+          )}
+        />
+        <div className="relative">{visual ?? <GenericUiShot variant={variant} />}</div>
+      </div>
     </div>
   );
 }

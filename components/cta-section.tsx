@@ -18,6 +18,7 @@ export function CTASection({
     <section className="border-y border-border bg-surface py-16 md:py-20">
       <Container>
         <div className="relative overflow-hidden rounded-3xl bg-primary px-8 py-14 text-center md:px-12">
+          <div aria-hidden className="dot-grid pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(circle,rgba(255,255,255,0.25)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_0%,black,transparent)]" />
           <div aria-hidden className="pointer-events-none absolute -top-20 -right-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
           <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
           <div className="relative flex flex-col items-center gap-5">

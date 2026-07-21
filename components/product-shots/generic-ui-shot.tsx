@@ -86,7 +86,7 @@ function EditorVariant() {
           Reshape this CV around the brief.
         </div>
         <div className="w-[85%] rounded-lg rounded-tl-sm border border-border bg-surface px-2 py-1.5 text-[9px] text-ink-soft">
-          Done — re-emphasized the relevant experience.
+          Done - re-emphasized the relevant experience.
         </div>
       </div>
     </div>

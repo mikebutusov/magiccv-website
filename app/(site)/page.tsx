@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, FileText, Globe2, Layers, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowUpRight, Building2, FileText, Globe2, Layers, ShieldCheck, Sparkles, Target, Users } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { LogoWall } from "@/components/logo-wall";
 import { FeatureRow } from "@/components/feature-row";
@@ -149,12 +149,22 @@ export default function HomePage() {
               who: "If you run the firm",
               pain: "Every CV that goes out is your brand. Right now its quality depends on who happened to edit it last, and at what hour.",
             },
-          ].map((c) => (
-            <div key={c.who} className="rounded-2xl border border-border bg-surface p-6">
-              <p className="text-sm font-semibold uppercase tracking-wide text-primary">{c.who}</p>
-              <p className="mt-3 text-ink-soft">{c.pain}</p>
-            </div>
-          ))}
+          ].map((c, i) => {
+            const Icon = [Target, Users, Building2][i];
+            return (
+              <div
+                key={c.who}
+                className="card-lift relative overflow-hidden rounded-2xl border border-border bg-surface p-6"
+              >
+                <div aria-hidden className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-[#8b7cf0] to-primary-tint" />
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-tint">
+                  <Icon className="h-5 w-5 text-primary" aria-hidden />
+                </span>
+                <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-primary">{c.who}</p>
+                <p className="mt-3 text-ink-soft">{c.pain}</p>
+              </div>
+            );
+          })}
         </div>
       </Section>
 
@@ -175,7 +185,7 @@ export default function HomePage() {
             <Link
               key={cap.href}
               href={cap.href}
-              className="group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-primary/40"
+              className="card-lift group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-6 hover:border-primary/40"
             >
               <cap.icon className="h-6 w-6 text-primary" aria-hidden />
               <p className="font-medium text-ink">{cap.title}</p>
@@ -269,7 +279,7 @@ export default function HomePage() {
             <Link
               key={role.href}
               href={role.href}
-              className="rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="card-lift rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink hover:border-primary/40 hover:text-primary"
             >
               {role.label}
             </Link>
@@ -283,7 +293,7 @@ export default function HomePage() {
             <Link
               key={industry.href}
               href={industry.href}
-              className="rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="card-lift rounded-2xl border border-border bg-paper px-5 py-4 text-sm font-medium text-ink hover:border-primary/40 hover:text-primary"
             >
               {industry.label}
             </Link>

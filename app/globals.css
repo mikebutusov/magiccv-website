@@ -104,6 +104,21 @@ h4 {
   @apply w-full rounded-lg border border-border bg-surface px-3.5 py-2.5 text-base text-ink placeholder:text-muted focus:border-primary;
 }
 
+/* Card hover-lift used across link cards and quote cards. */
+.card-lift {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -20px rgba(90, 75, 216, 0.35);
+}
+
+/* Subtle dot-grid backdrop for hero / CTA surfaces. */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(90, 75, 216, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
 .skip-link {
   @apply sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-primary focus:shadow-lg;
 }
