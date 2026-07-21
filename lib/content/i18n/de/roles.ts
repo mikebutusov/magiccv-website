@@ -102,10 +102,10 @@ export const roles: RolePage[] = [
       { label: "Spezialisierte Personal- & Talentagenturen", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "MagicCV für Recruitment- & Resourcing-Teams",
+      title: "Bewerbermanagement-Software mit CV-Datenbank",
       description:
-        "Halten Sie jeden Berater-CV aktuell, durchsuchbar und sofort formatiert für jede Ausschreibung oder jedes Angebot.",
-      keywords: ["Berater-CV-Datenbank", "Resourcing CV-Tool"],
+        "Kandidatenprofile aktuell, durchsuchbar und sofort im richtigen Format - eine Lebenslauf-Datenbank für Ihren gesamten Talentpool.",
+      keywords: ["bewerbermanagement software", "kandidaten datenbank", "cv datenbank", "lebenslauf datenbank"],
     },
   },
   {

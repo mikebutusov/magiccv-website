@@ -159,10 +159,10 @@ export const features: FeaturePage[] = [
       { label: "Trust Center", href: "/trust" },
     ],
     seo: {
-      title: "Anonymisation de CV & RGPD - MagicCV",
+      title: "Anonymisation de CV - CV anonyme en un clic",
       description:
-        "Des CV anonymes en un clic pour les appels d'offres et les dossiers concurrentiels, avec le RGPD intégré dès la conception.",
-      keywords: ["anonymisation de CV", "outil CV RGPD"],
+        "CV anonymes pour appels d'offres et évaluations à l'aveugle en un clic - cohérents dans toute l'équipe, RGPD by design.",
+      keywords: ["cv anonyme", "anonymisation cv", "cv anonymisé appel d'offres"],
     },
   },
   {
@@ -264,10 +264,10 @@ export const features: FeaturePage[] = [
       { label: "Pour les équipes Recrutement", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Profils de consultants centralisés & intelligence des compétences - MagicCV",
+      title: "Cvthèque & logiciel de matrice de compétences",
       description:
-        "Importez, enrichissez et recherchez toute votre équipe par compétences et expérience ; générez n'importe quel livrable à la demande.",
-      keywords: ["base de compétences consultants", "gestion des profils CV"],
+        "Une cvthèque consultable et une matrice de compétences en un seul outil : importez les CV, cherchez par compétence dans toute l'équipe et générez des CV à votre image à la demande.",
+      keywords: ["cvthèque", "logiciel cvthèque", "matrice de compétences", "logiciel matrice de compétences", "base de données cv"],
     },
   },
 ];

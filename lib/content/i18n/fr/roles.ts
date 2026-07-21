@@ -102,10 +102,10 @@ export const roles: RolePage[] = [
       { label: "Agences de staffing & de talents spécialisées", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "MagicCV pour les équipes Recrutement & Resourcing",
+      title: "Logiciel de gestion des candidatures avec cvthèque",
       description:
-        "Gardez chaque CV de consultant à jour, consultable et instantanément mis en forme pour n'importe quel cahier des charges ou dossier.",
-      keywords: ["base de CV de consultants", "outil de CV pour le resourcing"],
+        "Gestion des candidatures et cvthèque en un outil : chaque CV à jour, consultable et instantanément au bon format pour chaque brief ou appel d'offres.",
+      keywords: ["gestion des candidatures", "cvthèque", "base de données cv"],
     },
   },
   {

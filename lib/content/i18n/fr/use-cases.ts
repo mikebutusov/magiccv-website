@@ -145,10 +145,10 @@ export const useCases: UseCasePage[] = [
       { label: "Pour les équipes Recrutement", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centraliser & standardiser les CV de consultants - MagicCV",
+      title: "Logiciel de cvthèque - centralisez et standardisez les CV",
       description:
-        "Importez une fois, maintenez à jour, et générez n'importe quel format à la demande - fini les recherches dans SharePoint.",
-      keywords: ["base de CV centralisée conseil", "standardiser CV de consultants"],
+        "Un logiciel de gestion des CV qui met fin à la chasse dans SharePoint : importez une fois, gardez un profil à jour par personne et générez tout format à la demande.",
+      keywords: ["cvthèque", "logiciel cvthèque", "base de données cv", "logiciel gestion cv"],
     },
   },
   {
@@ -195,10 +195,10 @@ export const useCases: UseCasePage[] = [
       { label: "Agences de staffing & de talents spécialisées", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "Anonymiser les CV de consultants pour les soumissions à l'aveugle & appels d'offres - MagicCV",
+      title: "CV anonyme en un clic - pour appels d'offres et recrutement",
       description:
-        "Retirez les éléments identifiants pour les évaluations à l'aveugle et les marchés publics - de façon cohérente, dans toute votre équipe.",
-      keywords: ["outil d'anonymisation de CV", "CV anonymisé pour appels d'offres"],
+        "Produisez des CV anonymes pour l'évaluation à l'aveugle, les marchés publics et les candidatures sans biais - de façon cohérente dans toute l'équipe.",
+      keywords: ["cv anonyme", "anonymisation cv", "cv anonymisé"],
     },
   },
   {

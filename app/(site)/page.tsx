@@ -8,16 +8,26 @@ import { CvGeneratorShot } from "@/components/product-shots/cv-generator-shot";
 import { CvListShot } from "@/components/product-shots/cv-list-shot";
 import { ImportShot } from "@/components/product-shots/import-shot";
 import { TestimonialBlock } from "@/components/testimonial-block";
+import { FAQAccordion } from "@/components/faq-accordion";
 import { CTASection } from "@/components/cta-section";
 import { Section } from "@/components/ui/container";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "MagicCV - AI CV & Resume Platform for Consulting Firms",
+  title: "CV & Resume Management Software for Consulting Firms | MagicCV",
+  absoluteTitle: true,
   description:
-    "Keep every consultant profile current and turn it into a tailored, on-brand CV - for any client, bid, or language, in minutes. Multilingual, GDPR-ready, built for European consulting firms. Free plan - no credit card.",
+    "MagicCV is AI-native CV management software for consulting firms: one searchable resume database, tailored on-brand CVs in minutes, 5+ EU languages, GDPR-by-design. Free plan - no credit card.",
   path: "/",
-  keywords: ["CV management for consulting", "consultant CV software", "consultant CV database"],
+  keywords: [
+    "cv management software",
+    "resume management software",
+    "cv management",
+    "cv management system",
+    "resume management system",
+    "cv database software",
+    "resume database",
+  ],
   languages: { en: "/", de: "/de", fr: "/fr", nl: "/nl", sv: "/sv", "x-default": "/" },
 });
 
@@ -90,7 +100,7 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="AI-native CV management for consulting firms"
+        eyebrow="AI-native CV management software for consulting firms"
         h1="Every consultant CV, on-brand and ready in minutes."
         sub="MagicCV keeps your team's profiles current and turns them into tailored, on-brand CVs - for any client, bid, or language. One source of truth, minutes instead of evenings."
         visual={<CvGeneratorShot />}
@@ -266,6 +276,55 @@ export default function HomePage() {
 
       <Section className="border-t border-border bg-surface">
         <TestimonialBlock />
+      </Section>
+
+      <Section className="border-t border-border">
+        <div className="max-w-measure">
+          <h2 className="text-3xl font-medium text-ink">
+            CV management software, built around how consulting actually works
+          </h2>
+          <div className="mt-5 space-y-4 text-lg text-ink-soft">
+            <p>
+              Most resume management software was built for recruiters screening thousands of applicants.
+              MagicCV is different: it&rsquo;s a CV management system for the people you already employ - a
+              searchable resume database where every consultant&rsquo;s skills, projects, and certifications
+              live as structured data instead of stale Word files.
+            </p>
+            <p>
+              That makes the hard parts of CV data management automatic. Import existing files and let CV
+              parsing build the profile. Search your whole bench like a skills matrix. Generate a tailored,
+              on-brand CV for any client, bid, or language in minutes - and keep the database as your single
+              source of truth the entire time.
+            </p>
+          </div>
+        </div>
+        <div className="mt-10">
+          <FAQAccordion
+            title="CV management software, explained"
+            faqs={[
+              {
+                question: "What is CV management software?",
+                answer:
+                  "CV management software keeps your team's CVs and resumes in one structured, searchable database and generates polished, up-to-date documents on demand. Instead of chasing people for the latest Word file, you maintain one profile per person and export tailored, on-brand CVs for any client, proposal, or language.",
+              },
+              {
+                question: "How is a CV database different from an ATS?",
+                answer:
+                  "An applicant tracking system (ATS) manages external candidates through a hiring pipeline. A CV database like MagicCV manages the people you already have - consultants and specialists whose CVs you present to clients - keeping their profiles current and instantly exportable in your firm's brand.",
+              },
+              {
+                question: "Does MagicCV work as a resume management system for recruitment teams?",
+                answer:
+                  "Yes. Recruitment and resourcing teams use MagicCV as candidate database software: import CVs once, keep structured profiles current, search by skills or experience, and export client-ready, anonymized, or translated resumes in minutes.",
+              },
+              {
+                question: "Can I search the resume database by skills?",
+                answer:
+                  "Yes - every profile is structured data, so it works like talent management software with resume search built in: filter your whole bench by skill, certification, language, or past project to staff the next brief in minutes.",
+              },
+            ]}
+          />
+        </div>
       </Section>
 
       <CTASection />

@@ -8,6 +8,7 @@ export function buildMetadata({
   keywords,
   languages,
   ogLocale = "en_US",
+  absoluteTitle = false,
 }: {
   title: string;
   description: string;
@@ -16,22 +17,24 @@ export function buildMetadata({
   /** hreflang map, e.g. { en: "/", de: "/de", "x-default": "/" } (paths, not full URLs) */
   languages?: Record<string, string>;
   ogLocale?: string;
+  /** Bypass the "%s - MagicCV" title template (use when the title already carries the brand). */
+  absoluteTitle?: boolean;
 }): Metadata {
   const url = `${site.url}${path}`;
   const languageUrls = languages
     ? Object.fromEntries(Object.entries(languages).map(([lang, p]) => [lang, `${site.url}${p}`]))
     : undefined;
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     keywords,
     alternates: { canonical: url, ...(languageUrls ? { languages: languageUrls } : {}) },
+    // og:image / twitter:image come from the app/opengraph-image.tsx file convention.
     openGraph: {
       title,
       description,
       url,
       siteName: site.name,
-      images: [{ url: site.ogImage }],
       locale: ogLocale,
       type: "website",
     },
@@ -39,7 +42,6 @@ export function buildMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [site.ogImage],
     },
   };
 }
@@ -50,7 +52,20 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: site.name,
     url: site.url,
+    logo: `${site.url}/icon.svg`,
+    description: site.description,
     sameAs: [site.social.linkedin],
+  };
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    inLanguage: ["en", "de", "fr", "nl", "sv"],
+    publisher: { "@type": "Organization", name: site.name, url: site.url },
   };
 }
 

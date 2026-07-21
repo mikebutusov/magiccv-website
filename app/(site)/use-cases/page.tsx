@@ -10,8 +10,8 @@ import { getUseCases } from "@/lib/data";
 export const revalidate = 60;
 
 export const metadata = buildMetadata({
-  title: "MagicCV Use Cases",
-  description: "Whatever the job-to-be-done - tailoring, packing, centralizing, anonymizing, or translating CVs - see exactly how MagicCV does it.",
+  title: "CV & Resume Management Use Cases",
+  description: "CV management in practice: centralize a resume database, tailor CVs to every brief, build proposal packs, anonymize for tenders, and translate into any language.",
   path: "/use-cases",
   languages: languagesFor("/use-cases"),
 });

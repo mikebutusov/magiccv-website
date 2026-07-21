@@ -50,10 +50,10 @@ export const roles: RolePage[] = [
       { label: "MagicCV vs SharePoint + Word", href: "/compare/sharepoint-word" },
     ],
     seo: {
-      title: "MagicCV for Sales Teams - Win more consulting proposals",
+      title: "Bid Management Software for Consulting Sales Teams",
       description:
-        "Stop letting slow, generic CVs cost you bids. MagicCV gives sales teams RFP-ready consultant packs in minutes.",
-      keywords: ["proposal CV tool for sales", "win more RFPs consulting"],
+        "The CV side of bid management software: give sales teams tailored, RFP-ready consultant CV packs in minutes and stop letting slow, generic CVs cost you bids.",
+      keywords: ["bid management software", "proposal CV tool for sales", "win more RFPs consulting"],
     },
   },
   {
@@ -102,10 +102,10 @@ export const roles: RolePage[] = [
       { label: "Specialist staffing & talent agencies", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "MagicCV for Recruitment & Resourcing Teams",
+      title: "Candidate Database Software for Recruitment & Resourcing Teams",
       description:
-        "Keep every consultant CV current, searchable, and instantly formatted for any brief or bid.",
-      keywords: ["consultant CV database", "resourcing CV tool"],
+        "Candidate database software that keeps every CV current, searchable, and instantly formatted for any brief or bid - one resume database for your whole talent pool.",
+      keywords: ["candidate database software", "consultant CV database", "resume database", "resourcing CV tool"],
     },
   },
   {

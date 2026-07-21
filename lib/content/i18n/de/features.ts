@@ -159,10 +159,10 @@ export const features: FeaturePage[] = [
       { label: "Trust Center", href: "/trust" },
     ],
     seo: {
-      title: "CV-Anonymisierung & DSGVO - MagicCV",
+      title: "CV-Anonymisierung - anonymisierter Lebenslauf per Klick",
       description:
-        "Anonymisierte CVs für Ausschreibungen und Wettbewerbsangebote mit einem Klick - mit durchgängigem GDPR-by-Design.",
-      keywords: ["CV Anonymisierung", "DSGVO CV Tool", "anonymisierter Lebenslauf Ausschreibung"],
+        "Anonymisierte Lebensläufe für Ausschreibungen und faire Auswahlverfahren per Klick - konsistent im ganzen Team, DSGVO by Design.",
+      keywords: ["anonymisierter lebenslauf", "anonymer lebenslauf", "cv anonymisierung", "dsgvo cv tool"],
     },
   },
   {
@@ -264,10 +264,10 @@ export const features: FeaturePage[] = [
       { label: "Für Recruitment-Teams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Zentrale Beraterprofile & Skills-Intelligenz - MagicCV",
+      title: "Lebenslauf-Datenbank & Kompetenzmatrix-Software",
       description:
-        "Importieren, anreichern und durchsuchen Sie Ihr gesamtes Team nach Skills und Erfahrung - und generieren Sie jedes Ausgabeformat auf Abruf.",
-      keywords: ["Berater Skills-Datenbank", "CV-Profilverwaltung", "Skill-Datenbank Beratung"],
+        "Eine durchsuchbare Lebenslauf-Datenbank und Kompetenzmatrix in einem: CVs per Parsing importieren, das ganze Team nach Skills durchsuchen und markenkonforme CVs auf Abruf erstellen.",
+      keywords: ["lebenslauf datenbank", "cv datenbank", "kompetenzmatrix software", "skill matrix software", "mitarbeiterprofile software"],
     },
   },
 ];

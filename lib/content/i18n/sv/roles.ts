@@ -102,10 +102,10 @@ export const roles: RolePage[] = [
       { label: "Specialiserade bemannings- & talangbyråer", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "MagicCV för rekryterings- & resursteam",
+      title: "Rekryteringsverktyg med CV-databas",
       description:
-        "Håll varje konsult-CV aktuellt, sökbart och direkt formaterat för vilket underlag eller anbud som helst.",
-      keywords: ["CV-databas för konsulter", "CV-verktyg för resursplanering"],
+        "Håll varje CV aktuellt, sökbart och direkt i rätt format för varje brief eller anbud - en kompetensdatabas för hela er talangpool.",
+      keywords: ["rekryteringsverktyg", "kompetensdatabas", "cv databas"],
     },
   },
   {

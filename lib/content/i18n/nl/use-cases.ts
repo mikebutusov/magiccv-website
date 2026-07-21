@@ -145,10 +145,10 @@ export const useCases: UseCasePage[] = [
       { label: "Voor recruitmentteams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centraliseer & standaardiseer consultant-cv's - MagicCV",
+      title: "CV-databasesoftware - centraliseer en standaardiseer cv's",
       description:
-        "Importeer eenmalig, houd actueel en genereer elk format op aanvraag - nooit meer zoeken in SharePoint.",
-      keywords: ["centrale cv-database consultancy", "consultant-cv's standaardiseren"],
+        "Cv-beheer dat werkt: importeer één keer, houd per persoon één actueel profiel bij en genereer elk format op aanvraag - nooit meer zoeken in SharePoint.",
+      keywords: ["cv database", "cv databank", "cv beheer", "cv beheren"],
     },
   },
   {
@@ -195,10 +195,10 @@ export const useCases: UseCasePage[] = [
       { label: "Gespecialiseerde staffing- & talentbureaus", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "Anonimiseer consultant-cv's voor blinde & aanbestedingsindiening - MagicCV",
+      title: "Anoniem cv met één klik - voor aanbestedingen en werving",
       description:
-        "Verwijder identificerende gegevens voor blinde beoordeling en openbare aanbestedingen - consistent, voor je hele team.",
-      keywords: ["cv-anonimiseringstool", "geanonimiseerd cv voor aanbestedingen"],
+        "Maak geanonimiseerde cv's voor blinde beoordeling, aanbestedingen en onbevooroordeelde indiening - consistent voor het hele team.",
+      keywords: ["anoniem cv", "geanonimiseerd cv", "cv anonimiseren"],
     },
   },
   {

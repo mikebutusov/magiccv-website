@@ -138,9 +138,9 @@ const de: Dict = {
     body: "Sehen Sie es mit Ihren eigenen Consultants - oder starten Sie noch heute kostenlos, ohne Kreditkarte.",
   },
   home: {
-    seoTitle: "MagicCV - KI-CV-Plattform für Beratungsunternehmen",
-    seoDesc: "Halten Sie jedes Consultant-Profil aktuell und erstellen Sie daraus maßgeschneiderte, markenkonforme CVs - in Minuten. Mehrsprachig, DSGVO-konform, für europäische Beratungen. Kostenloser Plan.",
-    eyebrow: "KI-natives CV-Management für Beratungen",
+    seoTitle: "CV-Management-Software für Beratungsunternehmen",
+    seoDesc: "KI-native CV-Management-Software: eine durchsuchbare Lebenslauf-Datenbank, maßgeschneiderte markenkonforme CVs in Minuten, 5+ EU-Sprachen, DSGVO by Design. Kostenloser Plan.",
+    eyebrow: "KI-native CV-Management-Software für Beratungen",
     h1: "Jeder Consultant-CV: markenkonform und in Minuten fertig.",
     sub: "MagicCV hält die Profile Ihres Teams aktuell und macht daraus maßgeschneiderte, markenkonforme CVs - für jeden Kunden, jedes Angebot, jede Sprache. Eine Quelle der Wahrheit, Minuten statt Abende.",
     stats: [
@@ -283,9 +283,9 @@ const fr: Dict = {
     body: "Voyez-le sur vos propres consultants, ou commencez gratuitement dès aujourd'hui - sans carte bancaire.",
   },
   home: {
-    seoTitle: "MagicCV - Plateforme IA de CV pour cabinets de conseil",
-    seoDesc: "Gardez chaque profil de consultant à jour et transformez-le en CV sur mesure, à votre image - en minutes. Multilingue, conforme RGPD, conçu pour les cabinets européens. Offre gratuite.",
-    eyebrow: "Gestion de CV native IA pour cabinets de conseil",
+    seoTitle: "Logiciel de gestion de CV pour cabinets de conseil",
+    seoDesc: "Logiciel de gestion de CV natif IA : une cvthèque à jour et consultable en un clic, des CV sur mesure à votre image en minutes, 5+ langues européennes, RGPD by design. Offre gratuite.",
+    eyebrow: "Logiciel de gestion de CV natif IA pour cabinets de conseil",
     h1: "Chaque CV de consultant, à votre image et prêt en quelques minutes.",
     sub: "MagicCV garde les profils de votre équipe à jour et les transforme en CV sur mesure - pour chaque client, appel d'offres ou langue. Une source unique de vérité, des minutes au lieu de soirées.",
     stats: [
@@ -428,9 +428,9 @@ const nl: Dict = {
     body: "Bekijk het met je eigen consultants, of start vandaag gratis - zonder creditcard.",
   },
   home: {
-    seoTitle: "MagicCV - AI-cv-platform voor consultancybureaus",
-    seoDesc: "Houd elk consultantprofiel actueel en zet het om in een op maat gemaakt, merkconform cv - in minuten. Meertalig, AVG-proof, gebouwd voor Europese consultancies. Gratis plan.",
-    eyebrow: "AI-native cv-beheer voor consultancybureaus",
+    seoTitle: "CV-managementsoftware voor consultancybureaus",
+    seoDesc: "AI-native cv-managementsoftware: één doorzoekbare cv-database, op maat gemaakte merkconforme cv's in minuten, 5+ EU-talen, AVG by design. Gratis plan.",
+    eyebrow: "AI-native cv-managementsoftware voor consultancybureaus",
     h1: "Elk consultant-cv, merkconform en binnen minuten klaar.",
     sub: "MagicCV houdt de profielen van je team actueel en zet ze om in op maat gemaakte, merkconforme cv's - voor elke klant, offerte of taal. Eén bron van waarheid, minuten in plaats van avonden.",
     stats: [
@@ -573,9 +573,9 @@ const sv: Dict = {
     body: "Se det med era egna konsulter, eller börja gratis idag - inget betalkort krävs.",
   },
   home: {
-    seoTitle: "MagicCV - AI-plattform för konsult-CV:n",
-    seoDesc: "Håll varje konsultprofil uppdaterad och gör om den till ett skräddarsytt CV i er profil - på minuter. Flerspråkigt, GDPR-säkert, byggt för europeiska konsultbolag. Gratisplan.",
-    eyebrow: "AI-native CV-hantering för konsultbolag",
+    seoTitle: "CV-hanteringsprogram för konsultbolag",
+    seoDesc: "AI-nativt CV-hanteringsprogram: en sökbar CV-databas och kompetensdatabas, skräddarsydda CV:n i er profil på minuter, 5+ EU-språk, GDPR by design. Gratisplan.",
+    eyebrow: "AI-nativ CV-hanteringsprogramvara för konsultbolag",
     h1: "Varje konsult-CV, i er profil och klart på minuter.",
     sub: "MagicCV håller teamets profiler uppdaterade och gör om dem till skräddarsydda CV:n - för varje kund, anbud och språk. En enda sanningskälla, minuter i stället för kvällar.",
     stats: [

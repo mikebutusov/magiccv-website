@@ -145,10 +145,10 @@ export const useCases: UseCasePage[] = [
       { label: "Für Recruitment-Teams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Berater-CVs zentralisieren & standardisieren - MagicCV",
+      title: "CV-Datenbank-Software - CVs zentralisieren & standardisieren",
       description:
-        "Einmal importieren, aktuell halten und jedes Format auf Abruf generieren - Schluss mit der Suche in SharePoint.",
-      keywords: ["zentrale CV-Datenbank Beratung", "Berater-CVs standardisieren"],
+        "Lebenslauf-Verwaltung, die funktioniert: CVs einmal importieren, ein aktuelles Profil pro Person pflegen und jedes Format auf Abruf erstellen - Schluss mit der SharePoint-Suche.",
+      keywords: ["cv datenbank", "lebenslauf datenbank", "lebenslauf verwaltung", "cv verwaltung"],
     },
   },
   {
@@ -195,10 +195,10 @@ export const useCases: UseCasePage[] = [
       { label: "Spezialisierte Personal- & Talentagenturen", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "Berater-CVs für Blind- & Ausschreibungseinreichungen anonymisieren - MagicCV",
+      title: "Anonymisierter Lebenslauf in einem Klick",
       description:
-        "Entfernen Sie identifizierende Angaben für Blindbewertungen und öffentliche Ausschreibungen - konsistent, im gesamten Team.",
-      keywords: ["CV Anonymisierungstool", "anonymisierter CV für Ausschreibungen"],
+        "Anonyme Lebensläufe für Blindbewertung, öffentliche Ausschreibungen und faire Einreichungen - konsistent im gesamten Team.",
+      keywords: ["anonymisierter lebenslauf", "anonymer lebenslauf", "cv anonymisierung"],
     },
   },
   {

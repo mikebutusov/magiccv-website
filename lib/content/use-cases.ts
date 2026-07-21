@@ -106,9 +106,9 @@ export const useCases: UseCasePage[] = [
     slug: "centralize-cvs",
     job: "Replace scattered shared-drive CVs with one structured, current source of truth.",
     h1: "One home for every consultant CV.",
-    sub: "Import once, keep current, and generate any format on demand - no more hunting through SharePoint.",
+    sub: "CV database software that ends the hunt through SharePoint: import once, keep every profile current, and generate any format on demand.",
     problemToday:
-      "CVs live in shared drives, inboxes, and people's laptops - multiple versions of the same person's CV, none of them clearly the current one. Finding the right file costs time every single time it's needed.",
+      "CVs live in shared drives, inboxes, and people's laptops - multiple versions of the same person's CV, none of them clearly the current one. That isn't CV data management; it's file archaeology, and it costs time every single time a CV is needed.",
     steps: [
       {
         title: "Import from existing files",
@@ -145,10 +145,17 @@ export const useCases: UseCasePage[] = [
       { label: "For Recruitment teams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centralize & standardize consultant CVs - MagicCV",
+      title: "CV Database Software - Centralize & Standardize CVs",
       description:
-        "Import once, keep current, and generate any format on demand - no more hunting through SharePoint.",
-      keywords: ["centralized CV database consulting", "standardize consultant CVs"],
+        "Resume database management software for consulting teams: import CVs once, keep one current profile per person, and generate any format on demand. Proper CV data management, no more SharePoint hunts.",
+      keywords: [
+        "cv database software",
+        "resume database software",
+        "cv data management",
+        "resume database management software",
+        "cv dataset management",
+        "cv database",
+      ],
     },
   },
   {
@@ -195,10 +202,10 @@ export const useCases: UseCasePage[] = [
       { label: "Specialist staffing & talent agencies", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "Anonymize consultant CVs for blind & tender submission - MagicCV",
+      title: "Anonymised CVs in One Click - Blind CVs for Tenders & Hiring",
       description:
-        "Strip identifying details for blind evaluation and public tenders - consistently, across your whole team.",
-      keywords: ["CV anonymization tool", "anonymized CV for tenders"],
+        "Create an anonymous CV for blind evaluation, public tenders, and bias-free submissions - consistently, across your whole team, in one click.",
+      keywords: ["anonymised cv", "anonymous cv", "CV anonymization tool", "anonymized CV for tenders", "blind recruitment"],
     },
   },
   {

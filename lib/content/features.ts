@@ -159,10 +159,10 @@ export const features: FeaturePage[] = [
       { label: "Trust Center", href: "/trust" },
     ],
     seo: {
-      title: "CV anonymization & GDPR - MagicCV",
+      title: "CV Anonymization & Blind Recruitment Software",
       description:
-        "One-click blind CVs for tenders and competitive bids, with GDPR-by-design throughout.",
-      keywords: ["CV anonymization", "GDPR CV tool"],
+        "Blind recruitment software built in: one-click anonymised CVs for tenders, competitive bids, and bias-free evaluation - with GDPR-by-design throughout.",
+      keywords: ["CV anonymization", "blind recruitment software", "anonymised CV", "anonymous CV", "GDPR CV tool"],
     },
   },
   {
@@ -221,10 +221,10 @@ export const features: FeaturePage[] = [
     _type: "featurePage",
     slug: "profiles-skills",
     name: "Centralized profiles & skills intelligence",
-    h1: "One structured profile per person - endlessly reusable.",
-    sub: "Import, enrich, and search your whole team by skills and experience; generate any output on demand.",
+    h1: "Your team's resume database - one structured profile per person.",
+    sub: "A searchable resume database and skills matrix for your whole team: import once, keep profiles current, and generate any output on demand.",
     whatItDoesBody:
-      "Replace scattered CVs in shared drives and inboxes with one structured, always-current profile per consultant. Import from existing files today, with LinkedIn and HRIS enrichment on the roadmap, then search your whole bench by skill or experience and generate whatever output a bid requires - on demand, from a single source of truth.",
+      "Replace scattered CVs in shared drives and inboxes with one structured CV database - one always-current profile per consultant. CV parsing turns existing files into structured profiles today, with LinkedIn and HRIS enrichment on the roadmap. Then search your whole bench like a skills matrix - by skill, certification, or experience - and generate whatever output a bid requires. It works as talent management software with resume search built in: the database stays your single source of truth.",
     benefits: [
       {
         title: "Structured profiles, not freeform documents",
@@ -264,10 +264,17 @@ export const features: FeaturePage[] = [
       { label: "For Recruitment teams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centralized consultant profiles & skills intelligence - MagicCV",
+      title: "Resume Database & Skills Matrix Software for Consulting Teams",
       description:
-        "Import, enrich, and search your whole team by skills and experience; generate any output on demand.",
-      keywords: ["consultant skills database", "CV profile management"],
+        "A searchable resume database and employee skills database in one: CV parsing on import, skills matrix search across your bench, and on-brand CV output on demand.",
+      keywords: [
+        "resume database",
+        "skills matrix software",
+        "cv parsing software",
+        "employee skills database",
+        "cv database software",
+        "talent management software with resume search",
+      ],
     },
   },
 ];

@@ -102,10 +102,10 @@ export const roles: RolePage[] = [
       { label: "Gespecialiseerde staffing- & talentbureaus", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "MagicCV voor recruitment- & resourcingteams",
+      title: "Recruitmentsoftware met cv-database",
       description:
-        "Houd elk consultant-cv actueel, doorzoekbaar en direct opgemaakt voor elke briefing of bid.",
-      keywords: ["consultant-cv-database", "resourcing cv-tool"],
+        "Houd elk cv actueel, doorzoekbaar en direct in het juiste format voor elke brief of offerte - één kandidatendatabase voor je hele talentpool.",
+      keywords: ["recruitment software", "kandidatendatabase", "cv database"],
     },
   },
   {

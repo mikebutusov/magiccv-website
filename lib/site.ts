@@ -6,7 +6,6 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.magiccv.com",
   appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://getmagic.cv",
   signUpUrl: process.env.NEXT_PUBLIC_SIGNUP_URL ?? "https://getmagic.cv/sign-up",
-  ogImage: "/og/default.png",
   social: {
     linkedin: "https://www.linkedin.com/company/magiccv",
   },

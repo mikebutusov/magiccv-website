@@ -159,10 +159,10 @@ export const features: FeaturePage[] = [
       { label: "Trust Center", href: "/trust" },
     ],
     seo: {
-      title: "Cv-anonimisering & AVG - MagicCV",
+      title: "CV-anonimisering - anoniem cv met één klik",
       description:
-        "Blinde cv's voor aanbestedingen en competitieve bids met één klik, met AVG-by-design door en door.",
-      keywords: ["cv anonimiseren", "AVG cv-tool"],
+        "Anonieme cv's voor aanbestedingen en onbevooroordeelde beoordeling met één klik - consistent voor het hele team, AVG by design.",
+      keywords: ["anoniem cv", "geanonimiseerd cv", "cv anonimiseren"],
     },
   },
   {
@@ -264,10 +264,10 @@ export const features: FeaturePage[] = [
       { label: "Voor recruitmentteams", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Gecentraliseerde consultantprofielen & skills-intelligentie - MagicCV",
+      title: "CV-database & vaardighedenmatrix-software",
       description:
-        "Importeer, verrijk en doorzoek je hele team op vaardigheden en ervaring; genereer elke output op aanvraag.",
-      keywords: ["skills-database consultants", "cv-profielbeheer"],
+        "Een doorzoekbare cv-database en vaardighedenmatrix in één: importeer cv's, zoek je hele team op skills en genereer merkconforme cv's op aanvraag.",
+      keywords: ["cv database", "vaardighedenmatrix", "skills matrix", "kandidatendatabase"],
     },
   },
 ];

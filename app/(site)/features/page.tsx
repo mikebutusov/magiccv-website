@@ -10,8 +10,8 @@ import { getFeatures } from "@/lib/data";
 export const revalidate = 60;
 
 export const metadata = buildMetadata({
-  title: "MagicCV Features",
-  description: "Everything you need to make CVs win work: RFP-to-CV reasoning, brand templates, anonymization, multilingual, and centralized profiles.",
+  title: "CV Management Software Features",
+  description: "Everything a CV management system needs: RFP-to-CV reasoning, brand-consistent exports, anonymization, multilingual output, and a searchable resume database.",
   path: "/features",
   languages: languagesFor("/features"),
 });

@@ -1,0 +1,32 @@
+# MagicCV
+
+> MagicCV is CV and resume management software for consulting and professional-services firms. It keeps every consultant profile in one CV database, then generates tailored, on-brand CVs for any client, bid, or RFP - in 5+ European languages, with one-click anonymization. GDPR-by-design with EU data residency. Free plan (10 candidate profiles / 30 CVs), Pro at $50/month, custom Enterprise.
+
+MagicCV is built for mid-market European consulting firms (10-250 employees) that win work through written proposals. Unlike template-first tools, it reasons from the client's brief or RFP and re-emphasizes each consultant's real experience - never fabricating anything.
+
+## Product
+
+- [Features overview](/features): RFP-to-CV reasoning, brand-consistent exports, anonymization & GDPR, multilingual output, centralized profiles & skills
+- [Centralized profiles & skills](/features/profiles-skills): the resume database and skills matrix at the core of MagicCV
+- [Anonymization & GDPR](/features/anonymization): one-click blind CVs for tenders and bias-free hiring
+- [Multilingual & translation](/features/multilingual): CVs in EN, DE, FR, NL, ES and more from one master profile
+- [Pricing](/pricing): Free $0 (10 profiles / 30 CVs total), Pro $50/mo (200 profiles / 600 CVs), Enterprise custom
+
+## Use cases
+
+- [Centralize & standardize CVs](/use-cases/centralize-cvs): replace scattered files with one CV database
+- [Tailor CVs to every brief](/use-cases/tailor-cvs)
+- [Build a proposal-ready CV pack](/use-cases/proposal-cv-pack)
+- [Anonymize CVs](/use-cases/anonymize-cvs)
+- [Translate CVs into any language](/use-cases/translate-cvs)
+
+## Comparisons
+
+- [All comparisons](/compare): fair, factual comparisons vs Flowcase, Cinode, Napta, Sprint CV, CuViBox, Enhancv, VisualCV, Rezi, CV-Transformer, CV Converter, CVGate, MuchSkills, Neobrain, TechWolf, and SharePoint + Word
+
+## Company
+
+- [Trust Center](/trust): GDPR, EU data residency, SSO, audit logs
+- [About](/about)
+
+The site is available in English (default), German (/de), French (/fr), Dutch (/nl), and Swedish (/sv).

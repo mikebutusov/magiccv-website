@@ -159,10 +159,10 @@ export const features: FeaturePage[] = [
       { label: "Trust Center", href: "/trust" },
     ],
     seo: {
-      title: "CV-anonymisering & GDPR - MagicCV",
+      title: "CV-anonymisering - anonymt CV med ett klick",
       description:
-        "Avidentifierade CV:n med ett klick för upphandlingar och konkurrensutsatta anbud, med GDPR-by-design rakt igenom.",
-      keywords: ["CV-anonymisering", "GDPR CV-verktyg"],
+        "Anonyma CV:n för upphandlingar och fördomsfri utvärdering med ett klick - konsekvent i hela teamet, GDPR by design.",
+      keywords: ["anonymt cv", "anonymiserat cv", "cv anonymisering"],
     },
   },
   {
@@ -264,10 +264,10 @@ export const features: FeaturePage[] = [
       { label: "För rekryteringsteam", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centraliserade konsultprofiler & kompetensintelligens - MagicCV",
+      title: "CV-databas & kompetensmatris-program",
       description:
-        "Importera, berika och sök i hela teamet på kompetens och erfarenhet; generera vilket underlag som helst på begäran.",
-      keywords: ["kompetensdatabas för konsulter", "hantering av CV-profiler"],
+        "En sökbar CV-databas och kompetensmatris i ett: importera CV:n, sök hela teamet på kompetens och generera CV:n i er profil på begäran.",
+      keywords: ["cv databas", "kompetensmatris", "kompetensdatabas"],
     },
   },
 ];

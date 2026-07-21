@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { JsonLd, organizationJsonLd, softwareApplicationJsonLd } from "@/lib/seo";
+import { JsonLd, organizationJsonLd, softwareApplicationJsonLd, websiteJsonLd } from "@/lib/seo";
 
 export default function SiteLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -9,6 +9,7 @@ export default function SiteLayout({ children }: Readonly<{ children: React.Reac
       <main className="flex-1">{children}</main>
       <SiteFooter />
       <JsonLd data={organizationJsonLd()} />
+      <JsonLd data={websiteJsonLd()} />
       <JsonLd data={softwareApplicationJsonLd()} />
     </>
   );

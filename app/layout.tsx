@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} - AI CV & Resume Platform for Consulting Firms`,
+    default: `${site.name} - CV & Resume Management Software`,
     template: `%s - ${site.name}`,
   },
   description: site.description,

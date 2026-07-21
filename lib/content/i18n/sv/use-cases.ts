@@ -145,10 +145,10 @@ export const useCases: UseCasePage[] = [
       { label: "För rekryteringsteam", href: "/solutions/recruitment" },
     ],
     seo: {
-      title: "Centralisera & standardisera konsult-CV:n - MagicCV",
+      title: "CV-databas - centralisera och standardisera CV:n",
       description:
-        "Importera en gång, håll aktuellt och generera vilket format som helst på begäran - slut på letandet i SharePoint.",
-      keywords: ["centraliserad CV-databas konsultbolag", "standardisera konsult-CV:n"],
+        "CV-hantering som fungerar: importera en gång, håll en aktuell profil per person och generera valfritt format på begäran - slut på letandet i SharePoint.",
+      keywords: ["cv databas", "kompetensdatabas", "cv hantering"],
     },
   },
   {
@@ -195,10 +195,10 @@ export const useCases: UseCasePage[] = [
       { label: "Specialiserade bemannings- & talangbyråer", href: "/solutions/staffing-agencies" },
     ],
     seo: {
-      title: "Anonymisera konsult-CV:n för blind inlämning & upphandling - MagicCV",
+      title: "Anonymt CV med ett klick - för upphandling och rekrytering",
       description:
-        "Ta bort identifierande uppgifter för blindutvärdering och offentliga upphandlingar - konsekvent, i hela teamet.",
-      keywords: ["verktyg för CV-anonymisering", "anonymiserat CV för upphandlingar"],
+        "Skapa anonymiserade CV:n för blind utvärdering, offentliga upphandlingar och fördomsfria inlämningar - konsekvent i hela teamet.",
+      keywords: ["anonymt cv", "anonymiserat cv", "cv anonymisering"],
     },
   },
   {
